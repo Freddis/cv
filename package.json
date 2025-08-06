@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && tsc --noEmit",
-    "start": "node .output/server/index.mjs"
+    "start": "node .output/server/index.mjs",
+    "check": "npm run typecheck && npm run lint ",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --fix --ignore-pattern '.output/**'"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
@@ -24,11 +27,15 @@
     "@types/node": "^22.5.4",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/parser": "^8.39.0",
     "@vitejs/plugin-react": "^4.6.0",
     "autoprefixer": "^10.4.20",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
     "postcss": "^8.5.1",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.39.0",
     "vite": "^6.3.5",
     "vite-tsconfig-paths": "^5.1.4"
   }

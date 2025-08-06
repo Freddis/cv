@@ -1,13 +1,13 @@
-import {createRootRoute, createRoute} from "@tanstack/react-router"
-import {RootLayout} from "./components/layout/RootLayout"
-import {Home} from "./components/pages/Home/Home"
-import {DefaultCatchBoundary} from "./components/layout/DefaultCatchBoundary"
-import {NotFound} from "./components/layout/NotFound"
-import appCss from 'src/styles/app.css?url'
-import {Projects} from "./components/pages/Projects/Projects"
+import {createRootRoute, createRoute} from '@tanstack/react-router';
+import {RootLayout} from './components/layout/RootLayout';
+import {Home} from './components/pages/Home/Home';
+import {DefaultCatchBoundary} from './components/layout/DefaultCatchBoundary';
+import {NotFound} from './components/layout/NotFound';
+import appCss from 'src/styles/app.css?url';
+import {Projects} from './components/pages/Projects/Projects';
 
 export const rootRoute = createRootRoute({
-    head: () => ({
+  head: () => ({
     meta: [
       {
         charSet: 'utf-8',
@@ -18,7 +18,7 @@ export const rootRoute = createRootRoute({
       },
     ],
     links: [
-      { rel: 'stylesheet', href: appCss },
+      {rel: 'stylesheet', href: appCss},
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
@@ -36,28 +36,28 @@ export const rootRoute = createRootRoute({
         sizes: '16x16',
         href: '/favicon-16x16.png',
       },
-      { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
-      { rel: 'icon', href: '/favicon.ico' },
+      {rel: 'manifest', href: '/site.webmanifest', color: '#fffff'},
+      {rel: 'icon', href: '/favicon.ico'},
     ],
   }),
   errorComponent: DefaultCatchBoundary,
   notFoundComponent: () => <NotFound />,
-  component: RootLayout
-})
+  component: RootLayout,
+});
 
 export const homeRoute = createRoute({
   component: Home,
   path: '/',
   getParentRoute: () => rootRoute,
-})
+});
 
 export const projectsRoute = createRoute({
   component: Projects,
   path: '/projects',
   getParentRoute: () => rootRoute,
-})
+});
 
 export const routeTree = rootRoute.addChildren([
   homeRoute,
-  projectsRoute
-])
+  projectsRoute,
+]);

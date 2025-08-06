@@ -1,7 +1,7 @@
-import {HeadContent, Link, Outlet, Scripts} from "@tanstack/react-router"
-import {TanStackRouterDevtools} from "@tanstack/react-router-devtools"
-import {FC, StrictMode} from "react"
-import {homeRoute, projectsRoute} from "../../routes"
+import {HeadContent, Link, Outlet, Scripts} from '@tanstack/react-router';
+import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
+import {FC, StrictMode} from 'react';
+import {homeRoute, projectsRoute} from '../../routes';
 
 export const RootLayout: FC = () => {
   return (
@@ -19,12 +19,12 @@ export const RootLayout: FC = () => {
             <div className="grow flex flex-row">
               <Outlet />
             </div>
-            
+
           </div>
           <Scripts />
         </StrictMode>
         <TanStackRouterDevtools position="bottom-right" />
       </body>
     </html>
-  )
-}
+  );
+};

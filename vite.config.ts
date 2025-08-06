@@ -1,9 +1,8 @@
-import { tanstackStart } from '@tanstack/react-start/plugin/vite'
-import { defineConfig } from 'vite'
-import tsConfigPaths from 'vite-tsconfig-paths'
-import viteReact from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import { tanstackRouter } from '@tanstack/router-plugin/vite'
+import {tanstackStart} from '@tanstack/react-start/plugin/vite';
+import {defineConfig} from 'vite';
+import tsConfigPaths from 'vite-tsconfig-paths';
+import viteReact from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   server: {
@@ -15,12 +14,12 @@ export default defineConfig({
     }),
     tailwindcss(),
     tanstackStart({
-       customViteReactPlugin: true, 
-       spa: {enabled: false}, 
-       tsr: {
-         routesDirectory: 'src/ignore-this-garbage',
-       }
-      }),
+      customViteReactPlugin: true,
+      spa: {enabled: false},
+      tsr: {
+        routesDirectory: 'src/ignore-this-garbage',
+      },
+    }),
     viteReact(),
   ],
-})
+});

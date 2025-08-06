@@ -1,10 +1,10 @@
-import {FC} from 'react'
+import {FC} from 'react';
 
 
 export const Projects: FC = () => {
   return (
-    <div className=''>
-      <h3 className='bg-red-300'>Projects</h3>
+    <div className="">
+      <h3 className="bg-red-300">Projects</h3>
     </div>
-  )
-}
+  );
+};

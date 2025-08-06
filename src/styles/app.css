@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @theme inline {
   --color-accent: var(--color-red-500);
   --color-main: var(--color-zinc-500);
