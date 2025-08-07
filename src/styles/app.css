@@ -1,7 +1,16 @@
 @import "tailwindcss";
 
+
 @theme inline {
-  --color-accent: var(--color-red-500);
-  --color-main: var(--color-zinc-500);
-  --color-on-main: var(--color-zinc-100);
+  --color-accent: #04b4e0;
+  --color-accent-mute: #0ba376;
+  --color-accent-bg: #04b4e0;
+  --color-main:  #222;
+  --color-on-main: #fff;
+  --color-on-main-2: #d5d5d5;
+  --color-on-main-3: #aaa;
+  --color-surface: #444444;
+  --color-surface-2: #333;
+  --color-around-surface-2: #444;
+  --color-on-surface: #fff;
 }
