@@ -15,7 +15,7 @@ export const Home: FC = () => {
       <div className='relative'>
         <div className='rounded-full relative z-1 overflow-hidden border-[18px] border-surface border-solid' 
         style={{boxShadow: '0px 0px 25px 0px rgba(0,0,0,.8)'}}>
-          <img  className='filter-[grayscale(0.3)] bg-size-[100%] scale-120 relative top-8' src='/images/photo-real.jpg'/>
+          <img className='filter-[grayscale(0.3)] bg-size-[100%] scale-120 relative top-8' src='/images/photo-real.jpg'/>
         </div>
         <div 
           className='absolute left-[-7%] bg-size-[18px_18px] w-[45%] h-3/6 top-[-4%] z-0 opacity-5'
@@ -82,7 +82,7 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
     </div>
   </div>
   
-  <div className='w-full'>
+  {/* <div className='w-full'>
     <div className='z-1 relative overflow-visible mb-10'>
       <div className='absolute top-[-2px] left-[-7px] z-0 w-5 h-5 bg-radial from-accent from-20%  to-transparent to-20% bg-size-[7px_7px] opacity-50'>
       </div>
@@ -105,7 +105,7 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
         <h4 className='text-on-main-3 text-4xl'>5</h4>
       </div>
     </div>
-  </div>
+  </div> */}
 
 </div>
   );
