@@ -17,7 +17,8 @@ export default defineConfig({
       customViteReactPlugin: true,
       spa: {enabled: false},
       tsr: {
-        routesDirectory: 'src/ignore-this-garbage',
+        generatedRouteTree: 'src/ignore-this-garbage/routeTree.gen.ts',
+        routesDirectory: 'src/ignore-this-garbage/routes',
       },
     }),
     viteReact(),

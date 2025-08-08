@@ -15,7 +15,7 @@ export const Home: FC = () => {
       <div className='relative'>
         <div className='rounded-full relative z-1 overflow-hidden border-[18px] border-surface border-solid' 
         style={{boxShadow: '0px 0px 25px 0px rgba(0,0,0,.8)'}}>
-          <img src='/images/photo-main.jpg'/>
+          <img  className='filter-[grayscale(0.3)] bg-size-[100%] scale-120 relative top-8' src='/images/photo-real.jpg'/>
         </div>
         <div 
           className='absolute left-[-7%] bg-size-[18px_18px] w-[45%] h-3/6 top-[-4%] z-0 opacity-5'
@@ -26,11 +26,12 @@ export const Home: FC = () => {
     </div>
     <div className='col-span-7'>
       <h2 className='text-on-main-3 text-[16px]'>Full-Stack Web Developer</h2>
-      <Heading1 className='text-on-main text-[48px] font-[600] mb-2'>Alex Smith</Heading1>
+      <Heading1 className='text-on-main text-[48px] font-[600] mb-2'>Alex Sarychev</Heading1>
       <p className='text-on-main-2 text-[15px]/7 mb-5'>
-        I am a Full-Stack Web Developer & Web Designer based in The USA, but working Worldwide.
-        I am passionate about designing and developing user-friendly websites. I have all the skills to create a new high quality
-        website or improve existing websites for individuals and organisations, using the latest techniques and trends.
+   With over 14 years of experience in web and mobile development, I have consistently worked on complex, high-impact projects throughout my career. Passionate about technology, I stay up-to-date with industry-leading solutions and best practices in modern software development.
+      </p>
+            <p className='text-on-main-2 text-[15px]/7 mb-5'>
+I have strong expertise in multiple programming languages, including PHP, JavaScript, Typescript, Java, C#, and Swift, and am proficient in developing production-grade applications across these technologies. My technical knowledge, problem-solving skills, and commitment to high-quality code make me a reliable choice for challenging development tasks.
       </p>
       <div className='flex gap-2'>
         <button className='border-accent border-solid border-2 rounded-full px-6 py-2'>

@@ -25,7 +25,6 @@
     "types": ["vite/client"],
     "paths": {
       "~/*": ["src_bak/*"],
-       "@tanstack/react-router-devtools": ["./node_modules/@tanstack/react-router-devtools"]
     },
     "noEmit": true,
     "plugins": [{ "name": "vite-plugin-iso-import" }]

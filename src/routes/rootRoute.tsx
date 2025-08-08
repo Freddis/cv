@@ -1,10 +1,8 @@
-import {createRootRoute, createRoute} from '@tanstack/react-router';
-import {RootLayout} from './components/layout/RootLayout';
-import {Home} from './components/pages/Home/Home';
-import {DefaultCatchBoundary} from './components/layout/DefaultCatchBoundary';
-import {NotFound} from './components/layout/NotFound';
+import {createRootRoute} from "@tanstack/react-router";
+import {RootLayout} from "../components/layout/RootLayout";
+import {DefaultCatchBoundary} from "../components/layout/DefaultCatchBoundary";
+import {NotFound} from "../components/layout/NotFound";
 import appCss from 'src/styles/app.css?url';
-import {Projects} from './components/pages/Projects/Projects';
 
 export const rootRoute = createRootRoute({
   head: () => ({
@@ -38,8 +36,6 @@ export const rootRoute = createRootRoute({
       },
       {rel: 'manifest', href: '/site.webmanifest', color: '#fffff'},
       {rel: 'icon', href: '/favicon.ico'},
-      // <link rel="preconnect" href="https://fonts.googleapis.com">
-      /* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link> */
       {
         rel:'preconnect',
         href: 'https://fonts.googleapis.com',
@@ -56,23 +52,6 @@ export const rootRoute = createRootRoute({
     ],
   }),
   errorComponent: DefaultCatchBoundary,
-  notFoundComponent: () => <NotFound />,
+  notFoundComponent: () => NotFound({}),
   component: RootLayout,
 });
-
-export const homeRoute = createRoute({
-  component: Home,
-  path: '/',
-  getParentRoute: () => rootRoute,
-});
-
-export const projectsRoute = createRoute({
-  component: Projects,
-  path: '/projects',
-  getParentRoute: () => rootRoute,
-});
-
-export const routeTree = rootRoute.addChildren([
-  homeRoute,
-  projectsRoute,
-]);

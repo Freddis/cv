@@ -1,10 +1,14 @@
 import {HeadContent, Link, Outlet, Scripts} from '@tanstack/react-router';
-import {FC, StrictMode} from 'react';
-import {homeRoute, projectsRoute} from '../../routes';
+import {FC, ReactNode, StrictMode} from 'react';
+import {cvRoute, homeRoute, projectsRoute} from '../../routes/routes';
 import {FaFacebook, FaGithub, FaLinkedin} from 'react-icons/fa6';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
+import {cn} from '../../utils/cn/cn';
+import {MainMenuLink} from '../elements/MainMenuLink';
 
 export const RootLayout: FC = () => {
+  
+
   return (
     <html>
       <head>
@@ -25,17 +29,19 @@ export const RootLayout: FC = () => {
                 </div>
               </div>
               <div className='flex flex-col grow gap-8 text-xl  justify-center'>
-                <Link to={homeRoute.id} className='hover:text-accent transition-all duration-500'>Home</Link>
-                <Link to={projectsRoute.id}>Resume</Link>
-                <Link to={projectsRoute.id}>Projects</Link>
-                <Link to={projectsRoute.id}>About</Link>
+                <MainMenuLink to={homeRoute.id} className={cn('')}>Home</MainMenuLink>
+                <MainMenuLink to={cvRoute.id}>Resume</MainMenuLink>
+                <MainMenuLink to={projectsRoute.id}>Projects</MainMenuLink>
+                {/* <MainMenuLink to={projectsRoute.id}>About</MainMenuLink> */}
               </div>
               <div className='flex flex-col-reverse text-xs'>
                 2025 Alex S.
               </div>
             </div>
-            <div className="grow flex flex-row">
+            <div className="grow flex flex-row justify-center">
+              <div className='max-w-7xl w-full'>
               <Outlet />
+              </div>
             </div>
           </div>
           <Scripts />
