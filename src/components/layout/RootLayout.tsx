@@ -1,7 +1,7 @@
 import {HeadContent, Scripts, useLocation} from '@tanstack/react-router';
 import {FC, StrictMode, useEffect, useState} from 'react';
 import {cvRoute, homeRoute, projectsRoute} from '../../routes/routes';
-import {FaFacebook, FaGithub, FaLinkedin} from 'react-icons/fa6';
+import {FaBurger, FaFacebook, FaGithub, FaLinkedin} from 'react-icons/fa6';
 import {cn} from '../../utils/cn/cn';
 import {MainMenuLink} from '../elements/MainMenuLink';
 import {CvPage} from '../pages/Cv/CvPage';

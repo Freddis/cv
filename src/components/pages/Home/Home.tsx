@@ -5,6 +5,8 @@ import {GiFlyingFlag} from 'react-icons/gi';
 import {IoCloudOutline, IoCloudSharp, IoCodeSlashOutline, IoLaptopOutline, IoPhonePortraitOutline, IoStorefrontSharp} from 'react-icons/io5';
 import {GoPencil} from 'react-icons/go';
 import {LiaLaptopSolid} from 'react-icons/lia';
+import {cvRoute} from '../../../routes/routes';
+import {Link} from '@tanstack/react-router';
 
 
 export const Home: FC = () => {
@@ -99,6 +101,12 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
         <h4 className='text-on-main-3 text-4xl'>5</h4>
       </div>
     </div>
+  </div>
+
+  <div className='md:hidden flex justify-center w-full mt-10 '>
+    <Link to={cvRoute.id} className='border-accent border-solid border-2 rounded-full px-6 py-2 cursor-pointer'>
+      Resume
+    </Link>
   </div>
 
 </div>
