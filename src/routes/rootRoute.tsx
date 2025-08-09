@@ -9,6 +9,7 @@ export const rootRoute = createRootRoute({
     meta: [
       {
         charSet: 'utf-8',
+        title: 'Alex Sarychev'
       },
       {
         name: 'viewport',

@@ -1,8 +1,8 @@
 import {FC} from 'react';
 import {Heading1} from '../../elements/Heading1';
-import {FaClock, FaFlag, FaHeartCircleCheck, FaStar} from 'react-icons/fa6';
+import {FaClock, FaCode, FaFlag, FaHeartCircleCheck, FaStar} from 'react-icons/fa6';
 import {GiFlyingFlag} from 'react-icons/gi';
-import {IoStorefrontSharp} from 'react-icons/io5';
+import {IoCloudOutline, IoCloudSharp, IoCodeSlashOutline, IoLaptopOutline, IoPhonePortraitOutline, IoStorefrontSharp} from 'react-icons/io5';
 import {GoPencil} from 'react-icons/go';
 import {LiaLaptopSolid} from 'react-icons/lia';
 
@@ -50,33 +50,33 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
       </div>
       <h3 className='text-xl font-semibold'>What <span className='text-accent'>I Do</span></h3>
     </div>
-    <div className='grid grid-cols-2 gap-5'>
+    <div className='grid grid-cols-2 gap-x-10 gap-y-10 tracking-wide'>
       <div>
-        <IoStorefrontSharp className='text-5xl text-accent mb-2' />
-        <h4 className='text-lg font-semibold mb-2'>Ecommerce</h4>
+        <IoCloudOutline className='text-5xl text-accent mb-2' />
+        <h4 className='text-lg font-semibold mb-2'>Backend</h4>
         <p className='text-on-main-2'>
-          Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.
+          I design and build robust backend systems that power scalable and high-performance applications. From architecting APIs to optimizing database structures, I ensure reliability, security, and maintainability. My approach focuses on clean, modular code that supports future growth.
         </p>
       </div>
        <div>
-        <GoPencil className='text-5xl text-accent mb-2' />
-        <h4 className='text-lg font-semibold mb-2'>Copywriting</h4>
+        <IoLaptopOutline className='text-5xl text-accent mb-2' />
+        <h4 className='text-lg font-semibold mb-2'>Frontend</h4>
         <p className='text-on-main-2'>
-          Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.
+          I create engaging, responsive user interfaces that blend performance with usability. By leveraging modern frameworks and best practices, I deliver pixel-perfect designs that work seamlessly across devices. My goal is to provide intuitive, accessible, and fast experiences for all users.
         </p>
       </div>
        <div>
-        <LiaLaptopSolid  className='text-5xl text-accent mb-2' />
-        <h4 className='text-lg font-semibold mb-2'>Web Design</h4>
+        <IoPhonePortraitOutline  className='text-5xl text-accent mb-2' />
+        <h4 className='text-lg font-semibold mb-2'>Mobile</h4>
         <p className='text-on-main-2'>
-          Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.
+          I develop high-quality native and cross-platform mobile applications that combine functionality with smooth performance. My work emphasizes efficient architecture, platform-specific optimizations, and a strong user experience, ensuring apps are both stable and delightful to use.
         </p>
       </div>
        <div>
         <GiFlyingFlag className='text-5xl text-accent mb-2' />
         <h4 className='text-lg font-semibold mb-2'>Management</h4>
         <p className='text-on-main-2'>
-          Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.
+          I lead teams with a focus on collaboration, efficiency, and delivering results. From project planning to code reviews, I ensure high standards are met while fostering a productive environment. My management style balances technical oversight with empowering team members.
         </p>
       </div>
     </div>

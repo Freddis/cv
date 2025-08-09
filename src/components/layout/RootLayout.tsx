@@ -2,7 +2,6 @@ import {HeadContent, Scripts, useLocation} from '@tanstack/react-router';
 import {FC, StrictMode, useEffect, useState} from 'react';
 import {cvRoute, homeRoute, projectsRoute} from '../../routes/routes';
 import {FaFacebook, FaGithub, FaLinkedin} from 'react-icons/fa6';
-import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {cn} from '../../utils/cn/cn';
 import {MainMenuLink} from '../elements/MainMenuLink';
 import {CvPage} from '../pages/Cv/CvPage';
@@ -119,7 +118,7 @@ export const RootLayout: FC = () => {
             <div className="hidden md:flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0 fixed min-h-screen">
               <div className='mt-10'>
                 <h2 className='text-3xl font-semibold mb-2'>Alex Sarychev</h2>
-                <h3 className='font-light'>Web Designer</h3>
+                <h3 className='font-light text-sm'>Full-Stack Web Developer</h3>
                 <div className='flex justify-center gap-3 text-lg mt-8'>
                   <FaLinkedin />
                   <FaGithub />
@@ -130,7 +129,6 @@ export const RootLayout: FC = () => {
                 <MainMenuLink to={homeRoute.id} onClick={savePrevLocation} className={cn('')}>Home</MainMenuLink>
                 <MainMenuLink to={cvRoute.id}  onClick={savePrevLocation}>Resume</MainMenuLink>
                 <MainMenuLink to={projectsRoute.id}  onClick={savePrevLocation}>Projects</MainMenuLink>
-                {/* <MainMenuLink to={projectsRoute.id}>About</MainMenuLink> */}
               </div>
               <div className='flex flex-col-reverse text-xs'>
                 2025 Alex S.
@@ -162,7 +160,6 @@ export const RootLayout: FC = () => {
           </div>
           <Scripts />
         </StrictMode>
-        <TanStackRouterDevtools position="bottom-right" />
       </body>
     </html>
   );
