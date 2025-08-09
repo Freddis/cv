@@ -82,7 +82,7 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
     </div>
   </div>
   
-  {/* <div className='w-full'>
+  <div className='w-full'>
     <div className='z-1 relative overflow-visible mb-10'>
       <div className='absolute top-[-2px] left-[-7px] z-0 w-5 h-5 bg-radial from-accent from-20%  to-transparent to-20% bg-size-[7px_7px] opacity-50'>
       </div>
@@ -105,7 +105,7 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
         <h4 className='text-on-main-3 text-4xl'>5</h4>
       </div>
     </div>
-  </div> */}
+  </div>
 
 </div>
   );

@@ -14,7 +14,7 @@ export const RootLayout: FC = () => {
   const [prevLocation,setPrevLocation] = useState('')
   const [firstRender, setFirstRender] = useState(true) 
   const [inClasses, setInClasses] = useState('visible relative');
-  const [outClasses, setOutClasses] = useState('visible absolute');
+  const [outClasses, setOutClasses] = useState('visible');
 
   useEffect(() => {
       if(firstRender){
@@ -26,8 +26,8 @@ export const RootLayout: FC = () => {
       if(!classes){
         throw new Error("Animation not found")
       }
-      setInClasses(`${classes[0]} visible in`)
-      setOutClasses(`${classes[1]} visible absolute out`)
+      setInClasses(`${classes[0]} visible relative`)
+      setOutClasses(`${classes[1]} visible`)
   },[location.pathname])
 
  const animations: [string, string][] = [
@@ -84,19 +84,22 @@ export const RootLayout: FC = () => {
   // ['animated-section-rotateUnfoldRight', 'animated-section-moveToLeftFade'],
   // ['animated-section-rotateUnfoldTop', 'animated-section-moveToBottomFade'],
   // ['animated-section-rotateUnfoldBottom', 'animated-section-moveToTopFade'],
+
   ['animated-section-rotateRoomLeftIn', 'animated-section-rotateRoomLeftOut animated-section-ontop'],
   ['animated-section-rotateRoomRightIn', 'animated-section-rotateRoomRightOut animated-section-ontop'],
   ['animated-section-rotateRoomTopIn', 'animated-section-rotateRoomTopOut animated-section-ontop'],
   ['animated-section-rotateRoomBottomIn', 'animated-section-rotateRoomBottomOut animated-section-ontop'],
-  ['animated-section-rotateCubeLeftIn', 'animated-section-rotateCubeLeftOut animated-section-ontop'],
-  ['animated-section-rotateCubeRightIn', 'animated-section-rotateCubeRightOut animated-section-ontop'],
-  ['animated-section-rotateCubeTopIn', 'animated-section-rotateCubeTopOut animated-section-ontop'],
-  ['animated-section-rotateCubeBottomIn', 'animated-section-rotateCubeBottomOut animated-section-ontop'],
-  ['animated-section-rotateCarouselLeftIn', 'animated-section-rotateCarouselLeftOut animated-section-ontop'],
-  ['animated-section-rotateCarouselRightIn', 'animated-section-rotateCarouselRightOut animated-section-ontop'],
-  ['animated-section-rotateCarouselTopIn', 'animated-section-rotateCarouselTopOut animated-section-ontop'],
-  ['animated-section-rotateCarouselBottomIn', 'animated-section-rotateCarouselBottomOut animated-section-ontop'],
-  ['animated-section-rotateSidesIn animated-section-delay200', 'animated-section-rotateSidesOut'],
+
+  // ['animated-section-rotateCubeLeftIn', 'animated-section-rotateCubeLeftOut animated-section-ontop'],
+  // ['animated-section-rotateCubeRightIn', 'animated-section-rotateCubeRightOut animated-section-ontop'],
+  // ['animated-section-rotateCubeTopIn', 'animated-section-rotateCubeTopOut animated-section-ontop'],
+  // ['animated-section-rotateCubeBottomIn', 'animated-section-rotateCubeBottomOut animated-section-ontop'],
+
+  // ['animated-section-rotateCarouselLeftIn', 'animated-section-rotateCarouselLeftOut animated-section-ontop'],
+  // ['animated-section-rotateCarouselRightIn', 'animated-section-rotateCarouselRightOut animated-section-ontop'],
+  // ['animated-section-rotateCarouselTopIn', 'animated-section-rotateCarouselTopOut animated-section-ontop'],
+  // ['animated-section-rotateCarouselBottomIn', 'animated-section-rotateCarouselBottomOut animated-section-ontop'],
+  // ['animated-section-rotateSidesIn animated-section-delay200', 'animated-section-rotateSidesOut'],
   // ['animated-section-rotateSlideIn', 'animated-section-rotateSlideOut']
 ];
 
