@@ -9,31 +9,25 @@ import {LiaLaptopSolid} from 'react-icons/lia';
 
 export const Home: FC = () => {
   return (
-<div className="flex flex-col w-full justify-start items-start bg-main text-on-main px-20 py-20">
-  <div className="grid grid-cols-12 items-start justify-center gap-10 mt-15 mb-20">
-    <div className='col-span-5 h-full flex flex-col justify-center relative'>
-      <div className='relative'>
-        <div className='rounded-full relative z-1 overflow-hidden border-[18px] border-surface border-solid' 
-        style={{boxShadow: '0px 0px 25px 0px rgba(0,0,0,.8)'}}>
-          <img className='filter-[grayscale(0.3)] bg-size-[100%] scale-120 relative top-8' src='/images/photo-real.jpg'/>
+<div className="flex flex-col w-full justify-start items-start bg-main text-on-main p-5 md:p20">
+  <div className="grid grid-cols-1 md:grid-cols-12 items-start justify-center gap-10 md:mt-15 mb-20">
+    <div className='md:col-span-5 h-full flex flex-col justify-center items-center relative w-full'>
+        <div className='rounded-full relative z-1 overflow-hidden border-[18px] border-surface border-solid max-w-120 shadow-neutral-900 shadow-lg'>
+          <img className='filter-[grayscale(0.3)] bg-size-[100%] scale-120 relative translate-y-[8%]' src='/images/photo-real.jpg'/>
         </div>
-        <div 
-          className='absolute left-[-7%] bg-size-[18px_18px] w-[45%] h-3/6 top-[-4%] z-0 opacity-5'
-          style={{backgroundImage: '-webkit-repeating-radial-gradient(center center, #fff, #fff 3px, transparent 0px, transparent 100%)'}}
-          >
-        </div>
+        <div className='absolute left-[-7%] bg-size-[18px_18px] w-[45%] h-3/6 top-[-4%] z-0 opacity-5  bg-radial from-white from-20%  to-transparent to-20% '>
       </div>
     </div>
-    <div className='col-span-7'>
+    <div className='md:col-span-7'>
       <h2 className='text-on-main-3 text-[16px]'>Full-Stack Web Developer</h2>
-      <Heading1 className='text-on-main text-[48px] font-[600] mb-2'>Alex Sarychev</Heading1>
+      <Heading1 className='text-on-main  text-4xl md:text-[48px] font-[600] mb-2'>Alex Sarychev</Heading1>
       <p className='text-on-main-2 text-[15px]/7 mb-5'>
    With over 14 years of experience in web and mobile development, I have consistently worked on complex, high-impact projects throughout my career. Passionate about technology, I stay up-to-date with industry-leading solutions and best practices in modern software development.
       </p>
             <p className='text-on-main-2 text-[15px]/7 mb-5'>
 I have strong expertise in multiple programming languages, including PHP, JavaScript, Typescript, Java, C#, and Swift, and am proficient in developing production-grade applications across these technologies. My technical knowledge, problem-solving skills, and commitment to high-quality code make me a reliable choice for challenging development tasks.
       </p>
-      <div className='flex gap-2'>
+      <div className='flex flex-col md:flex-row gap-2'>
         <button className='border-accent border-solid border-2 rounded-full px-6 py-2'>
           Download CV
         </button>
@@ -50,7 +44,7 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
       </div>
       <h3 className='text-xl font-semibold'>What <span className='text-accent'>I Do</span></h3>
     </div>
-    <div className='grid grid-cols-2 gap-x-10 gap-y-10 tracking-wide'>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10 tracking-wide'>
       <div>
         <IoCloudOutline className='text-5xl text-accent mb-2' />
         <h4 className='text-lg font-semibold mb-2'>Backend</h4>
@@ -88,7 +82,7 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
       </div>
       <h3 className='text-xl font-semibold'>Fun <span className='text-accent'>Facts</span></h3>
     </div>
-    <div className='grid grid-cols-3 gap-5'> 
+    <div className='grid grid-cols-1 md:grid-cols-3 gap-5'> 
       <div className='bg-surface-2 p-10 max-full flex  flex-col items-center border-around-surface-2 border-solid border-2 rounded-xl'>
         <FaHeartCircleCheck className='text-4xl text-accent' />
         <h3 className='font-semibold text-base mt-5 mb-5'>Happy Clients</h3>

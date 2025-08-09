@@ -114,7 +114,7 @@ export const RootLayout: FC = () => {
       <body className='font-[Poppins] bg-main'>
         <StrictMode>
           <div className="flex flex-row min-h-screen">
-            <div className='md:flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0 '></div>
+            <div className='hidden md:flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0 '></div>
             <div className="hidden md:flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0 fixed min-h-screen">
               <div className='mt-10'>
                 <h2 className='text-3xl font-semibold mb-2'>Alex Sarychev</h2>
