@@ -7,6 +7,7 @@ import {GoPencil} from 'react-icons/go';
 import {LiaLaptopSolid} from 'react-icons/lia';
 import {cvRoute} from '../../../routes/routes';
 import {Link} from '@tanstack/react-router';
+import {PrimaryButton} from '../../elements/PrimaryButton';
 
 
 export const Home: FC = () => {
@@ -30,12 +31,9 @@ export const Home: FC = () => {
 I have strong expertise in multiple programming languages, including PHP, JavaScript, Typescript, Java, C#, and Swift, and am proficient in developing production-grade applications across these technologies. My technical knowledge, problem-solving skills, and commitment to high-quality code make me a reliable choice for challenging development tasks.
       </p>
       <div className='flex flex-col md:flex-row gap-2'>
-        <button className='border-accent border-solid border-2 rounded-full px-6 py-2'>
-          Download CV
-        </button>
-        <button className='border-white border-solid border-2 rounded-full px-6 py-2'>
-          Contact
-        </button>
+        <a href='/files/Alex_Sarychev.pdf' download target='_blank'>
+        <PrimaryButton>Download CV</PrimaryButton> 
+        </a>
       </div>
     </div>
   </div>
@@ -78,7 +76,7 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
     </div>
   </div>
   
-  <div className='w-full'>
+  {/* <div className='w-full'>
     <div className='z-1 relative overflow-visible mb-10'>
       <div className='absolute top-[-2px] left-[-7px] z-0 w-5 h-5 bg-radial from-accent from-20%  to-transparent to-20% bg-size-[7px_7px] opacity-50'>
       </div>
@@ -101,7 +99,7 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
         <h4 className='text-on-main-3 text-4xl'>5</h4>
       </div>
     </div>
-  </div>
+  </div> */}
 
   <div className='md:hidden flex justify-center w-full mt-10 '>
     <Link to={cvRoute.id} className='border-accent border-solid border-2 rounded-full px-6 py-2 cursor-pointer'>

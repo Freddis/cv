@@ -2,9 +2,9 @@ import {FC} from 'react';
 import {JobHistory} from './components/JobHistory';
 import {PageHeader} from '../../elements/PageHeader';
 import {PageContainer} from '../../elements/PageContainer';
-import {Skills} from './components/Skills';
 import {Link} from '@tanstack/react-router';
 import {projectsRoute} from '../../../routes/routes';
+import {Skills} from './components/Skills';
 
 export const CvPage: FC = () => {
   return (
@@ -13,9 +13,6 @@ export const CvPage: FC = () => {
   <div className='flex flex-col lg:flex-row gap-5 w-full'> 
     <div className='grow'>
     <JobHistory />
-    </div>
-    <div className='min-w-80 w-full md:w-80 shrink-0 grow-0'>
-      <Skills />
     </div>
   </div>
     <div className='md:hidden flex justify-center w-full mt-10 '>

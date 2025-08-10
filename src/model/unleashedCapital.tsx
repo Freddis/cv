@@ -1,4 +1,5 @@
 import {Job} from "../types/Job";
+import {Tag} from "../types/Tag";
 
 export const unleashedCapital: Job = {
   from: new Date('2021-09-01'),
@@ -20,6 +21,11 @@ export const unleashedCapital: Job = {
        transformed to expected format which is usually significantly different for each level.
     </p>
   </p>),
+  skills: {
+    management: 0,
+    backend: 100,
+  },
+  tags: [Tag.typescirpt],
   company: {
     name: "Unleashed Capital GmbH",
     webiste: "unleashedcapital.com",

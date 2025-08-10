@@ -24,6 +24,7 @@ export const xsoft: Job = {
       </p>
     </div>
   ),
+  tags: []
 }
 
 

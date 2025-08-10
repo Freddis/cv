@@ -79,7 +79,7 @@ export const Skills: FC = () => {
         </div>
       </div>
 
-      <BlockHeader>Some Tags</BlockHeader>
+      <BlockHeader>Skills</BlockHeader>
       <div className='w-full flex gap-2 flex-wrap text-sm '>
         <span className='bg-accent px-2 py-1 rounded-sm '>Marketing</span>
         <span className='bg-accent px-2 py-1 rounded-sm  '>Print</span>

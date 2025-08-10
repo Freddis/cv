@@ -20,4 +20,5 @@ export const webrex: Job = {
       </p>
     </div>
   ),
+  tags: []
 }
