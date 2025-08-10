@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import {Education} from './components/Education';
+import {JobHistory} from './components/JobHistory';
 import {PageHeader} from '../../elements/PageHeader';
 import {PageContainer} from '../../elements/PageContainer';
 import {Skills} from './components/Skills';
@@ -12,9 +12,9 @@ export const CvPage: FC = () => {
   <PageHeader>Resume</PageHeader>
   <div className='flex flex-col lg:flex-row gap-5 w-full'> 
     <div className='grow'>
-    <Education />
+    <JobHistory />
     </div>
-    <div className='w-100 shrink-1'>
+    <div className='min-w-80 w-full md:w-80 shrink-0 grow-0'>
       <Skills />
     </div>
   </div>
