@@ -1,9 +1,9 @@
-import {Job} from "../types/Job"
+import {Job} from '../types/Job';
 
 export const paive: Job = {
   from: new Date('2011-09-01'),
   to: new Date('2012-02-01'),
-  title: "Junior Developer",
+  title: 'Junior Developer',
   company: {
     webiste: 'https://promo.orbios.com',
     name: 'PAIVE Media Group LLC',
@@ -22,4 +22,4 @@ export const paive: Job = {
       </p>
     </div>
   ),
-}
+};

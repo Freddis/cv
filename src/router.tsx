@@ -11,7 +11,7 @@ export function createRouter() {
     defaultNotFoundComponent: () => <NotFound />,
     scrollRestoration: true,
   });
-  
+
   return router;
 }
 

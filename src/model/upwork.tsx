@@ -1,10 +1,10 @@
-import {Job} from "../types/Job"
-import {Tag} from "../types/Tag"
+import {Job} from '../types/Job';
+import {Tag} from '../types/Tag';
 
 export const upwork: Job = {
   from: new Date('2019-02-01'),
   to: new Date('2021-09-01'),
-  title: "Top Rated+ Freelancer",
+  title: 'Top Rated+ Freelancer',
   company: {
     webiste: 'https://skyground.group',
     name: 'Upwork Inc.',
@@ -13,7 +13,7 @@ export const upwork: Job = {
     backend: 30,
     management: 10,
   },
-  tags: [Tag.java, Tag.typescirpt,Tag.javascript,Tag.php],
+  tags: [Tag.java, Tag.typescirpt, Tag.javascript, Tag.php],
   description: (
     <div>
       <p className="mb-2">Participated in various projects, such as payment system, booking website and visual configurator for house interior/exterior.</p>
@@ -34,4 +34,4 @@ export const upwork: Job = {
 
     </div>
   ),
-}
+};

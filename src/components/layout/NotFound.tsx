@@ -10,8 +10,8 @@ export function NotFound({children}: { children?: ReactNode }) {
       <div className="">
         <PageHeader>404</PageHeader>
         <p>Page does not exist.</p>
-        <div className='mt-10'>
-          <Link to='/'>
+        <div className="mt-10">
+          <Link to="/">
             <PrimaryButton>Home</PrimaryButton>
           </Link>
         </div>

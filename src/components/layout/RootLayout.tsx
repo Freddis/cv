@@ -12,8 +12,8 @@ import {MainMenu} from '../elements/MainMenu';
 
 export const RootLayout: FC = () => {
   const location = useLocation();
-  const [prevLocation,setPrevLocation] = useState('')
-  const [firstRender, setFirstRender] = useState(true) 
+  const [prevLocation, setPrevLocation] = useState('');
+  const [firstRender, setFirstRender] = useState(true);
   const [inClasses, setInClasses] = useState('visible relative');
   const [outClasses, setOutClasses] = useState('visible');
   const [showMenu, setShowMenu] = useState(false);
@@ -22,85 +22,85 @@ export const RootLayout: FC = () => {
     homeRoute,
     cvRoute,
     projectsRoute,
-  ]
-  const possibleLocations = routes.map(x => x.id)
-  const hiddenOrNot = showMenu ? '': 'hidden';
+  ];
+  const possibleLocations = routes.map((x) => x.id);
+  const hiddenOrNot = showMenu ? '' : 'hidden';
   useEffect(() => {
-      if(firstRender){
+    if (firstRender) {
           // preventing animations on the first render
-          setFirstRender(false);
-          return
-      }
-      const index = Math.floor(Math.random() * animations.length);
-      const classes = animations[index];
-      if(!classes){
-        throw new Error("Animation not found")
-      }
-      setInClasses(`${classes[0]} visible relative`)
-      setOutClasses(`${classes[1]} visible`)
-  },[location.pathname])
+      setFirstRender(false);
+      return;
+    }
+    const index = Math.floor(Math.random() * animations.length);
+    const classes = animations[index];
+    if (!classes) {
+      throw new Error('Animation not found');
+    }
+    setInClasses(`${classes[0]} visible relative`);
+    setOutClasses(`${classes[1]} visible`);
+  }, [location.pathname]);
 
- const animations: [string, string][] = [
+  const animations: [string, string][] = [
   ['animated-section-rotateRoomLeftIn', 'animated-section-rotateRoomLeftOut animated-section-ontop'],
   ['animated-section-rotateRoomRightIn', 'animated-section-rotateRoomRightOut animated-section-ontop'],
   ['animated-section-rotateRoomTopIn', 'animated-section-rotateRoomTopOut animated-section-ontop'],
   ['animated-section-rotateRoomBottomIn', 'animated-section-rotateRoomBottomOut animated-section-ontop'],
-];
+  ];
   const savePrevLocation: MouseEventHandler<HTMLAnchorElement> = (e) => {
-    setPrevLocation(window.location.pathname)
-    window.scrollTo(0,0)
-    setShowMenu(false)
-  }
+    setPrevLocation(window.location.pathname);
+    window.scrollTo(0, 0);
+    setShowMenu(false);
+  };
 
   return (
-    <html className='bg-main'>
+    <html className="bg-main">
       <head>
         <HeadContent />
       </head>
-      <body className='font-[Poppins] bg-main' >
+      <body className="font-[Poppins] bg-main" >
         <StrictMode>
           <div className="flex flex-row min-h-screen">
-            <div className='md:hidden'>
-              {showMenu && <MobileMenuDrawer onClose={()=> setShowMenu(false)}/>}
+            <div className="md:hidden">
+              {showMenu && <MobileMenuDrawer onClose={() => setShowMenu(false)}/>}
             </div>
-            <div className='hidden md:flex md:min-w-80'>
+            <div className="hidden md:flex md:min-w-80">
               <MainMenu onClick={savePrevLocation}/>
             </div>
             <div className="grow flex flex-col items-center relative overflow-hidden">
-              <div className='block md:hidden text-3xl text-accent absolute right-5 top-5 z-100 cursor-pointer'>
+              <div className="block md:hidden text-3xl text-accent absolute right-5 top-5 z-100 cursor-pointer">
                 <RxHamburgerMenu onClick={() => setShowMenu(!showMenu)} />
               </div>
               <div className={cn(
                 'max-w-7xl w-full min-h-screen invisible absolute',
-                homeRoute.id == location.pathname  ? inClasses : '',
-                homeRoute.id == prevLocation ? outClasses : ''
+                homeRoute.id === location.pathname ? inClasses : '',
+                homeRoute.id === prevLocation ? outClasses : ''
                 )}>
                 <Home />
               </div>
              <div className={cn(
                 'max-w-7xl w-full min-h-screen invisible absolute',
-                cvRoute.id == location.pathname  ? inClasses : '',
-                cvRoute.id == prevLocation ? outClasses : ''
+                cvRoute.id === location.pathname ? inClasses : '',
+                cvRoute.id === prevLocation ? outClasses : ''
                 )}>
                 <CvPage />
               </div>
                <div className={cn(
                 'max-w-7xl w-full min-h-screen invisible absolute',
-                projectsRoute.id == location.pathname  ? inClasses : '',
-                projectsRoute.id == prevLocation  ? outClasses : ''
+                projectsRoute.id === location.pathname ? inClasses : '',
+                projectsRoute.id === prevLocation ? outClasses : ''
                 )}>
                 <Projects />
               </div>
-              {!possibleLocations.find(x => x === location.pathname) && (
+              {!possibleLocations.find((x) => x === location.pathname) && (
                 <div className={cn(
                 'max-w-7xl w-full min-h-screen',
-                projectsRoute.id == location.pathname  ? inClasses : '',
-                projectsRoute.id == prevLocation  ? outClasses : ''
+                projectsRoute.id === location.pathname ? inClasses : '',
+                projectsRoute.id === prevLocation ? outClasses : ''
                 )}>
                 <NotFound/>
               </div>
               )}
-              
+
             </div>
           </div>
           <Scripts />

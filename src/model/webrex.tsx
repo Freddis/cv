@@ -1,9 +1,9 @@
-import {Job} from "../types/Job"
+import {Job} from '../types/Job';
 
 export const webrex: Job = {
   from: new Date('2012-02-01'),
   to: new Date('2012-08-01'),
-  title: "PHP Programmer",
+  title: 'PHP Programmer',
   company: {
     webiste: 'https://promo.orbios.com',
     name: 'Webrex LLC',
@@ -20,5 +20,5 @@ export const webrex: Job = {
       </p>
     </div>
   ),
-  tags: []
-}
+  tags: [],
+};

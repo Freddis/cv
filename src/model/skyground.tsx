@@ -1,10 +1,10 @@
-import {Job} from "../types/Job"
-import {Tag} from "../types/Tag"
+import {Job} from '../types/Job';
+import {Tag} from '../types/Tag';
 
 export const skyground: Job = {
   from: new Date('2023-11-01'),
   to: new Date('2025-02-22'),
-  title: "Tech Lead",
+  title: 'Tech Lead',
   company: {
     webiste: 'https://skyground.group',
     name: 'Skyground LLC',
@@ -12,7 +12,7 @@ export const skyground: Job = {
   tags: [Tag.javascript, Tag.typescirpt, Tag.jenkins],
   skills: {
     management: 60,
-    backend: 75
+    backend: 75,
   },
   description: (
     <div>
@@ -41,4 +41,4 @@ export const skyground: Job = {
       </ul>
     </div>
   ),
-}
+};

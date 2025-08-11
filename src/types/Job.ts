@@ -1,6 +1,6 @@
-import {ReactElement} from "react"
-import {Company} from "./Company"
-import {Tag} from "./Tag"
+import {ReactElement} from 'react';
+import {Company} from './Company';
+import {Tag} from './Tag';
 
 export interface Job {
   from: Date,

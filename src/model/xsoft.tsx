@@ -1,9 +1,9 @@
-import {Job} from "../types/Job";
+import {Job} from '../types/Job';
 
 export const xsoft: Job = {
   from: new Date('2012-08-01'),
   to: new Date('2013-04-01'),
-  title: "Frontend Team Lead",
+  title: 'Frontend Team Lead',
   company: {
     webiste: 'https://promo.orbios.com',
     name: 'X-Soft LLC',
@@ -24,8 +24,7 @@ export const xsoft: Job = {
       </p>
     </div>
   ),
-  tags: []
-}
-
+  tags: [],
+};
 
 

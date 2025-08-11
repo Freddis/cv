@@ -1,9 +1,9 @@
-import {Job} from "../types/Job";
+import {Job} from '../types/Job';
 
 export const alfabank: Job = {
   from: new Date('2013-08-01'),
   to: new Date('2014-02-01'),
-  title: "Project Manager",
+  title: 'Project Manager',
   company: {
     webiste: 'https://alfabank.com',
     name: 'Alpha Bank JSC',
@@ -23,4 +23,4 @@ export const alfabank: Job = {
       </p>
     </div>
   ),
-}
+};

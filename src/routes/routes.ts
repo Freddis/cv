@@ -20,7 +20,7 @@ export const cvRoute = createRoute({
   component: CvPage,
   path: '/cv',
   getParentRoute: () => rootRoute,
-})
+});
 
 export const routeTree = rootRoute.addChildren([
   homeRoute,

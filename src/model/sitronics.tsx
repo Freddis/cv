@@ -1,9 +1,9 @@
-import {Job} from "../types/Job";
+import {Job} from '../types/Job';
 
 export const sitronics: Job = {
   from: new Date('2014-02-01'),
   to: new Date('2014-07-01'),
-  title: "Web-Platform Architect",
+  title: 'Web-Platform Architect',
   company: {
     webiste: 'https://analit.net',
     name: 'Sitronics JSC',
@@ -22,4 +22,4 @@ read / write operations and statistics.
       </p>
     </div>
   ),
-}
+};

@@ -1,9 +1,9 @@
-import {Job} from "../types/Job";
+import {Job} from '../types/Job';
 
 export const analit: Job = {
   from: new Date('2014-08-01'),
   to: new Date('2015-10-01'),
-  title: "Head of Department",
+  title: 'Head of Department',
   company: {
     webiste: 'https://analit.net',
     name: 'Analytic Centr LLC',
@@ -25,4 +25,4 @@ export const analit: Job = {
       </p>
     </div>
   ),
-}
+};
