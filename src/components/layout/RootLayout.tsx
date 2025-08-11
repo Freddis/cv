@@ -1,15 +1,14 @@
-import {HeadContent, Link, Scripts, useLocation, useNavigate} from '@tanstack/react-router';
+import {HeadContent, Scripts, useLocation} from '@tanstack/react-router';
 import {FC, MouseEventHandler, StrictMode, useEffect, useState} from 'react';
 import {cvRoute, homeRoute, projectsRoute} from '../../routes/routes';
-import {FaBurger, FaFacebook, FaGithub, FaLinkedin} from 'react-icons/fa6';
 import {cn} from '../../utils/cn/cn';
-import {MainMenuLink} from '../elements/MainMenuLink';
 import {CvPage} from '../pages/Cv/CvPage';
 import {Home} from '../pages/Home/Home';
 import {Projects} from '../pages/Projects/Projects';
 import {RxHamburgerMenu} from 'react-icons/rx';
-import {PrimaryButton} from '../elements/PrimaryButton';
 import {NotFound} from './NotFound';
+import {MobileMenuDrawer} from '../elements/MobileMenuDrawer';
+import {MainMenu} from '../elements/MainMenu';
 
 export const RootLayout: FC = () => {
   const location = useLocation();
@@ -28,6 +27,7 @@ export const RootLayout: FC = () => {
   const hiddenOrNot = showMenu ? '': 'hidden';
   useEffect(() => {
       if(firstRender){
+          // preventing animations on the first render
           setFirstRender(false);
           return
       }
@@ -60,25 +60,11 @@ export const RootLayout: FC = () => {
       <body className='font-[Poppins] bg-main' >
         <StrictMode>
           <div className="flex flex-row min-h-screen">
-            <div className={cn('z-1000 fixed md:static md:flex flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0',hiddenOrNot)}></div>
-            <div className={cn("z-1000 fixed flex md:flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0  min-h-screen",hiddenOrNot)}>
-              <div className='mt-10'>
-                <h2 className='text-3xl font-semibold mb-2'>Alex Sarychev</h2>
-                <h3 className='font-light text-sm'>Full-Stack Web Developer</h3>
-                <div className='flex justify-center gap-3 text-lg mt-8'>
-                  <FaLinkedin />
-                  <FaGithub />
-                  <FaFacebook />                
-                </div>
-              </div>
-              <div className='flex flex-col grow gap-8 text-xl  justify-center'>
-                <MainMenuLink to={homeRoute.id} onClick={savePrevLocation} className={cn('')}>Home</MainMenuLink>
-                <MainMenuLink to={cvRoute.id}  onClick={savePrevLocation}>Resume</MainMenuLink>
-                <MainMenuLink to={projectsRoute.id}  onClick={savePrevLocation}>Projects</MainMenuLink>
-              </div>
-              <div className='flex flex-col-reverse text-xs'>
-                2025 Alex S.
-              </div>
+            <div className='md:hidden'>
+              {showMenu && <MobileMenuDrawer onClose={()=> setShowMenu(false)}/>}
+            </div>
+            <div className='hidden md:flex md:min-w-80'>
+              <MainMenu onClick={savePrevLocation}/>
             </div>
             <div className="grow flex flex-col items-center relative overflow-hidden">
               <div className='block md:hidden text-3xl text-accent absolute right-5 top-5 z-100 cursor-pointer'>

@@ -7,7 +7,7 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
   const to: string =  `${job.to.getFullYear()}/${(job.to.getMonth()+1).toString().padStart(2,'0')}`;
   return (
     <div className='flex gap-5'>
-        <div className='hidden md:flex flex-col items-end text-right w-38 shrink-0 grow-0 pt-2'>
+        <div className='hidden lg:flex flex-col items-end text-right w-38 shrink-0 grow-0 pt-2'>
           <div>{from} - {to}</div>
           <div className='text-on-main-3 text-sm'>{job.company.name}</div>
         </div>
@@ -19,7 +19,7 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
           <div className='font-semibold text-xl mb-2 pt-2'>
             {job.title}
           </div>
-          <div className="md:hidden mb-2">
+          <div className="lg:hidden mb-2">
             <div>{from} - {to}</div>
             <div className='text-on-main-3 text-sm'>{job.company.name}</div>
           </div>
