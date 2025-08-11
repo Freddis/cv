@@ -43,12 +43,12 @@ export const RootLayout: FC = () => {
   const animations: [string, string][] = [
   ['animated-section-rotateRoomLeftIn', 'animated-section-rotateRoomLeftOut animated-section-ontop'],
   ['animated-section-rotateRoomRightIn', 'animated-section-rotateRoomRightOut animated-section-ontop'],
-  ['animated-section-rotateRoomTopIn', 'animated-section-rotateRoomTopOut animated-section-ontop'],
-  ['animated-section-rotateRoomBottomIn', 'animated-section-rotateRoomBottomOut animated-section-ontop'],
+  // ['animated-section-rotateRoomTopIn', 'animated-section-rotateRoomTopOut animated-section-ontop'],
+  // ['animated-section-rotateRoomBottomIn', 'animated-section-rotateRoomBottomOut animated-section-ontop'],
   ];
   const savePrevLocation: MouseEventHandler<HTMLAnchorElement> = (e) => {
     setPrevLocation(window.location.pathname);
-    window.scrollTo(0, 0);
+    window.scrollTo({top: 0, behavior: 'smooth'});
     setShowMenu(false);
   };
 
@@ -91,7 +91,7 @@ export const RootLayout: FC = () => {
                 )}>
                 <Projects />
               </div>
-              {!possibleLocations.find((x) => x === location.pathname) && (
+              {/* {!possibleLocations.find((x) => x === location.pathname) && (
                 <div className={cn(
                 'max-w-7xl w-full min-h-screen',
                 projectsRoute.id === location.pathname ? inClasses : '',
@@ -99,7 +99,7 @@ export const RootLayout: FC = () => {
                 )}>
                 <NotFound/>
               </div>
-              )}
+              )} */}
 
             </div>
           </div>

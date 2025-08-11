@@ -10,6 +10,10 @@ export const MobileMenuDrawer: FC<{onClose: () => void}> = ({onClose}) => {
     // onAnimatedObjectGone is going to be final step
     setDisplayed(false);
   };
+  const menuClick = () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    close();
+  }
   const onAnimatedObjectGone = () => {
     // calling onClose, letting the parent element know menu is gone and it can be removed from DOM
     onClose();
@@ -32,7 +36,7 @@ export const MobileMenuDrawer: FC<{onClose: () => void}> = ({onClose}) => {
       animation="left-0"
       onClick={blockClick}
       >
-        <MainMenu className="flex" onClick={() => close()} />
+        <MainMenu className="flex" onClick={menuClick} />
       </Animated>
   </div>
   );
