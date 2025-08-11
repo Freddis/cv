@@ -2,7 +2,8 @@ import {FC} from 'react';
 import {PageHeader} from '../../elements/PageHeader';
 import {PageContainer} from '../../elements/PageContainer';
 import {Link} from '@tanstack/react-router';
-import {cvRoute, homeRoute} from '../../../routes/routes';
+import {homeRoute} from '../../../routes/routes';
+import {PrimaryButton} from '../../elements/PrimaryButton';
 
 export const Projects: FC = () => {
   return (
@@ -31,11 +32,9 @@ export const Projects: FC = () => {
          
         </div>
       </div>
-        <div className='md:hidden flex justify-center w-full mt-10 '>
-          <Link to={homeRoute.id} className='border-accent border-solid border-2 rounded-full px-6 py-2 cursor-pointer'>
-            Home
-          </Link>
-        </div>
+      <div className='md:hidden w-full flex justify-center mt-20'>
+        <PrimaryButton onClick={() => window.scrollTo(0,0)}>To the top</PrimaryButton>
+      </div>
     </PageContainer>
   );
 };

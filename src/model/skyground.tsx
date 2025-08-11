@@ -27,18 +27,18 @@ export const skyground: Job = {
       </p>
       <p className="mb-2">
         Accomplishments:
-        <ul>
-          <li>1. Have written Documentation and solidified Jira workflows</li>
-          <li>2. Integrated tests (both browser and integrational) and CI pipelines.</li>
-          <li>2. Developed a new framework for frontend and backend projects. Input / Output fully typechecked.
-            Used OpenAPI and Zod to achieve the same effect as tRPC but more flexible and tailored to our needs.</li>
-          <li>3. Taken DevOps responsibilities, constantly was working on improving CD pipelines</li>
-          <li>4. Developed an ETL service that had to process more than 10 million updates daily.
-            RMQ and some functionality to correct problems remotely such as reuploading some data.</li>
-          <li>5. Developed a cache system to show stats on open trades such as open PNL  that processed 10 million ticks and trades daily.
-            The whole forex server (25k users and 7k open trades) processed within 5 seconds using Typescript only.</li>
-        </ul>
       </p>
+      <ul>
+        <li>1. Have written Documentation and solidified Jira workflows</li>
+        <li>2. Integrated tests (both browser and integrational) and CI pipelines.</li>
+        <li>2. Developed a new framework for frontend and backend projects. Input / Output fully typechecked.
+          Used OpenAPI and Zod to achieve the same effect as tRPC but more flexible and tailored to our needs.</li>
+        <li>3. Taken DevOps responsibilities, constantly was working on improving CD pipelines</li>
+        <li>4. Developed an ETL service that had to process more than 10 million updates daily.
+          RMQ and some functionality to correct problems remotely such as reuploading some data.</li>
+        <li>5. Developed a cache system to show stats on open trades such as open PNL  that processed 10 million ticks and trades daily.
+          The whole forex server (25k users and 7k open trades) processed within 5 seconds using Typescript only.</li>
+      </ul>
     </div>
   ),
 }

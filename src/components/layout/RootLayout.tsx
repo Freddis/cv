@@ -1,5 +1,5 @@
-import {HeadContent, Scripts, useLocation} from '@tanstack/react-router';
-import {FC, StrictMode, useEffect, useState} from 'react';
+import {HeadContent, Link, Scripts, useLocation, useNavigate} from '@tanstack/react-router';
+import {FC, MouseEventHandler, StrictMode, useEffect, useState} from 'react';
 import {cvRoute, homeRoute, projectsRoute} from '../../routes/routes';
 import {FaBurger, FaFacebook, FaGithub, FaLinkedin} from 'react-icons/fa6';
 import {cn} from '../../utils/cn/cn';
@@ -7,6 +7,8 @@ import {MainMenuLink} from '../elements/MainMenuLink';
 import {CvPage} from '../pages/Cv/CvPage';
 import {Home} from '../pages/Home/Home';
 import {Projects} from '../pages/Projects/Projects';
+import {RxHamburgerMenu} from 'react-icons/rx';
+import {PrimaryButton} from '../elements/PrimaryButton';
 
 export const RootLayout: FC = () => {
   const location = useLocation();
@@ -14,7 +16,9 @@ export const RootLayout: FC = () => {
   const [firstRender, setFirstRender] = useState(true) 
   const [inClasses, setInClasses] = useState('visible relative');
   const [outClasses, setOutClasses] = useState('visible');
+  const [showMenu, setShowMenu] = useState(false);
 
+  const hiddenOrNot = showMenu ? '': 'hidden';
   useEffect(() => {
       if(firstRender){
           setFirstRender(false);
@@ -30,92 +34,27 @@ export const RootLayout: FC = () => {
   },[location.pathname])
 
  const animations: [string, string][] = [
-  // ['animated-section-moveFromRight', 'animated-section-moveToLeft'],
-  // ['animated-section-moveFromLeft', 'animated-section-moveToRight'],
-  // ['animated-section-moveFromBottom', 'animated-section-moveToTop'],
-  // ['animated-section-moveFromTop', 'animated-section-moveToBottom'],
-  // ['animated-section-moveFromRight animated-section-ontop', 'animated-section-fade'],
-  // ['animated-section-moveFromLeft animated-section-ontop', 'animated-section-fade'],
-  // ['animated-section-moveFromBottom animated-section-ontop', 'animated-section-fade'],
-  // ['animated-section-moveFromTop animated-section-ontop', 'animated-section-fade'],
-  // ['animated-section-moveFromRightFade', 'animated-section-moveToLeftFade'],
-  // ['animated-section-moveFromLeftFade', 'animated-section-moveToRightFade'],
-  // ['animated-section-moveFromBottomFade', 'animated-section-moveToTopFade'],
-  // ['animated-section-moveFromTopFade', 'animated-section-moveToBottomFade'],
-  // ['animated-section-moveFromRight', 'animated-section-moveToLeftEasing animated-section-ontop'],
-  // ['animated-section-moveFromLeft', 'animated-section-moveToRightEasing animated-section-ontop'],
-  // ['animated-section-moveFromBottom', 'animated-section-moveToTopEasing animated-section-ontop'],
-  // ['animated-section-moveFromTop', 'animated-section-moveToBottomEasing animated-section-ontop'],
-  // ['animated-section-moveFromRight animated-section-ontop', 'animated-section-scaleDown'],
-  // ['animated-section-moveFromLeft animated-section-ontop', 'animated-section-scaleDown'],
-  // ['animated-section-moveFromBottom animated-section-ontop', 'animated-section-scaleDown'],
-  // ['animated-section-moveFromTop animated-section-ontop', 'animated-section-scaleDown'],
-  // ['animated-section-scaleUpDown animated-section-delay300', 'animated-section-scaleDown'],
-  // ['animated-section-scaleUp animated-section-delay300', 'animated-section-scaleDownUp'],
-  // ['animated-section-scaleUp', 'animated-section-moveToLeft animated-section-ontop'],
-  // ['animated-section-scaleUp', 'animated-section-moveToRight animated-section-ontop'],
-  // ['animated-section-scaleUp', 'animated-section-moveToTop animated-section-ontop'],
-  // ['animated-section-scaleUp', 'animated-section-moveToBottom animated-section-ontop'],
-  // ['animated-section-scaleUpCenter animated-section-delay400', 'animated-section-scaleDownCenter'],
-  // ['animated-section-moveFromRight animated-section-delay200 animated-section-ontop', 'animated-section-rotateRightSideFirst'],
-  // ['animated-section-moveFromLeft animated-section-delay200 animated-section-ontop', 'animated-section-rotateLeftSideFirst'],
-  // ['animated-section-moveFromTop animated-section-delay200 animated-section-ontop', 'animated-section-rotateTopSideFirst'],
-  // ['animated-section-moveFromBottom animated-section-delay200 animated-section-ontop', 'animated-section-rotateBottomSideFirst'],
-  // ['animated-section-flipInLeft animated-section-delay500', 'animated-section-flipOutRight'],
-  // ['animated-section-flipInRight animated-section-delay500', 'animated-section-flipOutLeft'],
-  // ['animated-section-flipInBottom animated-section-delay500', 'animated-section-flipOutTop'],
-  // ['animated-section-flipInTop animated-section-delay500', 'animated-section-flipOutBottom'],
-  // ['animated-section-scaleUp', 'animated-section-rotateFall animated-section-ontop'],
-  // ['animated-section-rotateInNewspaper animated-section-delay500', 'animated-section-rotateOutNewspaper'],
-  // ['animated-section-moveFromRight', 'animated-section-rotatePushLeft'],
-  // ['animated-section-moveFromLeft', 'animated-section-rotatePushRight'],
-  // ['animated-section-moveFromBottom', 'animated-section-rotatePushTop'],
-  // ['animated-section-moveFromTop', 'animated-section-rotatePushBottom'],
-  // ['animated-section-rotatePullRight animated-section-delay180', 'animated-section-rotatePushLeft'],
-  // ['animated-section-rotatePullLeft animated-section-delay180', 'animated-section-rotatePushRight'],
-  // ['animated-section-rotatePullBottom animated-section-delay180', 'animated-section-rotatePushTop'],
-  // ['animated-section-rotatePullTop animated-section-delay180', 'animated-section-rotatePushBottom'],
-  // ['animated-section-moveFromRightFade', 'animated-section-rotateFoldLeft'],
-  // ['animated-section-moveFromLeftFade', 'animated-section-rotateFoldRight'],
-  // ['animated-section-moveFromBottomFade', 'animated-section-rotateFoldTop'],
-  // ['animated-section-moveFromTopFade', 'animated-section-rotateFoldBottom'],
-  // ['animated-section-rotateUnfoldLeft', 'animated-section-moveToRightFade'],
-  // ['animated-section-rotateUnfoldRight', 'animated-section-moveToLeftFade'],
-  // ['animated-section-rotateUnfoldTop', 'animated-section-moveToBottomFade'],
-  // ['animated-section-rotateUnfoldBottom', 'animated-section-moveToTopFade'],
-
   ['animated-section-rotateRoomLeftIn', 'animated-section-rotateRoomLeftOut animated-section-ontop'],
   ['animated-section-rotateRoomRightIn', 'animated-section-rotateRoomRightOut animated-section-ontop'],
   ['animated-section-rotateRoomTopIn', 'animated-section-rotateRoomTopOut animated-section-ontop'],
   ['animated-section-rotateRoomBottomIn', 'animated-section-rotateRoomBottomOut animated-section-ontop'],
-
-  // ['animated-section-rotateCubeLeftIn', 'animated-section-rotateCubeLeftOut animated-section-ontop'],
-  // ['animated-section-rotateCubeRightIn', 'animated-section-rotateCubeRightOut animated-section-ontop'],
-  // ['animated-section-rotateCubeTopIn', 'animated-section-rotateCubeTopOut animated-section-ontop'],
-  // ['animated-section-rotateCubeBottomIn', 'animated-section-rotateCubeBottomOut animated-section-ontop'],
-
-  // ['animated-section-rotateCarouselLeftIn', 'animated-section-rotateCarouselLeftOut animated-section-ontop'],
-  // ['animated-section-rotateCarouselRightIn', 'animated-section-rotateCarouselRightOut animated-section-ontop'],
-  // ['animated-section-rotateCarouselTopIn', 'animated-section-rotateCarouselTopOut animated-section-ontop'],
-  // ['animated-section-rotateCarouselBottomIn', 'animated-section-rotateCarouselBottomOut animated-section-ontop'],
-  // ['animated-section-rotateSidesIn animated-section-delay200', 'animated-section-rotateSidesOut'],
-  // ['animated-section-rotateSlideIn', 'animated-section-rotateSlideOut']
 ];
-
-  function savePrevLocation(): void {
+  const savePrevLocation: MouseEventHandler<HTMLAnchorElement> = (e) => {
     setPrevLocation(window.location.pathname)
+    window.scrollTo(0,0)
+    setShowMenu(false)
   }
 
   return (
-    <html>
+    <html className='bg-main'>
       <head>
         <HeadContent />
       </head>
-      <body className='font-[Poppins] bg-main'>
+      <body className='font-[Poppins] bg-main' >
         <StrictMode>
           <div className="flex flex-row min-h-screen">
-            <div className='hidden md:flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0 '></div>
-            <div className="hidden md:flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0 fixed min-h-screen">
+            <div className={cn('z-1000 fixed md:static md:flex flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0',hiddenOrNot)}></div>
+            <div className={cn("z-1000 fixed flex md:flex flex-col gap-5 0 p-5 text-center bg-surface text-on-surface w-80 shrink-0  min-h-screen",hiddenOrNot)}>
               <div className='mt-10'>
                 <h2 className='text-3xl font-semibold mb-2'>Alex Sarychev</h2>
                 <h3 className='font-light text-sm'>Full-Stack Web Developer</h3>
@@ -135,6 +74,9 @@ export const RootLayout: FC = () => {
               </div>
             </div>
             <div className="grow flex flex-col items-center relative overflow-hidden">
+              <div className='block md:hidden text-3xl text-accent absolute right-5 top-5 z-100 cursor-pointer'>
+                <RxHamburgerMenu onClick={() => setShowMenu(!showMenu)} />
+              </div>
               <div className={cn(
                 'max-w-7xl w-full min-h-screen invisible absolute',
                 homeRoute.id == location.pathname  ? inClasses : '',
@@ -156,6 +98,7 @@ export const RootLayout: FC = () => {
                 )}>
                 <Projects />
               </div>
+              
             </div>
           </div>
           <Scripts />

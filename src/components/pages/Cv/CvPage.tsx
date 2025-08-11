@@ -2,9 +2,7 @@ import {FC} from 'react';
 import {JobHistory} from './components/JobHistory';
 import {PageHeader} from '../../elements/PageHeader';
 import {PageContainer} from '../../elements/PageContainer';
-import {Link} from '@tanstack/react-router';
-import {projectsRoute} from '../../../routes/routes';
-import {Skills} from './components/Skills';
+import {PrimaryButton} from '../../elements/PrimaryButton';
 
 export const CvPage: FC = () => {
   return (
@@ -15,10 +13,8 @@ export const CvPage: FC = () => {
     <JobHistory />
     </div>
   </div>
-    <div className='md:hidden flex justify-center w-full mt-10 '>
-      <Link to={projectsRoute.id} className='border-accent border-solid border-2 rounded-full px-6 py-2 cursor-pointer'>
-        Projects
-      </Link>
+  <div className='md:hidden w-full flex justify-center mt-20'>
+    <PrimaryButton onClick={() => window.scrollTo(0,0)}>To the top</PrimaryButton>
   </div>
 </PageContainer>
   );

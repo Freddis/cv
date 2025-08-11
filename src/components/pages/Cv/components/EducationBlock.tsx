@@ -4,7 +4,7 @@ import {Job} from "../../../../types/Job";
 export const EducationBlock:FC = () => {
   const education: Job = {
     from: new Date('2008-09-01'),
-    to: new Date('2012-06-31'),
+    to: new Date('2012-06-01'),
     title: "Bachelor Degree in Development of CAD Systems",
     description: <div></div>,
     company: {
@@ -13,8 +13,8 @@ export const EducationBlock:FC = () => {
     }
   }
   const job = education;
-  const from: string  =  `${job.from.getFullYear()}/${(job.from.getMonth()+1).toString().padStart(2,'0')}`;
-  const to: string =  `${job.to.getFullYear()}/${(job.to.getMonth()+1).toString().padStart(2,'0')}`;
+  const from: string  =  `${job.from.getFullYear()}`;
+  const to: string =  `${job.to.getFullYear()}`;
 
   return (
      <div className='flex gap-5'>
@@ -30,7 +30,6 @@ export const EducationBlock:FC = () => {
           </div>
           <div className="md:hidden mb-2">
             <div>{from} - {to}</div>
-            <div className='text-on-main-3 text-sm'>{job.company.name}</div>
           </div>
           <div className='text-sm/relaxed text-on-main-2 mb-5'>
             {job.company.name}

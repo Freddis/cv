@@ -1,6 +1,5 @@
 import {FC} from "react";
 import {Job} from "../../../../types/Job";
-import {BlockHeader} from "../../../elements/BlockHeader";
 import {Percentage} from "./Percentage";
 
 export const JobBlock: FC<{job: Job}> = ({job}) => {
@@ -17,17 +16,18 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
           </div>
         </div>
         <div>
-          <div className='font-semibold text-lg mb-2 pt-2'>
+          <div className='font-semibold text-xl mb-2 pt-2'>
             {job.title}
           </div>
           <div className="md:hidden mb-2">
             <div>{from} - {to}</div>
             <div className='text-on-main-3 text-sm'>{job.company.name}</div>
           </div>
-          <div className="flex flex-col md:flex-row gap-5">
-            <div className='text-sm/relaxed text-on-main-2 mb-0 md:mb-10'>
+          <div className="flex flex-col xl:flex-row gap-5">
+            <div className='text-base/relaxed text-on-main-2 mb-0 md:mb-10'>
               {job.description}
             </div>
+
             <div className='min-w-80 w-full md:w-80 shrink-0 grow-0 mb-10'>
               {job.skills?.management !== undefined && (
                 <>
@@ -43,9 +43,9 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
               )}
               {job.tags && job.tags.length > 0  && (
                 <>
-                  <BlockHeader>Skills</BlockHeader>
+                  {/* <BlockHeader>Skills</BlockHeader> */}
                   <div className='w-full flex gap-2 flex-wrap text-sm '>
-                    {job.tags.map( x => <span className='bg-accent px-2 py-1 rounded-sm '>{x}</span>)}
+                    {job.tags.map( x => <span key={x} className='bg-accent px-2 py-1 rounded-sm '>{x}</span>)}
                   </div>
                 </>
               )}

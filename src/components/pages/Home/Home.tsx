@@ -1,19 +1,14 @@
 import {FC} from 'react';
 import {Heading1} from '../../elements/Heading1';
-import {FaClock, FaCode, FaFlag, FaHeartCircleCheck, FaStar} from 'react-icons/fa6';
 import {GiFlyingFlag} from 'react-icons/gi';
-import {IoCloudOutline, IoCloudSharp, IoCodeSlashOutline, IoLaptopOutline, IoPhonePortraitOutline, IoStorefrontSharp} from 'react-icons/io5';
-import {GoPencil} from 'react-icons/go';
-import {LiaLaptopSolid} from 'react-icons/lia';
-import {cvRoute} from '../../../routes/routes';
-import {Link} from '@tanstack/react-router';
+import {IoCloudOutline, IoLaptopOutline, IoPhonePortraitOutline} from 'react-icons/io5';
 import {PrimaryButton} from '../../elements/PrimaryButton';
 
 
 export const Home: FC = () => {
   return (
-<div className="flex flex-col w-full justify-start items-start bg-main text-on-main p-5 md:p20">
-  <div className="grid grid-cols-1 md:grid-cols-12 items-start justify-center gap-10 md:mt-15 mb-20">
+<div className="flex flex-col w-full justify-start items-start bg-main text-on-main p-5 md:p-20">
+  <div className="grid grid-cols-1 md:grid-cols-12 items-start justify-center gap-10 md:mt-15">
     <div className='md:col-span-5 h-full flex flex-col justify-center items-center relative w-full'>
         <div className='rounded-full relative z-1 overflow-hidden border-[18px] border-surface border-solid max-w-120 shadow-neutral-900 shadow-lg'>
           <img className='filter-[grayscale(0.3)] bg-size-[100%] scale-120 relative translate-y-[8%]' src='/images/photo-real.jpg'/>
@@ -30,7 +25,7 @@ export const Home: FC = () => {
             <p className='text-on-main-2 text-[15px]/7 mb-5'>
 I have strong expertise in multiple programming languages, including PHP, JavaScript, Typescript, Java, C#, and Swift, and am proficient in developing production-grade applications across these technologies. My technical knowledge, problem-solving skills, and commitment to high-quality code make me a reliable choice for challenging development tasks.
       </p>
-      <div className='flex flex-col md:flex-row gap-2'>
+      <div className='flex flex-col md:flex-row gap-2 mb-20'>
         <a href='/files/Alex_Sarychev.pdf' download target='_blank'>
         <PrimaryButton>Download CV</PrimaryButton> 
         </a>
@@ -74,6 +69,9 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
         </p>
       </div>
     </div>
+    <div className='md:hidden w-full flex justify-center mt-20'>
+      <PrimaryButton onClick={() => window.scrollTo(0,0)}>To the top</PrimaryButton>
+    </div>
   </div>
   
   {/* <div className='w-full'>
@@ -100,12 +98,6 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
       </div>
     </div>
   </div> */}
-
-  <div className='md:hidden flex justify-center w-full mt-10 '>
-    <Link to={cvRoute.id} className='border-accent border-solid border-2 rounded-full px-6 py-2 cursor-pointer'>
-      Resume
-    </Link>
-  </div>
 
 </div>
   );
