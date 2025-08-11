@@ -9,6 +9,7 @@ import {Home} from '../pages/Home/Home';
 import {Projects} from '../pages/Projects/Projects';
 import {RxHamburgerMenu} from 'react-icons/rx';
 import {PrimaryButton} from '../elements/PrimaryButton';
+import {NotFound} from './NotFound';
 
 export const RootLayout: FC = () => {
   const location = useLocation();
@@ -18,6 +19,12 @@ export const RootLayout: FC = () => {
   const [outClasses, setOutClasses] = useState('visible');
   const [showMenu, setShowMenu] = useState(false);
 
+  const routes = [
+    homeRoute,
+    cvRoute,
+    projectsRoute,
+  ]
+  const possibleLocations = routes.map(x => x.id)
   const hiddenOrNot = showMenu ? '': 'hidden';
   useEffect(() => {
       if(firstRender){
@@ -98,6 +105,15 @@ export const RootLayout: FC = () => {
                 )}>
                 <Projects />
               </div>
+              {!possibleLocations.find(x => x === location.pathname) && (
+                <div className={cn(
+                'max-w-7xl w-full min-h-screen',
+                projectsRoute.id == location.pathname  ? inClasses : '',
+                projectsRoute.id == prevLocation  ? outClasses : ''
+                )}>
+                <NotFound/>
+              </div>
+              )}
               
             </div>
           </div>
