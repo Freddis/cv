@@ -1,4 +1,4 @@
-import {TagGroup} from '../types/TagGroup';
+import {TagGroup} from '../../types/TagGroup';
 
 export const groupMap: Record<TagGroup, { color: string }> = {
   [TagGroup.Languages]: {

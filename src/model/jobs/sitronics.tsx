@@ -1,5 +1,5 @@
-import {Job} from '../types/Job';
-import {Tag} from '../types/Tag';
+import {Job} from '../../types/Job';
+import {Tag} from '../../types/Tag';
 
 export const sitronics: Job = {
   from: new Date('2014-02-01'),

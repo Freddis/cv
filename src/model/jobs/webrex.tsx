@@ -1,5 +1,5 @@
-import {Job} from '../types/Job';
-import {Tag} from '../types/Tag';
+import {Job} from '../../types/Job';
+import {Tag} from '../../types/Tag';
 
 export const webrex: Job = {
   from: new Date('2012-02-01'),

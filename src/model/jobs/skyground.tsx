@@ -1,5 +1,5 @@
-import {Job} from '../types/Job';
-import {Tag} from '../types/Tag';
+import {Job} from '../../types/Job';
+import {Tag} from '../../types/Tag';
 
 export const skyground: Job = {
   from: new Date('2023-11-01'),

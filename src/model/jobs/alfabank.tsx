@@ -1,5 +1,5 @@
-import {Job} from '../types/Job';
-import {Tag} from '../types/Tag';
+import {Job} from '../../types/Job';
+import {Tag} from '../../types/Tag';
 
 export const alfabank: Job = {
   from: new Date('2013-08-01'),

@@ -1,6 +1,6 @@
 import {FC} from 'react';
 import {Tag} from '../../types/Tag';
-import {groupMap} from '../../model/groupMap';
+import {groupMap} from '../../model/jobs/groupMap';
 import {tagMap} from '../../model/tagMap';
 
 
