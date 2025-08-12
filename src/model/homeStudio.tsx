@@ -1,4 +1,5 @@
 import {Job} from '../types/Job';
+import {Tag} from '../types/Tag';
 
 export const homeStudio: Job = {
   from: new Date('2015-11-01'),
@@ -8,6 +9,28 @@ export const homeStudio: Job = {
     webiste: 'https://skyground.group',
     name: 'Home-Studio LLC',
   },
+    skills: {
+      management: 0,
+      backend: 100,
+    },
+      tags: [
+      Tag.javascript, 
+      Tag.typescript, 
+      Tag.jenkins, 
+      Tag.kubernetes,
+      Tag.postgreSQL,
+      Tag.redis,
+      Tag.protobuf,
+      Tag.nestJS,
+      Tag.Angular,
+      Tag.Vue,
+      Tag.nodeJs,
+      Tag.Webpack,
+      Tag.websocket,
+      Tag.typeORM,
+      Tag.vbox,
+      Tag.kubernetes
+    ],
   description: (
     <div>
       <p className="mb-2">

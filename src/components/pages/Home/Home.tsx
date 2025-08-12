@@ -4,6 +4,8 @@ import {GiFlyingFlag} from 'react-icons/gi';
 import {IoCloudOutline, IoLaptopOutline, IoPhonePortraitOutline} from 'react-icons/io5';
 import {PrimaryButton} from '../../elements/PrimaryButton';
 import {ScrollToTopButton} from '../../elements/ScrollToTopButton';
+import {BlockHeader} from '../../elements/BlockHeader';
+import {TagListBlock} from './components/TagListBlock';
 
 export const Home: FC = () => {
   return (
@@ -33,7 +35,7 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
     </div>
   </div>
 
-  <div className="mb-20">
+  <div className="mb-10">
     <div className="z-1 relative overflow-visible mb-10">
       <div className="absolute top-[-2px] left-[-7px] z-0 w-5 h-5 bg-radial from-accent from-20%  to-transparent to-20% bg-size-[7px_7px] opacity-50">
       </div>
@@ -69,9 +71,14 @@ I have strong expertise in multiple programming languages, including PHP, JavaSc
         </p>
       </div>
     </div>
-    <ScrollToTopButton/>
   </div>
 
+  
+<div className='mb-10'>
+  <BlockHeader>Skills <span className='text-accent'>And Tools</span></BlockHeader>
+  <TagListBlock/>
+  <ScrollToTopButton/>
+</div>
   {/* <div className='w-full'>
     <div className='z-1 relative overflow-visible mb-10'>
       <div className='absolute top-[-2px] left-[-7px] z-0 w-5 h-5 bg-radial from-accent from-20%  to-transparent to-20% bg-size-[7px_7px] opacity-50'>

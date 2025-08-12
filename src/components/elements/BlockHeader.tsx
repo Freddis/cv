@@ -1,6 +1,6 @@
-import {FC} from 'react';
+import {FC, ReactNode} from 'react';
 
-export const BlockHeader: FC<{children: string}> = ({children}) => {
+export const BlockHeader: FC<{children: ReactNode}> = ({children}) => {
 
   return (
          <div className="z-1 relative overflow-visible mb-2">

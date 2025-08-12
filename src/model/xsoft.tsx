@@ -1,4 +1,5 @@
 import {Job} from '../types/Job';
+import {Tag} from '../types/Tag';
 
 export const xsoft: Job = {
   from: new Date('2012-08-01'),
@@ -8,6 +9,19 @@ export const xsoft: Job = {
     webiste: 'https://promo.orbios.com',
     name: 'X-Soft LLC',
   },
+  skills: {
+    management: 40,
+    backend: 0,
+  },
+  tags: [
+    Tag.javascript,
+    Tag.ajax, 
+    Tag.HTML, 
+    Tag.CSS, 
+    Tag.Angular,
+    Tag.longPolling,
+    Tag.redmine
+  ],
   description: (
     <div>
       <p className="mb-2">
@@ -24,7 +38,6 @@ export const xsoft: Job = {
       </p>
     </div>
   ),
-  tags: [],
 };
 
 

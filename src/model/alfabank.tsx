@@ -1,4 +1,5 @@
 import {Job} from '../types/Job';
+import {Tag} from '../types/Tag';
 
 export const alfabank: Job = {
   from: new Date('2013-08-01'),
@@ -8,6 +9,12 @@ export const alfabank: Job = {
     webiste: 'https://alfabank.com',
     name: 'Alpha Bank JSC',
   },
+  skills: {
+    management: 85,
+  },
+  tags: [
+    Tag.php, Tag.pHPUnit,Tag.selenium, Tag.javascript
+  ],
   description: (
     <div>
       <p className="mb-2">

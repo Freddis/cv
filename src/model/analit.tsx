@@ -1,4 +1,5 @@
 import {Job} from '../types/Job';
+import {Tag} from '../types/Tag';
 
 export const analit: Job = {
   from: new Date('2014-08-01'),
@@ -8,6 +9,17 @@ export const analit: Job = {
     webiste: 'https://analit.net',
     name: 'Analytic Centr LLC',
   },
+  skills: {
+    management: 60,
+    backend: 70,
+  },
+  tags: [
+    Tag.cSharp,
+    Tag.Hibernate,
+    Tag.management,
+    Tag.redmine,
+    Tag.ASPNETMVC
+  ],
   description: (
     <div>
       <p className="mb-2">

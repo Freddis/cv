@@ -1,4 +1,5 @@
 import {Job} from '../types/Job';
+import {Tag} from '../types/Tag';
 
 export const webrex: Job = {
   from: new Date('2012-02-01'),
@@ -8,6 +9,13 @@ export const webrex: Job = {
     webiste: 'https://promo.orbios.com',
     name: 'Webrex LLC',
   },
+  skills: {
+    management: 0,
+    backend: 80,
+  },
+  tags: [
+    Tag.php,Tag.javascript, Tag.ajax, Tag.HTML, Tag.CSS, Tag.jquery
+  ],
   description: (
     <div>
       <p className="mb-2">
@@ -19,6 +27,5 @@ export const webrex: Job = {
         One of my achievements on that job is automatization of the coupon creation process.
       </p>
     </div>
-  ),
-  tags: [],
+  )
 };

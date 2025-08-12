@@ -13,7 +13,25 @@ export const upwork: Job = {
     backend: 30,
     management: 10,
   },
-  tags: [Tag.java, Tag.typescirpt, Tag.javascript, Tag.php],
+  tags: [
+    Tag.java, 
+    Tag.typescript,
+    Tag.javascript,
+    Tag.php,
+    Tag.cSharp,
+    Tag.Angular,
+    Tag.Vue,
+    Tag.HTML,
+    Tag.CSS,
+    Tag.Webpack,
+    Tag.swift,
+    Tag.react,
+    Tag.mysql,
+    Tag.postgreSQL,
+    Tag.redis,
+    Tag.Jira,
+    Tag.nodeJs,
+    ],
   description: (
     <div>
       <p className="mb-2">Participated in various projects, such as payment system, booking website and visual configurator for house interior/exterior.</p>

@@ -1,6 +1,7 @@
 import {FC} from 'react';
 import {Job} from '../../../../types/Job';
 import {Percentage} from './Percentage';
+import {TagBlock} from '../../../elements/TagBlock';
 
 export const JobBlock: FC<{job: Job}> = ({job}) => {
   const from: string = `${job.from.getFullYear()}/${(job.from.getMonth() + 1).toString().padStart(2, '0')}`;
@@ -35,7 +36,7 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
                 {job.skills.management !== 100 && <Percentage title="Coding" color="green" value={100 - job.skills.management} />}
                 </>
               )}
-              {job.skills?.backend && (
+              {job.skills?.backend !== undefined && (
                 <>
                 {job.skills.backend !== 0 && <Percentage title="Backend" color="red" value={job.skills.backend} />}
                 {job.skills.backend !== 100 && <Percentage title="Frontend" color="orange" value={100 - job.skills.backend} />}
@@ -45,7 +46,7 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
                 <>
                   {/* <BlockHeader>Skills</BlockHeader> */}
                   <div className="w-full flex gap-2 flex-wrap text-sm ">
-                    {job.tags.map((x) => <span key={x} className="bg-accent px-2 py-1 rounded-sm ">{x}</span>)}
+                    {job.tags.map((x) => <TagBlock key={x} skill={x} />)}
                   </div>
                 </>
               )}

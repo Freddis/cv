@@ -1,4 +1,5 @@
 import {Job} from '../types/Job';
+import {Tag} from '../types/Tag';
 
 export const sitronics: Job = {
   from: new Date('2014-02-01'),
@@ -8,6 +9,13 @@ export const sitronics: Job = {
     webiste: 'https://analit.net',
     name: 'Sitronics JSC',
   },
+  skills: {
+    management: 0,
+    backend: 30,
+  },
+  tags: [
+    Tag.php, Tag.pHPUnit,Tag.selenium, Tag.javascript, Tag.websocket, Tag.Gulp,Tag.SVG, Tag.HTML,Tag.CSS,
+  ],
   description: (
     <div>
       <p className="mb-2">
