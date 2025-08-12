@@ -14,7 +14,7 @@ export const sitronics: Job = {
     backend: 30,
   },
   tags: [
-    Tag.php, Tag.pHPUnit,Tag.selenium, Tag.javascript, Tag.websocket, Tag.Gulp,Tag.SVG, Tag.HTML,Tag.CSS,
+    Tag.php, Tag.pHPUnit, Tag.selenium, Tag.javascript, Tag.websocket, Tag.Gulp, Tag.SVG, Tag.HTML, Tag.CSS,
   ],
   description: (
     <div>

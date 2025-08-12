@@ -16,9 +16,8 @@ export const analit: Job = {
   tags: [
     Tag.cSharp,
     Tag.Hibernate,
-    Tag.management,
     Tag.redmine,
-    Tag.ASPNETMVC
+    Tag.ASPNETMVC,
   ],
   description: (
     <div>

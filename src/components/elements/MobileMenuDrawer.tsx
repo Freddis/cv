@@ -13,7 +13,7 @@ export const MobileMenuDrawer: FC<{onClose: () => void}> = ({onClose}) => {
   const menuClick = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
     close();
-  }
+  };
   const onAnimatedObjectGone = () => {
     // calling onClose, letting the parent element know menu is gone and it can be removed from DOM
     onClose();
@@ -23,7 +23,6 @@ export const MobileMenuDrawer: FC<{onClose: () => void}> = ({onClose}) => {
     e.stopPropagation();
   };
 
-  const hiddenOrNot = '';
   return (
     <div className="md:w-80" onClick={close}>
       <Animated onHide={onAnimatedObjectGone}

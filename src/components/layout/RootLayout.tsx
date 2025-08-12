@@ -24,10 +24,9 @@ export const RootLayout: FC = () => {
     projectsRoute,
   ];
   const possibleLocations = routes.map((x) => x.id);
-  const hiddenOrNot = showMenu ? '' : 'hidden';
   useEffect(() => {
     if (firstRender) {
-          // preventing animations on the first render
+      // preventing animations on the first render
       setFirstRender(false);
       return;
     }
@@ -46,7 +45,7 @@ export const RootLayout: FC = () => {
   // ['animated-section-rotateRoomTopIn', 'animated-section-rotateRoomTopOut animated-section-ontop'],
   // ['animated-section-rotateRoomBottomIn', 'animated-section-rotateRoomBottomOut animated-section-ontop'],
   ];
-  const savePrevLocation: MouseEventHandler<HTMLAnchorElement> = (e) => {
+  const savePrevLocation: MouseEventHandler<HTMLAnchorElement> = () => {
     setPrevLocation(window.location.pathname);
     window.scrollTo({top: 0, behavior: 'smooth'});
     setShowMenu(false);
@@ -91,7 +90,7 @@ export const RootLayout: FC = () => {
                 )}>
                 <Projects />
               </div>
-              {/* {!possibleLocations.find((x) => x === location.pathname) && (
+              {!possibleLocations.find((x) => x === location.pathname) && (
                 <div className={cn(
                 'max-w-7xl w-full min-h-screen',
                 projectsRoute.id === location.pathname ? inClasses : '',
@@ -99,7 +98,7 @@ export const RootLayout: FC = () => {
                 )}>
                 <NotFound/>
               </div>
-              )} */}
+              )}
 
             </div>
           </div>

@@ -14,7 +14,7 @@ export const webrex: Job = {
     backend: 80,
   },
   tags: [
-    Tag.php,Tag.javascript, Tag.ajax, Tag.HTML, Tag.CSS, Tag.jquery
+    Tag.php, Tag.javascript, Tag.ajax, Tag.HTML, Tag.CSS, Tag.jquery,
   ],
   description: (
     <div>
@@ -27,5 +27,5 @@ export const webrex: Job = {
         One of my achievements on that job is automatization of the coupon creation process.
       </p>
     </div>
-  )
+  ),
 };

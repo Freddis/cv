@@ -13,7 +13,7 @@ export const alfabank: Job = {
     management: 85,
   },
   tags: [
-    Tag.php, Tag.pHPUnit,Tag.selenium, Tag.javascript
+    Tag.php, Tag.pHPUnit, Tag.selenium, Tag.javascript,
   ],
   description: (
     <div>

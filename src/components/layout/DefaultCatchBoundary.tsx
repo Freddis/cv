@@ -1,4 +1,4 @@
-import {ErrorComponent, ErrorComponentProps} from '@tanstack/react-router';
+import {ErrorComponentProps} from '@tanstack/react-router';
 import {PageContainer} from '../elements/PageContainer';
 import {PageHeader} from '../elements/PageHeader';
 

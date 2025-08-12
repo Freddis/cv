@@ -7,6 +7,6 @@ export enum TagGroup {
   CDCI = 'CDCI',
   Observability = 'Observability',
   Management = 'Management',
-  Techniques = "Techniques",
+  Techniques = 'Techniques',
   Other = 'Other'
 }

@@ -15,12 +15,12 @@ export const xsoft: Job = {
   },
   tags: [
     Tag.javascript,
-    Tag.ajax, 
-    Tag.HTML, 
-    Tag.CSS, 
-    Tag.Angular,
+    Tag.ajax,
+    Tag.HTML,
+    Tag.CSS,
+    Tag.angular,
     Tag.longPolling,
-    Tag.redmine
+    Tag.redmine,
   ],
   description: (
     <div>

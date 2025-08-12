@@ -14,7 +14,7 @@ export const paive: Job = {
     backend: 30,
   },
   tags: [
-    Tag.php,Tag.javascript, Tag.ajax, Tag.HTML, Tag.CSS, Tag.jquery,Tag.mooTools
+    Tag.php, Tag.javascript, Tag.ajax, Tag.HTML, Tag.CSS, Tag.jquery, Tag.mooTools,
   ],
   description: (
     <div>

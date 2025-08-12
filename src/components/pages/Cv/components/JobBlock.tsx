@@ -44,9 +44,8 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
               )}
               {job.tags && job.tags.length > 0 && (
                 <>
-                  {/* <BlockHeader>Skills</BlockHeader> */}
                   <div className="w-full flex gap-2 flex-wrap text-sm ">
-                    {job.tags.map((x) => <TagBlock key={x} skill={x} />)}
+                    {job.tags.map((x) => <TagBlock key={x} tag={x} />)}
                   </div>
                 </>
               )}

@@ -8,7 +8,8 @@ export const MainMenuLink: FC<LinkComponentProps> = (props) => {
   const activeClass = isActive ? 'text-accent scale-103' : '';
   return (
     <Link
-    {...props} className={cn('text-xl tracking-wider font-semibold text-on-main hover:text-accent duration-500 transition-all ', activeClass)}
+    {...props}
+    className={cn('text-xl tracking-wider font-semibold text-on-main hover:text-accent duration-500 transition-all ', activeClass)}
     >{props.children}</Link>
   );
 };

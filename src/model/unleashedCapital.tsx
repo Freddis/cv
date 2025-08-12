@@ -27,10 +27,10 @@ export const unleashedCapital: Job = {
     management: 0,
     backend: 100,
   },
-    tags: [
-    Tag.javascript, 
-    Tag.typescript, 
-    Tag.jenkins, 
+  tags: [
+    Tag.javascript,
+    Tag.typescript,
+    Tag.jenkins,
     Tag.kubernetes,
     Tag.postgreSQL,
     Tag.redis,

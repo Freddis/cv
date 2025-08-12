@@ -1,7 +1,7 @@
-import {ProgrammingLangauge} from "../types/ProgrammingLangauge";
-import { Tag } from "../types/Tag";
-import { TagGroup } from "../types/TagGroup";
-import {TagProps} from "../types/tagProps";
+import {ProgrammingLangauge} from '../types/ProgrammingLangauge';
+import {Tag} from '../types/Tag';
+import {TagGroup} from '../types/TagGroup';
+import {TagProps} from '../types/TagProps';
 
 export const tagMap: Record<Tag, TagProps> = {
   // --- ProgrammingLangauges ---
@@ -17,8 +17,8 @@ export const tagMap: Record<Tag, TagProps> = {
     language: [ProgrammingLangauge.CSharp],
     categories: [TagGroup.Languages, TagGroup.Backend],
   },
-  [Tag.c]: { language: [ProgrammingLangauge.C], categories: [TagGroup.Languages] },
-  [Tag.cpp]: { language: [ProgrammingLangauge.Cpp], categories: [TagGroup.Languages] },
+  [Tag.c]: {language: [ProgrammingLangauge.C], categories: [TagGroup.Languages]},
+  [Tag.cpp]: {language: [ProgrammingLangauge.Cpp], categories: [TagGroup.Languages]},
   [Tag.java]: {
     language: [ProgrammingLangauge.Java],
     categories: [TagGroup.Languages, TagGroup.Backend, TagGroup.Mobile],
@@ -37,23 +37,20 @@ export const tagMap: Record<Tag, TagProps> = {
   },
 
   // --- Management ---
-  [Tag.productManagement]: { language: null, categories: [TagGroup.Management] },
-  [Tag.management]: { language: null, categories: [TagGroup.Management] },
-  [Tag.redmine]: { language: null, categories: [TagGroup.Management] },
-  [Tag.Jira]: { language: null, categories: [TagGroup.Management] },
-  [Tag.Assembla]: { language: null, categories: [TagGroup.Management] },
+  [Tag.redmine]: {language: null, categories: [TagGroup.Management]},
+  [Tag.Jira]: {language: null, categories: [TagGroup.Management]},
+  [Tag.Assembla]: {language: null, categories: [TagGroup.Management]},
 
   // --- CDCI ---
-  [Tag.jenkins]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.teamCity]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.gitlab]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.gitHub]: { language: null, categories: [TagGroup.CDCI] },
+  [Tag.jenkins]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.teamCity]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.gitlab]: {language: null, categories: [TagGroup.CDCI]},
 
   // --- Observability ---
-  [Tag.bugsnag]: { language: null, categories: [TagGroup.Observability] },
-  [Tag.sentry]: { language: null, categories: [TagGroup.Observability] },
-  [Tag.elk]: { language: null, categories: [TagGroup.Observability] },
-  [Tag.prometheus]: { language: null, categories: [TagGroup.Observability] },
+  [Tag.bugsnag]: {language: null, categories: [TagGroup.Observability]},
+  [Tag.sentry]: {language: null, categories: [TagGroup.Observability]},
+  [Tag.elk]: {language: null, categories: [TagGroup.Observability]},
+  [Tag.prometheus]: {language: null, categories: [TagGroup.Observability]},
 
   // --- Libraries ---
   [Tag.jquery]: {
@@ -64,17 +61,17 @@ export const tagMap: Record<Tag, TagProps> = {
     language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
     categories: [TagGroup.Techniques, TagGroup.Frontend],
   },
-  [Tag.websocket]: { language: null, categories: [TagGroup.Techniques] },
-  [Tag.graphql]: { language: null, categories: [TagGroup.Techniques] },
-  [Tag.openApi]: { language: null, categories: [TagGroup.Techniques] },
-  [Tag.longPolling]: { language: null, categories: [TagGroup.Techniques] },
-  [Tag.protobuf]: { language: null, categories: [TagGroup.Techniques] },
+  [Tag.websocket]: {language: null, categories: [TagGroup.Techniques]},
+  [Tag.graphql]: {language: null, categories: [TagGroup.Techniques]},
+  [Tag.openApi]: {language: null, categories: [TagGroup.Techniques]},
+  [Tag.longPolling]: {language: null, categories: [TagGroup.Techniques]},
+  [Tag.protobuf]: {language: null, categories: [TagGroup.Techniques]},
   [Tag.trpc]: {
     language: [ProgrammingLangauge.TypeScript],
     categories: [TagGroup.Backend, TagGroup.Backend],
   },
-  [Tag.kue]: { language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.Backend] },
-  [Tag.bull]: { language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.Backend] },
+  [Tag.kue]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.Backend]},
+  [Tag.bull]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.Backend]},
   [Tag.redux]: {
     language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
     categories: [TagGroup.Frontend],
@@ -176,7 +173,7 @@ export const tagMap: Record<Tag, TagProps> = {
     categories: [TagGroup.Databases, TagGroup.Backend],
   },
   [Tag.sqLite]: {
-   language: null,
+    language: null,
     categories: [TagGroup.Databases, TagGroup.Backend],
   },
   [Tag.mariaDb]: {
@@ -205,10 +202,10 @@ export const tagMap: Record<Tag, TagProps> = {
     language: null,
     categories: [TagGroup.Backend, TagGroup.Backend],
   },
-  [Tag.mt5]: { language: [ProgrammingLangauge.C, ProgrammingLangauge.Cpp], categories: [TagGroup.Other] },
-  [Tag.mt4]: { language: [ProgrammingLangauge.C, ProgrammingLangauge.Cpp], categories: [TagGroup.Other] },
-  [Tag.HTTP]: { language: null, categories: [TagGroup.Other] },
-  [Tag.TCP]: { language: null, categories: [TagGroup.Other] },
+  [Tag.mt5]: {language: [ProgrammingLangauge.C, ProgrammingLangauge.Cpp], categories: [TagGroup.Other]},
+  [Tag.mt4]: {language: [ProgrammingLangauge.C, ProgrammingLangauge.Cpp], categories: [TagGroup.Other]},
+  [Tag.HTTP]: {language: null, categories: [TagGroup.Other]},
+  [Tag.TCP]: {language: null, categories: [TagGroup.Other]},
 
   // --- Mobile ---
   [Tag.reactNative]: {
@@ -217,36 +214,36 @@ export const tagMap: Record<Tag, TagProps> = {
   },
 
   // --- Techniques ---
-  [Tag.designSystem]: { language: null, categories: [TagGroup.Techniques, TagGroup.Frontend] },
-  [Tag.CodeGen]: { language: null, categories: [TagGroup.Techniques] },
-  [Tag.Scaling]: { language: null, categories: [TagGroup.Techniques] },
-  [Tag.Replication]: { language: null, categories: [TagGroup.Techniques] },
+  [Tag.designSystem]: {language: null, categories: [TagGroup.Techniques, TagGroup.Frontend]},
+  [Tag.CodeGen]: {language: null, categories: [TagGroup.Techniques]},
+  [Tag.Scaling]: {language: null, categories: [TagGroup.Techniques]},
+  [Tag.Replication]: {language: null, categories: [TagGroup.Techniques]},
 
   // --- Other ---
-  [Tag.vbox]: { language: null, categories: [TagGroup.CDCI] },
+  [Tag.vbox]: {language: null, categories: [TagGroup.CDCI]},
   [Tag.tanstackStart]: {
     language: [ProgrammingLangauge.TypeScript],
     categories: [TagGroup.Frontend],
   },
-  [Tag.tanstackQuery]: { language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.Frontend] },
-  [Tag.docker]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.aws]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.awsFargate]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.awsLambda]: { language: null, categories: [TagGroup.Backend] },
-  [Tag.kubernetes]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.Vite]: { language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.CDCI] },
-  [Tag.Webpack]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.Gulp]: { language: [ProgrammingLangauge.JavaScript], categories: [TagGroup.CDCI] },
-  [Tag.Apache]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.Nginx]: { language: null, categories: [TagGroup.CDCI] },
+  [Tag.tanstackQuery]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.Frontend]},
+  [Tag.docker]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.aws]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.awsFargate]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.awsLambda]: {language: null, categories: [TagGroup.Backend]},
+  [Tag.kubernetes]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.Vite]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.CDCI]},
+  [Tag.Webpack]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.Gulp]: {language: [ProgrammingLangauge.JavaScript], categories: [TagGroup.CDCI]},
+  [Tag.Apache]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.Nginx]: {language: null, categories: [TagGroup.CDCI]},
 
   // --- Testing ---
-  [Tag.selenium]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.playwright]: { language: null, categories: [TagGroup.CDCI] },
-  [Tag.mocha]: { language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.CDCI] },
-  [Tag.nunit]: { language: [ProgrammingLangauge.CSharp], categories: [TagGroup.CDCI] },
-  [Tag.pHPUnit]: { language: [ProgrammingLangauge.PHP], categories: [TagGroup.CDCI] },
-  [Tag.jUnit]: { language: [ProgrammingLangauge.Java], categories: [TagGroup.CDCI] },
+  [Tag.selenium]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.playwright]: {language: null, categories: [TagGroup.CDCI]},
+  [Tag.mocha]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], categories: [TagGroup.CDCI]},
+  [Tag.nunit]: {language: [ProgrammingLangauge.CSharp], categories: [TagGroup.CDCI]},
+  [Tag.pHPUnit]: {language: [ProgrammingLangauge.PHP], categories: [TagGroup.CDCI]},
+  [Tag.jUnit]: {language: [ProgrammingLangauge.Java], categories: [TagGroup.CDCI]},
   [Tag.prisma]: {
     language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
     categories: [TagGroup.Backend],
@@ -330,6 +327,30 @@ export const tagMap: Record<Tag, TagProps> = {
   [Tag.AWSCloudWatch]: {
     language: null,
     categories: [TagGroup.Observability],
+  },
+  [Tag.UML]: {
+    language: null,
+    categories: [TagGroup.Management],
+  },
+  [Tag.Kanban]: {
+    language: null,
+    categories: [TagGroup.Management],
+  },
+  [Tag.Scrum]: {
+    language: null,
+    categories: [TagGroup.Management],
+  },
+  [Tag.Agile]: {
+    language: null,
+    categories: [TagGroup.Management],
+  },
+  [Tag.Waterfall]: {
+    language: null,
+    categories: [TagGroup.Management],
+  },
+  [Tag.gha]: {
+    language: null,
+    categories: [TagGroup.CDCI],
   },
 };
 

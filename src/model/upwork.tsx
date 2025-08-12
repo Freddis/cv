@@ -14,12 +14,12 @@ export const upwork: Job = {
     management: 10,
   },
   tags: [
-    Tag.java, 
+    Tag.java,
     Tag.typescript,
     Tag.javascript,
     Tag.php,
     Tag.cSharp,
-    Tag.Angular,
+    Tag.angular,
     Tag.Vue,
     Tag.HTML,
     Tag.CSS,
@@ -31,10 +31,12 @@ export const upwork: Job = {
     Tag.redis,
     Tag.Jira,
     Tag.nodeJs,
-    ],
+  ],
   description: (
     <div>
-      <p className="mb-2">Participated in various projects, such as payment system, booking website and visual configurator for house interior/exterior.</p>
+      <p className="mb-2">
+        Participated in various projects, such as payment system, booking website and visual configurator for house interior/exterior.
+      </p>
       <p className="mb-2">My account has 2 Top Rated badges (normal and high budget projects), Job Success Score: 100%.</p>
       <p className="mb-2 font-semibold">Notable SOA / Microservice Projects:</p>
       <p className="mb-2 ml-4">

@@ -1,10 +1,10 @@
-import {ReactNode} from 'react';
+import {FC} from 'react';
 import {PageContainer} from '../elements/PageContainer';
 import {PageHeader} from '../elements/PageHeader';
 import {PrimaryButton} from '../elements/PrimaryButton';
 import {Link} from '@tanstack/react-router';
 
-export function NotFound({children}: { children?: ReactNode }) {
+export const NotFound: FC = () => {
   return (
     <PageContainer>
       <div className="">
@@ -18,4 +18,4 @@ export function NotFound({children}: { children?: ReactNode }) {
       </div>
     </PageContainer>
   );
-}
+};

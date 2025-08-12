@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { tagMap } from "../../../../model/tagMap";
-import { Tag } from "../../../../types/Tag";
-import { TagGroup } from "../../../../types/TagGroup";
-import { TagBlock } from "../../../elements/TagBlock";
+import {FC} from 'react';
+import {tagMap} from '../../../../model/tagMap';
+import {Tag} from '../../../../types/Tag';
+import {TagGroup} from '../../../../types/TagGroup';
+import {TagBlock} from '../../../elements/TagBlock';
 
 export const TagListBlock: FC = () => {
   const getTagsForGroup = (group: TagGroup): Tag[] => {
@@ -20,15 +20,14 @@ export const TagListBlock: FC = () => {
 
     return raw;
   };
-  const groups = getGroups();
   return (
     <>
       {getGroups().map((group) => (
-        <div className="mb-5">
+        <div key={group} className="mb-5">
           <h2 className="text-base font-semibold mb-2">{group}:</h2>
           <div className="flex flex-wrap gap-2">
             {getTagsForGroup(group).map((tag) => (
-              <TagBlock key={tag} skill={tag} />
+              <TagBlock key={tag} tag={tag} />
             ))}
           </div>
         </div>
