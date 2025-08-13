@@ -2,14 +2,14 @@ import {FC} from 'react';
 import {tagMap} from '../../../../model/tagMap';
 import {Tag} from '../../../../types/Tag';
 import {TagGroup} from '../../../../types/TagGroup';
-import {TagBlock} from '../../../elements/TagBlock';
+import {TagList} from '../../../elements/TagList';
 
-export const TagListBlock: FC = () => {
+export const TagOverviewBlock: FC = () => {
   const getTagsForGroup = (group: TagGroup): Tag[] => {
-    // const tags =  Object.keys(tagProps).filter( x => tagProps[x]?.categories[0] === group);
-    const tags = Object.keys(tagMap).filter((x) =>
-      tagMap[x]?.categories?.includes(group)
-    );
+    const tags = Object.keys(tagMap).filter((x) => tagMap[x]?.groups[0] === group);
+    // const tags = Object.keys(tagMap).filter((x) =>
+    //   tagMap[x]?.groups?.includes(group)
+    // );
 
     return tags;
   };
@@ -26,9 +26,7 @@ export const TagListBlock: FC = () => {
         <div key={group} className="mb-5">
           <h2 className="text-base font-semibold mb-2">{group}:</h2>
           <div className="flex flex-wrap gap-2">
-            {getTagsForGroup(group).map((tag) => (
-              <TagBlock key={tag} tag={tag} />
-            ))}
+           <TagList tags={getTagsForGroup(group)}/>
           </div>
         </div>
       ))}

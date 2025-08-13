@@ -7,13 +7,14 @@ export const alfabank: Job = {
   title: 'Project Manager',
   company: {
     webiste: 'https://alfabank.com',
-    name: 'Alpha Bank JSC',
+    name: 'Alfa Bank JSC',
   },
   skills: {
     management: 85,
   },
   tags: [
     Tag.php, Tag.pHPUnit, Tag.selenium, Tag.javascript,
+    Tag.Waterfall,
   ],
   description: (
     <div>

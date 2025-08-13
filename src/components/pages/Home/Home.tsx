@@ -5,7 +5,7 @@ import {IoCloudOutline, IoLaptopOutline, IoPhonePortraitOutline} from 'react-ico
 import {PrimaryButton} from '../../elements/PrimaryButton';
 import {ScrollToTopButton} from '../../elements/ScrollToTopButton';
 import {BlockHeader} from '../../elements/BlockHeader';
-import {TagListBlock} from './components/TagListBlock';
+import {TagOverviewBlock} from './components/TagOverviewBlock';
 
 export const Home: FC = () => {
   return (
@@ -91,7 +91,7 @@ export const Home: FC = () => {
 
 <div className="mb-10">
   <BlockHeader>Skills <span className="text-accent">And Tools</span></BlockHeader>
-  <TagListBlock/>
+  <TagOverviewBlock/>
   <ScrollToTopButton/>
 </div>
   {/* <div className="w-full">

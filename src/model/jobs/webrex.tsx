@@ -6,7 +6,6 @@ export const webrex: Job = {
   to: new Date('2012-08-01'),
   title: 'PHP Programmer',
   company: {
-    webiste: 'https://promo.orbios.com',
     name: 'Webrex LLC',
   },
   skills: {

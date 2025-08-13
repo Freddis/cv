@@ -22,8 +22,10 @@ export const analit: Job = {
   description: (
     <div>
       <p className="mb-2">
-        Analytic Center is a collaboration of the internet provider Inforum ( http://ivrn.net) and
-        AnalitFarmacia (http://analit.net) which is a digital marketplace for drugstores and
+        Analytic Center is a collaboration of the internet
+        provider <a href={'http://ivrn.net'} target="_blank" className="text-accent/70">Inforum</a> and
+        &nbsp; <a href={'http://analit.net'} target="_blank" className="text-accent/70">AnalitFarmacia</a> which
+         is a digital marketplace for drugstores and
         pharmaceutical companies around Russia. The IT department had been relocated to Moscow
         due to difficulties in recruitment and it served the needs of both Inforum and AnalitFarmacia.
       </p>

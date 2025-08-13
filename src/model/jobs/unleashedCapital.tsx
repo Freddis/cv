@@ -47,7 +47,6 @@ export const unleashedCapital: Job = {
   ],
   company: {
     name: 'Unleashed Capital GmbH',
-    webiste: 'unleashedcapital.com',
     bankrupcyDate: new Date('2023-12-23'),
   },
 };

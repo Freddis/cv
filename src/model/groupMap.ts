@@ -1,34 +1,34 @@
-import {TagGroup} from '../../types/TagGroup';
+import {TagGroup} from '../types/TagGroup';
 
 export const groupMap: Record<TagGroup, { color: string }> = {
   [TagGroup.Languages]: {
-    color: 'bg-blue-500',
+    color: 'bg-blue-700',
   },
   [TagGroup.Databases]: {
-    color: 'bg-green-500',
+    color: 'bg-green-700',
   },
   [TagGroup.Frontend]: {
-    color: 'bg-orange-500',
+    color: 'bg-orange-700',
   },
   [TagGroup.Backend]: {
-    color: 'bg-red-500',
+    color: 'bg-red-700',
   },
   [TagGroup.Mobile]: {
-    color: 'bg-indigo-500',
+    color: 'bg-neutral-700',
   },
   [TagGroup.CDCI]: {
-    color: 'bg-cyan-500',
+    color: 'bg-cyan-700',
   },
   [TagGroup.Observability]: {
-    color: 'bg-yellow-500',
+    color: 'bg-yellow-700',
   },
   [TagGroup.Management]: {
-    color: 'bg-indigo-500',
+    color: 'bg-indigo-700',
   },
   [TagGroup.Techniques]: {
-    color: 'bg-pink-500',
+    color: 'bg-pink-700',
   },
   [TagGroup.Other]: {
-    color: 'bg-slate-500',
+    color: 'bg-slate-700',
   },
 };

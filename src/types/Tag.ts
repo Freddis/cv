@@ -1,11 +1,11 @@
 export enum Tag {
-  php = 'PHP',
+  typescript = 'Typescript',
   javascript = 'Javascript',
+  php = 'PHP',
+  java = 'Java',
   cSharp = 'C#',
   c = 'C',
   cpp = 'C++',
-  java = 'Java',
-  typescript = 'Typescript',
   nodeJs = 'NodeJs',
   jenkins = 'Jenkins',
   teamCity = 'TeamCity',
@@ -114,4 +114,7 @@ export enum Tag {
   Scrum = 'Scrum',
   Agile = 'Agile',
   Waterfall = 'Waterfall',
+  Vitest = 'Vitest',
+  ETL = 'ETL',
+  Binary = 'Binary Operations',
 }

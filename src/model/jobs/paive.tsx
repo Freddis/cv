@@ -6,7 +6,7 @@ export const paive: Job = {
   to: new Date('2012-02-01'),
   title: 'Junior Web Developer',
   company: {
-    webiste: 'https://promo.orbios.com',
+    webiste: 'https://www.paive.com/',
     name: 'PAIVE Media Group LLC',
   },
   skills: {

@@ -6,7 +6,7 @@ export const homeStudio: Job = {
   to: new Date('2019-02-01'),
   title: 'Chief Technology Officer',
   company: {
-    webiste: 'https://skyground.group',
+    webiste: 'https://home-studio.pro',
     name: 'Home-Studio LLC',
   },
   skills: {
@@ -29,7 +29,6 @@ export const homeStudio: Job = {
     Tag.websocket,
     Tag.typeORM,
     Tag.vbox,
-    Tag.kubernetes,
   ],
   description: (
     <div>

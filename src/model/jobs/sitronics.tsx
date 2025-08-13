@@ -6,7 +6,7 @@ export const sitronics: Job = {
   to: new Date('2014-07-01'),
   title: 'Web-Platform Architect',
   company: {
-    webiste: 'https://analit.net',
+    webiste: 'https://www.sitronics.com/en',
     name: 'Sitronics JSC',
   },
   skills: {

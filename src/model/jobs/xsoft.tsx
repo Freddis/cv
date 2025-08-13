@@ -6,7 +6,6 @@ export const xsoft: Job = {
   to: new Date('2013-04-01'),
   title: 'Frontend Team Lead',
   company: {
-    webiste: 'https://promo.orbios.com',
     name: 'X-Soft LLC',
   },
   skills: {

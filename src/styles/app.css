@@ -2,10 +2,7 @@
 @import './animations.css';
 
 @theme inline {
-  --color-accent: #04b4e0;
-  --color-accent-2: #0BA376;
-  --color-accent-mute: #0ba376;
-  --color-accent-bg: #04b4e0;
+  --color-accent: var(--color-cyan-400);
   --color-main:  #222;
   --color-on-main: #fff;
   --color-on-main-2: #d5d5d5;

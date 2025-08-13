@@ -1,5 +1,5 @@
 export interface Company {
   name: string,
-  webiste: string,
+  webiste?: string,
   bankrupcyDate?: Date
 }
