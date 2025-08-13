@@ -36,7 +36,7 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
               {job.description}
             </div>
 
-            <div className="min-w-80 w-full md:w-80 shrink-0 grow-0 mb-10">
+            <div className="min-w-80 w-full xl:w-80  shrink-0 mb-10">
               {job.skills?.management !== undefined && (
                 <>
                 {job.skills.management !== 0 && <Percentage title="Management" color="management" value={job.skills.management} />}

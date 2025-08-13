@@ -8,7 +8,7 @@ export const ProjectBlock: FC<{project: Project}> = ({project}) => {
 
   return (
   <div className={`lg:min-h-100 ${project.color} w-full rounded-xl overflow-hidden relative`}>
-    <div className="grid grid-cols-1 md:grid-cols-8 h-full">
+    <div className="grid grid-cols-1 lg:grid-cols-8 h-full">
       <div className="md:col-span-3 flex items-center justify-center min-h-50 h-full w-full">
 
           {!!project.logo && project.logo}
@@ -17,7 +17,7 @@ export const ProjectBlock: FC<{project: Project}> = ({project}) => {
       </div>
       <div className={'md:col-span-5 flex flex-col h-full grow bg-black/60 p-5'}>
         <div className="mb-2 text-left text-on-main-2 text-base/relaxed">{project.description}</div>
-        <div className="mb-10">
+        <div className="mb-2">
           <TagList tags={project.tags}/>
         </div>
         <div className="grow items-end flex gap-5 justify-center">

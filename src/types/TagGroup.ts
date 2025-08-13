@@ -1,10 +1,10 @@
 export enum TagGroup {
   Languages = 'Languages',
-  Databases = 'Databases',
+  Databases = 'Data Handling',
   Backend = 'Backend',
   Frontend = 'Frontend',
   Mobile = 'Mobile',
-  CDCI = 'CDCI',
+  CDCI = 'CD / CI',
   Observability = 'Observability',
   Management = 'Management',
   Techniques = 'Techniques',

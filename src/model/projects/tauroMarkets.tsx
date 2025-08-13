@@ -55,5 +55,6 @@ export const tauroMarkets: Project = {
     Tag.mt5,
     Tag.redux,
     Tag.gha,
+    Tag.Replication,
   ],
 };

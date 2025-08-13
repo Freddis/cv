@@ -1,5 +1,4 @@
 import {FC} from 'react';
-import {BlockHeader} from '../../../elements/BlockHeader';
 import {skyground} from '../../../../model/jobs/skyground';
 import {upwork} from '../../../../model/jobs/upwork';
 import {unleashedCapital} from '../../../../model/jobs/unleashedCapital';
@@ -12,7 +11,6 @@ import {alfabank} from '../../../../model/jobs/alfabank';
 import {xsoft} from '../../../../model/jobs/xsoft';
 import {paive} from '../../../../model/jobs/paive';
 import {webrex} from '../../../../model/jobs/webrex';
-import {EducationBlock} from './EducationBlock';
 
 export const JobHistory: FC = () => {
   const jobs: Job[] = [
@@ -31,10 +29,7 @@ export const JobHistory: FC = () => {
 
   return (
     <div>
-      <BlockHeader>Experience</BlockHeader>
       {jobs.map((x) => <JobBlock key={x.title} job={x} />)}
-      <BlockHeader>Education</BlockHeader>
-      <EducationBlock />
     </div>
   );
 };
