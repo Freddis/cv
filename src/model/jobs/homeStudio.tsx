@@ -6,12 +6,13 @@ export const homeStudio: Job = {
   to: new Date('2019-02-01'),
   title: 'Chief Technology Officer',
   company: {
-    webiste: 'https://home-studio.pro',
+    websites: ['https://home-studio.pro'],
     name: 'Home-Studio LLC',
   },
   skills: {
-    management: 0,
-    backend: 100,
+    management: 60,
+    backend: 50,
+    mobile: 25,
   },
   tags: [
     Tag.javascript,

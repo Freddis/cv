@@ -6,11 +6,12 @@ export const alfabank: Job = {
   to: new Date('2014-02-01'),
   title: 'Project Manager',
   company: {
-    webiste: 'https://alfabank.com',
+    websites: ['https://alfabank.com'],
     name: 'Alfa Bank JSC',
   },
   skills: {
     management: 85,
+    backend: 50,
   },
   tags: [
     Tag.php, Tag.pHPUnit, Tag.selenium, Tag.javascript,

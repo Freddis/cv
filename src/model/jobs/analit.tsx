@@ -6,7 +6,7 @@ export const analit: Job = {
   to: new Date('2015-10-01'),
   title: 'Head of Department',
   company: {
-    webiste: 'https://analit.net',
+    websites: ['https://analit.net', 'https://ivrn.net'],
     name: 'Analytic Centr LLC',
   },
   skills: {
@@ -23,9 +23,15 @@ export const analit: Job = {
     <div>
       <p className="mb-2">
         Analytic Center is a collaboration of the internet
-        provider <a href={'http://ivrn.net'} target="_blank" className="text-accent/70">Inforum</a> and
-        &nbsp; <a href={'http://analit.net'} target="_blank" className="text-accent/70">AnalitFarmacia</a> which
-         is a digital marketplace for drugstores and
+        provider <a
+          href={'https://ivrn.net'}
+          target="_blank"
+          className="text-accent/70">Inforum</a> and  <a
+          href={'https://analit.net'}
+          target="_blank"
+          className="text-accent/70"
+        >Analit</a> which
+        is a digital marketplace for drugstores and
         pharmaceutical companies around Russia. The IT department had been relocated to Moscow
         due to difficulties in recruitment and it served the needs of both Inforum and AnalitFarmacia.
       </p>

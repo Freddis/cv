@@ -14,7 +14,7 @@ export const groupMap: Record<TagGroup, { color: string }> = {
     color: 'bg-orange-700',
   },
   [TagGroup.Mobile]: {
-    color: 'bg-neutral-700',
+    color: 'bg-emerald-800',
   },
   [TagGroup.CDCI]: {
     color: 'bg-cyan-700',

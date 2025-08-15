@@ -1,9 +1,9 @@
 import {FC} from 'react';
-import {cn} from '../../../../utils/cn/cn';
+import {cn} from '../../../../utils/cn';
 import {groupMap} from '../../../../model/groupMap';
 import {TagGroup} from '../../../../types/TagGroup';
 
-type Color = 'code' | 'management' | 'frontend' | 'backend';
+type Color = 'code' | 'management' | 'frontend' | 'backend' | 'mobile';
 export const Percentage: FC<{title: string, value: number, color?: Color}> = ({title, value, color}) => {
 
   const palette = color ?? 'code';
@@ -12,6 +12,7 @@ export const Percentage: FC<{title: string, value: number, color?: Color}> = ({t
     management: [groupMap[TagGroup.Management].color, groupMap[TagGroup.Management].color],
     frontend: [groupMap[TagGroup.Frontend].color, groupMap[TagGroup.Frontend].color],
     backend: [groupMap[TagGroup.Backend].color, groupMap[TagGroup.Backend].color],
+    mobile: [groupMap[TagGroup.Mobile].color, groupMap[TagGroup.Mobile].color],
   };
 
   return (

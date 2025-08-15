@@ -1,5 +1,5 @@
 import {ReactNode, FC, useState, useEffect, TransitionEventHandler, DOMAttributes} from 'react';
-import {cn} from '../../utils/cn/cn';
+import {cn} from '../../utils/cn';
 
 interface AnimatedProps {
  show: boolean

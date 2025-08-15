@@ -3,7 +3,7 @@ import {Project} from '../../types/Projects';
 import {Tag} from '../../types/Tag';
 
 export const tauroMarkets: Project = {
-  name: 'Tauro Markets',
+  title: 'Tauro Markets',
   color: 'bg-white',
   url: 'https://tauromarkets.com/',
   logo: <TauroMarketsLogo />,
@@ -53,8 +53,12 @@ export const tauroMarkets: Project = {
     Tag.rabbitMQ,
     Tag.mt4,
     Tag.mt5,
-    Tag.redux,
-    Tag.gha,
     Tag.Replication,
   ],
+  skills: {
+    mobile: true,
+    backend: true,
+    frontend: true,
+    management: true,
+  },
 };

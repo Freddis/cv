@@ -12,7 +12,7 @@ export const ProjectBlock: FC<{project: Project}> = ({project}) => {
       <div className="md:col-span-3 flex items-center justify-center min-h-50 h-full w-full">
 
           {!!project.logo && project.logo}
-          {!project.logo && <span className="text-2xl font-light text-center w-full block">{project.name}</span>}
+          {!project.logo && <span className="text-2xl font-light text-center w-full block">{project.title}</span>}
 
       </div>
       <div className={'md:col-span-5 flex flex-col h-full grow bg-black/60 p-5'}>

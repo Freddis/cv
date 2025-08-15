@@ -1,6 +1,6 @@
 import {Link, LinkComponentProps, useLocation} from '@tanstack/react-router';
 import {FC} from 'react';
-import {cn} from '../../utils/cn/cn';
+import {cn} from '../../utils/cn';
 
 export const MainMenuLink: FC<LinkComponentProps> = (props) => {
   const location = useLocation();

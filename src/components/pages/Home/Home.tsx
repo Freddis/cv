@@ -8,8 +8,25 @@ import {BlockHeader} from '../../elements/BlockHeader';
 import {TagOverviewBlock} from './components/TagOverviewBlock';
 import {FaCode, FaUsers} from 'react-icons/fa6';
 import {HiOutlineClock} from 'react-icons/hi';
+import {model} from '../../../model/model';
+import {pdf} from '@react-pdf/renderer';
+import {CvPdf} from '../../elements/CvPdf';
+
 
 export const Home: FC = () => {
+
+  const print = async () => {
+    const blob = await pdf(<CvPdf model={model} />).toBlob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'alex_sarychev_cv_full.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
 <div className="flex flex-col w-full justify-start items-start bg-main text-on-main p-5 md:p-20">
   <div className="grid grid-cols-1 lg:grid-cols-12 items-start justify-center gap-10 lg:mt-15 mb-20">
@@ -43,9 +60,7 @@ export const Home: FC = () => {
         for challenging development tasks.
       </p>
       <div className="flex items-center flex-col md:flex-row gap-2">
-        <a href="/files/Alex_Sarychev.pdf" download target="_blank">
-        <PrimaryButton>Download CV</PrimaryButton>
-        </a>
+        <PrimaryButton onClick={print}>Download Full CV</PrimaryButton>
       </div>
     </div>
   </div>
@@ -56,51 +71,38 @@ export const Home: FC = () => {
       <div>
         <IoCloudOutline className="text-5xl text-accent mb-2" />
         <h4 className="text-lg font-semibold mb-2">Backend</h4>
-        <p className="text-on-main-2 mb-2">
-          I design and build robust backend systems using TypeScript, JavaScript, PHP, C#, and Java, delivering scalable,
-          high-performance applications.
-        </p>
-        <p className="text-on-main-2 mb-2">
-          With expertise in microservices architecture,
-          object-oriented design, and API development, I create clean, modular, and maintainable code.
-        </p>
+        {model.profile.skills.backend.map((text) => (
+          <p key={text} className="text-on-main-2 mb-2">
+            {text}
+          </p>
+        ))}
       </div>
       <div>
         <IoLaptopOutline className="text-5xl text-accent mb-2" />
         <h4 className="text-lg font-semibold mb-2">Frontend</h4>
-        <p className="text-on-main-2 mb-2">
-         I build responsive, high-performance frontends using Angular, React and Vue, delivering seamless,
-          accessible experiences across devices
-        </p>
-        <p className="text-on-main-2 mb-2">
-        I develop robust design systems that ensure consistent, theme-adaptive components,
-        enabling rapid development without constant designer input. Proficient in browser automation,
-        testing, and BDD.
-        </p>
+        {model.profile.skills.frontend.map((text) => (
+          <p key={text} className="text-on-main-2 mb-2">
+            {text}
+          </p>
+        ))}
       </div>
       <div>
         <IoPhonePortraitOutline className="text-5xl text-accent mb-2" />
         <h4 className="text-lg font-semibold mb-2">Mobile</h4>
-        <p className="text-on-main-2 mb-2">
-          I develop high-quality mobile applications using Java and Swift for native Android and iOS,
-          as well as React Native for cross-platform solutions.
-        </p>
-        <p className="text-on-main-2 mb-2">
-          With a focus on performance, usability, and maintainable architecture, I deliver smooth,
-          responsive apps that integrate seamlessly with backend services and modern APIs.
-        </p>
+         {model.profile.skills.mobile.map((text) => (
+          <p key={text} className="text-on-main-2 mb-2">
+            {text}
+          </p>
+        ))}
       </div>
       <div>
         <GiFlyingFlag className="text-5xl text-accent mb-2" />
         <h4 className="text-lg font-semibold mb-2">Management</h4>
-        <p className="text-on-main-2 mb-2">
-          I lead by example, guiding teams of up to 10 developers with a
-          focus on collaboration, mentorship, and shared ownership of success.
-        </p>
-        <p className="text-on-main-2 mb-2">
-          Not afraid to get my hands dirty, I stay involved in the code while setting
-          the technical vision and direction, capable of driving company-wide IT strategy at the CTO level.
-        </p>
+        {model.profile.skills.management.map((text) => (
+          <p key={text} className="text-on-main-2 mb-2">
+            {text}
+          </p>
+        ))}
       </div>
     </div>
   </div>

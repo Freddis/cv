@@ -1,7 +1,7 @@
 import {HeadContent, Scripts, useLocation} from '@tanstack/react-router';
 import {FC, MouseEventHandler, StrictMode, useEffect, useState} from 'react';
 import {cvRoute, homeRoute, projectsRoute} from '../../routes/routes';
-import {cn} from '../../utils/cn/cn';
+import {cn} from '../../utils/cn';
 import {CvPage} from '../pages/Cv/CvPage';
 import {Home} from '../pages/Home/Home';
 import {Projects} from '../pages/Projects/Projects';

@@ -6,11 +6,6 @@ import * as eslintImport from 'eslint-plugin-import';
 import reactPlugin from 'eslint-plugin-react';
 import tsParser from '@typescript-eslint/parser';
 
-// This eslint has a bug with globals, seems like some peer deps load old globals package.
-const fixedBrowserGlobals = {};
-for (const key of Object.keys(globals.browser)) {
-  fixedBrowserGlobals[key.trim()] = globals.browser[key];
-}
 export default tseslint.config(
   eslint.configs.recommended,
   tseslint.configs.recommended,
@@ -198,8 +193,9 @@ export default tseslint.config(
       useJSXTextNode: true,
     },
     globals: {
-      ...fixedBrowserGlobals,
+      ...globals.browser,
       ...globals.node,
+      ...globals.es2021,
     },
   },
 }));

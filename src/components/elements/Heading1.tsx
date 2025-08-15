@@ -1,5 +1,5 @@
 import {FC, HTMLAttributes} from 'react';
-import {cn} from '../../utils/cn/cn';
+import {cn} from '../../utils/cn';
 
 export const Heading1: FC<HTMLAttributes<HTMLHeadingElement>> = ({children, className}) => {
 

@@ -6,7 +6,7 @@ export const skyground: Job = {
   to: new Date('2025-02-22'),
   title: 'Tech Lead',
   company: {
-    webiste: 'https://skyground.group',
+    websites: ['https://skyground.group'],
     name: 'Skyground LLC',
   },
   tags: [
@@ -41,10 +41,14 @@ export const skyground: Job = {
     Tag.postgreSQL,
     Tag.redux,
     Tag.designSystem,
+    Tag.mt4,
+    Tag.mt5,
+    Tag.fintech,
   ],
   skills: {
     management: 60,
     backend: 75,
+    mobile: 10,
   },
   description: (
     <div>
@@ -55,13 +59,13 @@ export const skyground: Job = {
       <p className="mb-2">
         Duties consist of hiring new developers, planning for the department,
         creating the development workflow and pipelines, navigating developers on their
-        tasks.Participated in product and UX design decisions since i had some relevant experience.
+        tasks. Participated in product and UX design decisions since i had some relevant experience.
       </p>
       <p className="mb-2">
         Accomplishments:
       </p>
       <ul>
-        <li>1. Have written Documentation and solidified Jira workflows</li>
+        <li>1. Have written documentation and solidified Jira workflows</li>
         <li>2. Integrated tests (both browser and integrational) and CI pipelines.</li>
         <li>2. Developed a new framework for frontend and backend projects. Input / Output fully typechecked.
           Used OpenAPI and Zod to achieve the same effect as tRPC but more flexible and tailored to our needs.</li>

@@ -11,7 +11,8 @@ export interface Job {
   tags?: Tag[],
   skills?: {
     management?: number,
-    backend?: number
+    backend?: number,
+    mobile?: number,
   }
 }
 

@@ -136,7 +136,7 @@ export const tagMap: Record<Tag, TagProps> = {
   },
   [Tag.JavaFx]: {
     language: [ProgrammingLangauge.Java],
-    groups: [TagGroup.Frontend, TagGroup.Frontend],
+    groups: [TagGroup.Frontend],
   },
   [Tag.symfony]: {
     language: [ProgrammingLangauge.PHP],
@@ -361,6 +361,10 @@ export const tagMap: Record<Tag, TagProps> = {
     groups: [TagGroup.Techniques],
   },
   [Tag.Binary]: {
+    language: null,
+    groups: [TagGroup.Other],
+  },
+  [Tag.fintech]: {
     language: null,
     groups: [TagGroup.Other],
   },

@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import {FC} from 'react';
-import {cn} from '../../utils/cn/cn';
+import {cn} from '../../utils/cn';
 
 export const DisciplineLogo: FC<{withText?: boolean, className?: string}> = (props) => {
   const withText = props.withText ?? true;

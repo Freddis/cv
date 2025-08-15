@@ -1,5 +1,5 @@
 import {FC, MouseEventHandler} from 'react';
-import {cn} from '../../utils/cn/cn';
+import {cn} from '../../utils/cn';
 import {FaLinkedin, FaGithub} from 'react-icons/fa6';
 import {homeRoute, cvRoute, projectsRoute} from '../../routes/routes';
 import {MainMenuLink} from './MainMenuLink';

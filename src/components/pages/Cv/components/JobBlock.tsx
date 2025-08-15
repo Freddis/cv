@@ -11,12 +11,12 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
         <div className="hidden lg:flex flex-col items-end text-right w-38 shrink-0 grow-0 pt-2">
           <div>{from} - {to}</div>
           <div className="text-on-main-3 text-sm">
-            {!!job.company.webiste && (
-            <a href={job.company.webiste} target="_blank" className="text-accent/80 transition-all duration-700">
+            {!!job.company.websites && (
+            <a href={job.company.websites[0]} target="_blank" className="text-accent/80 transition-all duration-700">
             {job.company.name}
             </a>
             )}
-            {!job.company.webiste && job.company.name}
+            {!job.company.websites && job.company.name}
           </div>
         </div>
         <div className="border-l-1 border-l-solid border-l-surface relative z-10">
@@ -47,6 +47,12 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
                 <>
                 {job.skills.backend !== 0 && <Percentage title="Backend" color="backend" value={job.skills.backend} />}
                 {job.skills.backend !== 100 && <Percentage title="Frontend" color="frontend" value={100 - job.skills.backend} />}
+                </>
+              )}
+                {job.skills?.mobile !== undefined && (
+                <>
+                {job.skills.mobile !== 0 && <Percentage title="Mobile" color="mobile" value={job.skills.mobile} />}
+
                 </>
               )}
               {job.tags && job.tags.length > 0 && <TagList tags={job.tags} />}

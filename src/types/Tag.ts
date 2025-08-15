@@ -117,4 +117,5 @@ export enum Tag {
   Vitest = 'Vitest',
   ETL = 'ETL',
   Binary = 'Binary Operations',
+  fintech = 'Fintech',
 }

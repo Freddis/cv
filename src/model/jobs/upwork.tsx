@@ -7,10 +7,12 @@ export const upwork: Job = {
   title: 'Top Rated+ Freelancer',
   company: {
     name: 'Upwork Inc.',
+    websites: ['https://www.upwork.com/freelancers/~015e4e0f5478ebfb7d'],
   },
   skills: {
     backend: 30,
     management: 10,
+    mobile: 20,
   },
   tags: [
     Tag.java,
@@ -38,6 +40,8 @@ export const upwork: Job = {
       </p>
       <p className="mb-2">My account has 2 Top Rated badges (normal and high budget projects), Job Success Score: 100%.</p>
       <p className="mb-2 font-semibold">Notable SOA / Microservice Projects:</p>
+      <ul>
+        <li>
       <p className="mb-2 pl-2">
         Led the development of Amazon Analytics Tool.
         We used distributed architecture in order to process the data of amazon sellers via Amazon API and scraping using chrome headless.
@@ -45,6 +49,8 @@ export const upwork: Job = {
         <br />
         <a href={'https://www.ecomengine.com/feedbackfive'} target="_blank" className="text-accent/70">Feedback Five</a>
       </p>
+      </li>
+      <li>
       <p className="mb-2 pl-2">
         Development of a microservice that processes user requests for acquiring.
         Gathering information from the user, checking sensitive information,
@@ -52,7 +58,8 @@ export const upwork: Job = {
         <br />
         <a href={'https://www.linkedin.com/company/finaxar'} target="_blank" className="text-accent/70">Finaxar</a>
       </p>
-
+      </li>
+      </ul>
     </div>
   ),
 };

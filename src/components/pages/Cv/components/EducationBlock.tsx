@@ -1,20 +1,9 @@
 import {FC} from 'react';
-import {Job} from '../../../../types/Job';
+import {Education} from '../../../../types/Education';
 
-export const EducationBlock:FC = () => {
-  const education: Job = {
-    from: new Date('2008-09-01'),
-    to: new Date('2012-06-01'),
-    title: 'Bachelor Degree in Development of CAD Systems',
-    description: <div></div>,
-    company: {
-      name: 'Moscow State University of Design and Technology',
-      webiste: 'http://вфыв',
-    },
-  };
-  const job = education;
-  const from: string = `${job.from.getFullYear()}`;
-  const to: string = `${job.to.getFullYear()}`;
+export const EducationBlock:FC<{education: Education}> = ({education}) => {
+  const from: string = `${education.start.getFullYear()}`;
+  const to: string = `${education.end.getFullYear()}`;
 
   return (
      <div className="flex gap-5">
@@ -26,14 +15,13 @@ export const EducationBlock:FC = () => {
         </div>
         <div>
           <div className="font-semibold text-lg mb-2 pt-2">
-            {job.title}
+            {education.degree}
           </div>
           <div className="md:hidden mb-2">
             <div>{from} - {to}</div>
           </div>
           <div className="text-sm/relaxed text-on-main-2 mb-5">
-            {job.company.name}
-
+            {education.insitution}
           </div>
         </div>
         </div>

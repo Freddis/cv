@@ -1,5 +1,5 @@
 export interface Company {
   name: string,
-  webiste?: string,
+  websites?: [string, ...string[]],
   bankrupcyDate?: Date
 }

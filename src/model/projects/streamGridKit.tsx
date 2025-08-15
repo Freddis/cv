@@ -2,7 +2,7 @@ import {Project} from '../../types/Projects';
 import {Tag} from '../../types/Tag';
 
 export const streamGridKit: Project = {
-  name: 'Steam Grid Kit',
+  title: 'Steam Grid Kit',
   color: 'bg-blue-950',
   code: 'https://github.com/Freddis/Steam-Grid-Kit',
   description: (
@@ -22,4 +22,7 @@ export const streamGridKit: Project = {
     </div>
   ),
   tags: [Tag.java, Tag.JavaFx, Tag.jUnit, Tag.Binary],
+  skills: {
+    frontend: true,
+  },
 };
