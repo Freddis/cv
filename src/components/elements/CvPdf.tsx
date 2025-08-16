@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const CvPdf: FC<{model: Model}> = ({model}) => {
+export const CvPdf: FC<{model: Model, allowedTags?: Tag[]}> = ({model, allowedTags}) => {
 
   const getDate = (date?: Date): string => {
     if (!date) {
@@ -144,6 +144,10 @@ export const CvPdf: FC<{model: Model}> = ({model}) => {
       }
       const groupTags: Tag[] = [];
       for (const tag of tags) {
+        if (allowedTags && !allowedTags.includes(tag)) {
+          continue;
+        }
+
         if (tagMap[tag].groups.includes(group)) {
           groupTags.push(tag);
         }
@@ -249,7 +253,7 @@ export const CvPdf: FC<{model: Model}> = ({model}) => {
         </View>
       ))}
 
-      {model.projects.map((p, i) => (
+      {model.projects.filter((p) => !allowedTags || allowedTags.find((x) => p.tags.includes(x))).map((p, i) => (
         <View key={p.title} style={styles.section} wrap={false}>
           {i === 0 && <Text style={styles.section.heading}>Proejcts & Code Samples</Text>}
           <Text style={styles.section.block.heading}>{p.title}</Text>

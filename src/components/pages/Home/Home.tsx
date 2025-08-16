@@ -11,16 +11,18 @@ import {HiOutlineClock} from 'react-icons/hi';
 import {model} from '../../../model/model';
 import {pdf} from '@react-pdf/renderer';
 import {CvPdf} from '../../elements/CvPdf';
+import {Tag} from '../../../types/Tag';
+import {SecondaryButton} from '../../elements/SecondaryButton';
 
 
 export const Home: FC = () => {
 
-  const print = async () => {
-    const blob = await pdf(<CvPdf model={model} />).toBlob();
+  const print = async (suffix: string, tags?: Tag[]) => {
+    const blob = await pdf(<CvPdf model={model} allowedTags={tags} />).toBlob();
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'alex_sarychev_cv_full.pdf';
+    a.download = `alex_sarychev_cv_${suffix}.pdf`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -59,8 +61,9 @@ export const Home: FC = () => {
         My technical knowledge, problem-solving skills, and commitment to high-quality code make me a reliable choice
         for challenging development tasks.
       </p>
-      <div className="flex items-center flex-col md:flex-row gap-2">
-        <PrimaryButton onClick={print}>Download Full CV</PrimaryButton>
+      <div className="flex items-center flex-col md:flex-row gap-5">
+        <SecondaryButton onClick={() => print('compact', [])}>Compact CV</SecondaryButton>
+        <PrimaryButton onClick={() => print('full')}>Full CV</PrimaryButton>
       </div>
     </div>
   </div>
@@ -109,7 +112,7 @@ export const Home: FC = () => {
 
   <div className="mb-10">
     <BlockHeader>Skills <span className="text-accent">And Tools</span></BlockHeader>
-    <TagOverviewBlock/>
+    <TagOverviewBlock onCustomCvClick={(tags) => print('custom', tags)}/>
   </div>
 
   <div className="w-full mb-10">

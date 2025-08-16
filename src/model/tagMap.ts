@@ -1,4 +1,3 @@
-import {ProgrammingLangauge} from '../types/ProgrammingLangauge';
 import {Tag} from '../types/Tag';
 import {TagGroup} from '../types/TagGroup';
 import {TagProps} from '../types/TagProps';
@@ -6,33 +5,33 @@ import {TagProps} from '../types/TagProps';
 export const tagMap: Record<Tag, TagProps> = {
   // --- ProgrammingLangauges ---
   [Tag.typescript]: {
-    language: [ProgrammingLangauge.TypeScript],
+    language: [Tag.typescript],
     groups: [TagGroup.Languages, TagGroup.Frontend, TagGroup.Backend],
   },
   [Tag.javascript]: {
-    language: [ProgrammingLangauge.JavaScript],
+    language: [Tag.javascript],
     groups: [TagGroup.Languages, TagGroup.Frontend, TagGroup.Backend],
   },
   [Tag.php]: {
-    language: [ProgrammingLangauge.PHP],
+    language: [Tag.php],
     groups: [TagGroup.Languages, TagGroup.Backend],
   },
   [Tag.java]: {
-    language: [ProgrammingLangauge.Java],
+    language: [Tag.java],
     groups: [TagGroup.Languages, TagGroup.Backend, TagGroup.Mobile],
   },
   [Tag.cSharp]: {
-    language: [ProgrammingLangauge.CSharp],
+    language: [Tag.cSharp],
     groups: [TagGroup.Languages, TagGroup.Backend],
   },
   [Tag.swift]: {
-    language: [ProgrammingLangauge.Swift],
+    language: [Tag.swift],
     groups: [TagGroup.Languages, TagGroup.Mobile],
   },
-  [Tag.c]: {language: [ProgrammingLangauge.C], groups: [TagGroup.Languages]},
-  [Tag.cpp]: {language: [ProgrammingLangauge.Cpp], groups: [TagGroup.Languages]},
+  [Tag.c]: {language: [Tag.c], groups: [TagGroup.Languages]},
+  [Tag.cpp]: {language: [Tag.cpp], groups: [TagGroup.Languages]},
   [Tag.haskell]: {
-    language: [ProgrammingLangauge.Haskell],
+    language: [Tag.haskell],
     groups: [TagGroup.Languages],
   },
 
@@ -54,11 +53,11 @@ export const tagMap: Record<Tag, TagProps> = {
 
   // --- Libraries ---
   [Tag.jquery]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Frontend],
   },
   [Tag.ajax]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Techniques, TagGroup.Frontend],
   },
   [Tag.websocket]: {language: null, groups: [TagGroup.Techniques]},
@@ -67,87 +66,87 @@ export const tagMap: Record<Tag, TagProps> = {
   [Tag.longPolling]: {language: null, groups: [TagGroup.Techniques]},
   [Tag.protobuf]: {language: null, groups: [TagGroup.Techniques]},
   [Tag.trpc]: {
-    language: [ProgrammingLangauge.TypeScript],
+    language: [Tag.typescript],
     groups: [TagGroup.Backend, TagGroup.Backend],
   },
-  [Tag.kue]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], groups: [TagGroup.Backend]},
-  [Tag.bull]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], groups: [TagGroup.Backend]},
+  [Tag.kue]: {language: [Tag.javascript, Tag.typescript], groups: [TagGroup.Backend]},
+  [Tag.bull]: {language: [Tag.javascript, Tag.typescript], groups: [TagGroup.Backend]},
   [Tag.redux]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Frontend],
   },
   [Tag.mobX]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Frontend],
   },
   [Tag.Zod]: {
-    language: [ProgrammingLangauge.TypeScript],
+    language: [Tag.typescript],
     groups: [TagGroup.Backend, TagGroup.Frontend],
   },
 
   // --- Frameworks ---
   [Tag.mooTools]: {
-    language: [ProgrammingLangauge.JavaScript],
+    language: [Tag.javascript],
     groups: [TagGroup.Frontend, TagGroup.Frontend],
   },
   [Tag.prototype]: {
-    language: [ProgrammingLangauge.JavaScript],
+    language: [Tag.javascript],
     groups: [TagGroup.Frontend, TagGroup.Frontend],
   },
   [Tag.yii]: {
-    language: [ProgrammingLangauge.PHP],
+    language: [Tag.php],
     groups: [TagGroup.Backend, TagGroup.Backend],
   },
   [Tag.laravel]: {
-    language: [ProgrammingLangauge.PHP],
+    language: [Tag.php],
     groups: [TagGroup.Backend, TagGroup.Backend],
   },
   [Tag.spring]: {
-    language: [ProgrammingLangauge.Java],
+    language: [Tag.java],
     groups: [TagGroup.Backend, TagGroup.Backend],
   },
   [Tag.nextJS]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Frontend],
   },
   [Tag.nestJS]: {
-    language: [ProgrammingLangauge.TypeScript],
+    language: [Tag.typescript],
     groups: [TagGroup.Backend, TagGroup.Backend],
   },
   [Tag.react]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Frontend, TagGroup.Frontend],
   },
   [Tag.angular]: {
-    language: [ProgrammingLangauge.TypeScript],
+    language: [Tag.typescript, Tag.javascript],
     groups: [TagGroup.Frontend],
   },
   [Tag.Vue]: {
-    language: [ProgrammingLangauge.JavaScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Frontend],
   },
   [Tag.Express]: {
-    language: [ProgrammingLangauge.JavaScript],
+    language: [Tag.javascript],
     groups: [TagGroup.Backend, TagGroup.Backend],
   },
   [Tag.Hibernate]: {
-    language: [ProgrammingLangauge.Java],
+    language: [Tag.java],
     groups: [TagGroup.Backend, TagGroup.Backend],
   },
   [Tag.JavaFx]: {
-    language: [ProgrammingLangauge.Java],
+    language: [Tag.java],
     groups: [TagGroup.Frontend],
   },
   [Tag.symfony]: {
-    language: [ProgrammingLangauge.PHP],
+    language: [Tag.php],
     groups: [TagGroup.Backend, TagGroup.Backend],
   },
   [Tag.typeORM]: {
-    language: [ProgrammingLangauge.TypeScript],
+    language: [Tag.typescript],
     groups: [TagGroup.Backend],
   },
   [Tag.drizzle]: {
-    language: [ProgrammingLangauge.TypeScript],
+    language: [Tag.typescript],
     groups: [TagGroup.Backend],
   },
 
@@ -157,7 +156,7 @@ export const tagMap: Record<Tag, TagProps> = {
     groups: [TagGroup.Databases, TagGroup.Backend],
   },
   [Tag.mssql]: {
-    language: [ProgrammingLangauge.CSharp],
+    language: [Tag.cSharp],
     groups: [TagGroup.Databases, TagGroup.Backend],
   },
   [Tag.postgreSQL]: {
@@ -181,7 +180,7 @@ export const tagMap: Record<Tag, TagProps> = {
     groups: [TagGroup.Databases, TagGroup.Backend],
   },
   [Tag.memcached]: {
-    language: [ProgrammingLangauge.PHP],
+    language: [Tag.php],
     groups: [TagGroup.Databases, TagGroup.Backend],
   },
   [Tag.redis]: {
@@ -202,14 +201,14 @@ export const tagMap: Record<Tag, TagProps> = {
     language: null,
     groups: [TagGroup.Backend, TagGroup.Backend],
   },
-  [Tag.mt5]: {language: [ProgrammingLangauge.C, ProgrammingLangauge.Cpp], groups: [TagGroup.Other]},
-  [Tag.mt4]: {language: [ProgrammingLangauge.C, ProgrammingLangauge.Cpp], groups: [TagGroup.Other]},
+  [Tag.mt5]: {language: [Tag.c, Tag.cpp], groups: [TagGroup.Other]},
+  [Tag.mt4]: {language: [Tag.c, Tag.cpp], groups: [TagGroup.Other]},
   [Tag.HTTP]: {language: null, groups: [TagGroup.Other]},
   [Tag.TCP]: {language: null, groups: [TagGroup.Other]},
 
   // --- Mobile ---
   [Tag.reactNative]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Mobile],
   },
 
@@ -222,34 +221,34 @@ export const tagMap: Record<Tag, TagProps> = {
   // --- Other ---
   [Tag.vbox]: {language: null, groups: [TagGroup.CDCI]},
   [Tag.tanstackStart]: {
-    language: [ProgrammingLangauge.TypeScript],
+    language: [Tag.typescript],
     groups: [TagGroup.Frontend],
   },
-  [Tag.tanstackQuery]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], groups: [TagGroup.Frontend]},
+  [Tag.tanstackQuery]: {language: [Tag.javascript, Tag.typescript], groups: [TagGroup.Frontend]},
   [Tag.docker]: {language: null, groups: [TagGroup.CDCI]},
   [Tag.aws]: {language: null, groups: [TagGroup.CDCI]},
   [Tag.awsFargate]: {language: null, groups: [TagGroup.CDCI]},
   [Tag.awsLambda]: {language: null, groups: [TagGroup.Backend]},
   [Tag.kubernetes]: {language: null, groups: [TagGroup.CDCI]},
-  [Tag.Vite]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], groups: [TagGroup.CDCI]},
+  [Tag.Vite]: {language: [Tag.javascript, Tag.typescript], groups: [TagGroup.CDCI]},
   [Tag.Webpack]: {language: null, groups: [TagGroup.CDCI]},
-  [Tag.Gulp]: {language: [ProgrammingLangauge.JavaScript], groups: [TagGroup.CDCI]},
+  [Tag.Gulp]: {language: [Tag.javascript], groups: [TagGroup.CDCI]},
   [Tag.Apache]: {language: null, groups: [TagGroup.CDCI]},
   [Tag.Nginx]: {language: null, groups: [TagGroup.CDCI]},
 
   // --- Testing ---
   [Tag.selenium]: {language: null, groups: [TagGroup.CDCI]},
   [Tag.playwright]: {language: null, groups: [TagGroup.CDCI]},
-  [Tag.mocha]: {language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript], groups: [TagGroup.CDCI]},
-  [Tag.nunit]: {language: [ProgrammingLangauge.CSharp], groups: [TagGroup.CDCI]},
-  [Tag.pHPUnit]: {language: [ProgrammingLangauge.PHP], groups: [TagGroup.CDCI]},
-  [Tag.jUnit]: {language: [ProgrammingLangauge.Java], groups: [TagGroup.CDCI]},
+  [Tag.mocha]: {language: [Tag.javascript, Tag.typescript], groups: [TagGroup.CDCI]},
+  [Tag.nunit]: {language: [Tag.cSharp], groups: [TagGroup.CDCI]},
+  [Tag.pHPUnit]: {language: [Tag.php], groups: [TagGroup.CDCI]},
+  [Tag.jUnit]: {language: [Tag.java], groups: [TagGroup.CDCI]},
   [Tag.prisma]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Backend],
   },
   [Tag.Doctrine]: {
-    language: [ProgrammingLangauge.PHP],
+    language: [Tag.php],
     groups: [TagGroup.Backend],
   },
   [Tag.HTML]: {
@@ -265,15 +264,15 @@ export const tagMap: Record<Tag, TagProps> = {
     groups: [TagGroup.Frontend],
   },
   [Tag.SVG]: {
-    language: null,
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Frontend],
   },
   [Tag.nodeJs]: {
-    language: [ProgrammingLangauge.TypeScript, ProgrammingLangauge.JavaScript],
+    language: [Tag.typescript, Tag.javascript],
     groups: [TagGroup.Backend],
   },
   [Tag.Knex]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Backend],
   },
   [Tag.microservices]: {
@@ -281,15 +280,15 @@ export const tagMap: Record<Tag, TagProps> = {
     groups: [TagGroup.Techniques, TagGroup.Backend],
   },
   [Tag.ASPNETMVC]: {
-    language: [ProgrammingLangauge.CSharp],
+    language: [Tag.cSharp],
     groups: [TagGroup.Backend],
   },
   [Tag.awsCDK]: {
-    language: [ProgrammingLangauge.TypeScript, ProgrammingLangauge.JavaScript],
+    language: [Tag.typescript, Tag.javascript],
     groups: [TagGroup.CDCI],
   },
   [Tag.expo]: {
-    language: [ProgrammingLangauge.TypeScript, ProgrammingLangauge.JavaScript],
+    language: [Tag.typescript, Tag.javascript],
     groups: [TagGroup.Mobile],
   },
   [Tag.EventSourcing]: {
@@ -305,7 +304,7 @@ export const tagMap: Record<Tag, TagProps> = {
     groups: [TagGroup.Frontend],
   },
   [Tag.Shadcn]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Frontend],
   },
   [Tag.OpenGL]: {
@@ -313,7 +312,7 @@ export const tagMap: Record<Tag, TagProps> = {
     groups: [TagGroup.Other],
   },
   [Tag.WebGL]: {
-    language: [ProgrammingLangauge.JavaScript, ProgrammingLangauge.TypeScript],
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.Frontend],
   },
   [Tag.Miro]: {
@@ -353,7 +352,7 @@ export const tagMap: Record<Tag, TagProps> = {
     groups: [TagGroup.CDCI],
   },
   [Tag.Vitest]: {
-    language: null,
+    language: [Tag.javascript, Tag.typescript],
     groups: [TagGroup.CDCI],
   },
   [Tag.ETL]: {

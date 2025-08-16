@@ -103,7 +103,7 @@ export enum Tag {
   ASPNETMVC = 'ASP .NET MVC',
   EventSourcing = 'Event Sourcing',
   Less = 'Less',
-  Sass = 'Saas',
+  Sass = 'Sass',
   Shadcn = 'Shadcn',
   OpenGL = 'OpenGL',
   WebGL = 'WebGL',
