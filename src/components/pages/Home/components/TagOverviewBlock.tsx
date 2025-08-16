@@ -77,7 +77,7 @@ export const TagOverviewBlock: FC<{onCustomCvClick: (tags: Tag[]) => void}> = (p
        <div className="mb-10">
         <div
         className={cn(
-          'opacity transition-all duration-1000 max-h-0 overflow-hidden ',
+          'opacity transition-all duration-1000 max-h-0 overflow-y-hidden overflow-x-visible',
           hasSelected ? 'max-h-50' : ''
         )}>
           <h2 className={cn('text-base font-semibold mb-2 flex items-start', !hasSelected ? 'invisible' : '')}>
@@ -92,11 +92,7 @@ export const TagOverviewBlock: FC<{onCustomCvClick: (tags: Tag[]) => void}> = (p
           <div>
             Create customized CV for your stack. Start with selecting language.
           </div>
-          <PrimaryButton
-          // eslint-disable-next-line max-len
-          className={cn('cursor-not-allowed opacity-50 transition-all duration-1000 min-w-42', hasSelected ? 'opacity-100 cursor-pointer' : '')}
-          onClick={onCustomCvClick}
-          >
+          <PrimaryButton disabled={!hasSelected} className={cn('min-w-42')} onClick={onCustomCvClick}>
             Customized CV
           </PrimaryButton>
         </div>
@@ -104,7 +100,7 @@ export const TagOverviewBlock: FC<{onCustomCvClick: (tags: Tag[]) => void}> = (p
 
       {getGroups().map((group) => (
         <div key={group} className="mb-5">
-          <h2 className="text-base font-semibold mb-2">{group}:</h2>
+          <h2 className={cn('text-base font-semibold mb-2', !hasSelected && group !== TagGroup.Languages ? 'opacity-50' : '')}>{group}:</h2>
           <div className="flex flex-wrap gap-2">
            <TagList onClick={onTagClicked} tags={getTagsForGroup(group)} disabled={getDisabledTags(group)} />
           </div>

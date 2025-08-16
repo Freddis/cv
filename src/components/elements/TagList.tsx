@@ -23,7 +23,7 @@ export const TagList: FC<{tags: Tag[], disabled?: Tag[], onClick?: (tag: Tag) =>
     onClick(tag);
   };
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-3 px-2 py-0">
       {sorted.map((row) => <TagBlock onClick={onTagClick.bind(null, row.tag)} key={row.tag} tag={row.tag} disabled={row.disabled} />)}
     </div>
   );
