@@ -14,7 +14,8 @@ export const TagBlock: FC<{tag: Tag, disabled?: boolean, onClick?: () => void}> 
   return (
   <span
   onClick={onClick}
-  className={`${color} ${disabledOpacity} px-1.5 py-0.5 rounded-sm text-sm hover:scale-115 transition-all duration-500 cursor-pointer`}
+  // eslint-disable-next-line max-len
+  className={`${color} ${disabledOpacity} px-1.5 py-0.5 rounded-sm text-sm hover:scale-115 transition-transform duration-500 cursor-pointer`}
   >
     {tag}
   </span>

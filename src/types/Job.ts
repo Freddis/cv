@@ -9,6 +9,7 @@ export interface Job {
   description: ReactElement
   company: Company,
   tags?: Tag[],
+  // tags?: Partial<Record<Tag, string>>,
   skills?: {
     management?: number,
     backend?: number,

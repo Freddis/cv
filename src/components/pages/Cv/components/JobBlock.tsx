@@ -12,7 +12,7 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
           <div>{from} - {to}</div>
           <div className="text-on-main-3 text-sm">
             {!!job.company.websites && (
-            <a href={job.company.websites[0]} target="_blank" className="text-accent/80 transition-all duration-700">
+            <a href={job.company.websites[0]} target="_blank" className="text-accent/80">
             {job.company.name}
             </a>
             )}
