@@ -10,15 +10,14 @@ import {FaCode, FaUsers} from 'react-icons/fa6';
 import {HiOutlineClock} from 'react-icons/hi';
 import {model} from '../../../model/model';
 import {pdf} from '@react-pdf/renderer';
-import {CvPdf} from '../../elements/CvPdf';
-import {Tag} from '../../../types/Tag';
+import {CvPdf, CvPdfProps} from '../../elements/CvPdf/CvPdf';
 import {SecondaryButton} from '../../elements/SecondaryButton';
-
+import {Tag} from '../../../types/Tag';
 
 export const Home: FC = () => {
 
-  const print = async (suffix: string, tags?: Tag[]) => {
-    const blob = await pdf(<CvPdf model={model} allowedTags={tags} />).toBlob();
+  const print = async (suffix: string, props?: Omit<CvPdfProps, 'model'>) => {
+    const blob = await pdf(<CvPdf model={model} {...props} />).toBlob();
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -28,7 +27,12 @@ export const Home: FC = () => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-
+  const fullCvProps: Omit<CvPdfProps, 'model'> = {
+    allowedTags: Object.values(Tag),
+    profileVariant: 'long',
+    jobsVariant: 'long',
+    projects: true,
+  };
   return (
 <div className="flex flex-col w-full justify-start items-start bg-main text-on-main p-5 md:p-20">
   <div className="grid grid-cols-1 lg:grid-cols-12 items-start justify-center gap-10 lg:mt-15 mb-20">
@@ -48,22 +52,16 @@ export const Home: FC = () => {
       </div>
     </div>
     <div className="lg:col-span-7">
-      <h2 className="text-on-main-3 text-[16px]">Full-Stack Web Developer</h2>
-      <Heading1 className="text-on-main  text-4xl md:text-[48px] font-[600] mb-2">Alex Sarychev</Heading1>
-      <p className="text-on-main-2 text-base/relaxed mb-5">
-        With over 14 years of experience in web and mobile development, I have consistently
-        worked on complex, high-impact projects throughout my career. Passionate about technology,
-        I stay up-to-date with industry-leading solutions and best practices in modern software development.
-      </p>
-      <p className="text-on-main-2  text-base/relaxed mb-5">
-        I have strong expertise in multiple programming languages
-        and proficient in developing production-grade applications across these technologies.
-        My technical knowledge, problem-solving skills, and commitment to high-quality code make me a reliable choice
-        for challenging development tasks.
-      </p>
+      <h2 className="text-on-main-3 text-[16px]">{model.profile.position}</h2>
+      <Heading1 className="text-on-main  text-4xl md:text-[48px] font-[600] mb-2">{model.profile.name}</Heading1>
+      {model.profile.core.map((text) => (
+        <p key={text} className="text-on-main-2 text-base/relaxed mb-5">{text}</p>
+      ))}
       <div className="flex items-center flex-col md:flex-row gap-5">
-        <SecondaryButton onClick={() => print('compact', [])}>Compact CV</SecondaryButton>
-        <PrimaryButton onClick={() => print('full')}>Full CV</PrimaryButton>
+        <SecondaryButton onClick={() => print('compact')}>Compact CV</SecondaryButton>
+        <PrimaryButton onClick={() => print('full', fullCvProps)}>
+          Full CV
+        </PrimaryButton>
       </div>
     </div>
   </div>
@@ -112,7 +110,7 @@ export const Home: FC = () => {
 
   <div className="mb-10">
     <BlockHeader>Skills <span className="text-accent">And Tools</span></BlockHeader>
-    <TagOverviewBlock onCustomCvClick={(tags) => print('custom', tags)}/>
+    <TagOverviewBlock onCustomCvClick={(allowedTags) => print('custom', {allowedTags, projects: true, jobsVariant: 'long'})}/>
   </div>
 
   <div className="w-full mb-10">

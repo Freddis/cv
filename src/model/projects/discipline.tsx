@@ -8,6 +8,9 @@ export const discipline: Project = {
   code: 'https://github.com/Freddis/gym-tracker-web',
   demo: 'http://discipline.alex-sarychev.com',
   logo: <DisciplineLogo />,
+  brief: (
+    <p>A gym tracking app with a modular, service-based backend and a <b>TanStack Start</b> frontend.</p>
+  ),
   description: (
     <div>
       <p className="mb-2">
@@ -22,23 +25,32 @@ export const discipline: Project = {
       </p>
     </div>
   ),
-  tags: [
-    Tag.typescript,
-    Tag.javascript,
-    Tag.tanstackStart,
-    Tag.tanstackQuery,
-    Tag.postgreSQL,
-    Tag.awsCDK,
-    Tag.docker,
-    Tag.Vitest,
-    Tag.react,
-    Tag.expo,
-    Tag.reactNative,
-    Tag.Tailwind,
-  ],
-  skills: {
-    mobile: true,
-    backend: true,
-    frontend: true,
+  tags: {
+    Backend: [
+      Tag.Backend,
+      Tag.typescript,
+      Tag.javascript,
+      Tag.awsCDK,
+      Tag.postgreSQL,
+      Tag.Vitest,
+      Tag.docker,
+      Tag.drizzle,
+    ],
+    Frontend: [
+      Tag.Frontend,
+      Tag.typescript,
+      Tag.javascript,
+      Tag.tanstackStart,
+      Tag.tanstackQuery,
+      Tag.playwright,
+      Tag.react,
+      Tag.Tailwind,
+      Tag.designSystem,
+    ],
+    Mobile: [
+      Tag.Mobile,
+      Tag.reactNative,
+      Tag.expo,
+    ],
   },
 };

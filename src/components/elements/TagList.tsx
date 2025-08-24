@@ -1,20 +1,20 @@
-import {FC} from 'react';
+import {FC, ReactNode} from 'react';
 import {Tag} from '../../types/Tag';
 import {TagBlock} from './TagBlock';
-import {groupMap} from '../../model/groupMap';
-import {tagMap} from '../../model/tagMap';
+import {orderTags} from '../../utils/orderTags';
 
+interface TagListProps {
+  tags: Tag[],
+  disabled?: Tag[],
+  onClick?: (tag: Tag) => void,
+  children?: ReactNode
+}
 
-export const TagList: FC<{tags: Tag[], disabled?: Tag[], onClick?: (tag: Tag) => void}> = ({tags, disabled, onClick}) => {
-
+export const TagList: FC<TagListProps> = ({tags, disabled, onClick, children}) => {
   const sorted: {tag: Tag, disabled: boolean} [] = [];
-  for (const group of Object.keys(groupMap)) {
-    for (const tag of tags) {
-      if (tagMap[tag].groups[0] === group) {
-        const isDisabled = disabled ? disabled.includes(tag) : false;
-        sorted.push({tag, disabled: isDisabled});
-      }
-    }
+  for (const tag of orderTags(tags)) {
+    const isDisabled = disabled ? disabled.includes(tag) : false;
+    sorted.push({tag, disabled: isDisabled});
   }
   const onTagClick = (tag: Tag) => {
     if (!onClick) {
@@ -25,6 +25,7 @@ export const TagList: FC<{tags: Tag[], disabled?: Tag[], onClick?: (tag: Tag) =>
   return (
     <div className="flex flex-wrap gap-3 px-2 py-0">
       {sorted.map((row) => <TagBlock onClick={onTagClick.bind(null, row.tag)} key={row.tag} tag={row.tag} disabled={row.disabled} />)}
-    </div>
+      {children}
+     </div>
   );
 };

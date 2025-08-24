@@ -2,10 +2,16 @@ import {FC} from 'react';
 import {Job} from '../../../../types/Job';
 import {Percentage} from './Percentage';
 import {TagList} from '../../../elements/TagList';
+import {Domain} from '../../../../types/Domain';
+import {getTags} from '../../../../utils/getTags';
 
 export const JobBlock: FC<{job: Job}> = ({job}) => {
   const from: string = `${job.from.getFullYear()}/${(job.from.getMonth() + 1).toString().padStart(2, '0')}`;
   const to: string = `${job.to.getFullYear()}/${(job.to.getMonth() + 1).toString().padStart(2, '0')}`;
+  const descriptions = Object.values(Domain)
+              .filter((domain) => domain !== job.primaryDescription && !!job.description[domain])
+              .map((row) => job.description[row]);
+  const tags = getTags(job.tags);
   return (
     <div className="flex gap-5">
         <div className="hidden lg:flex flex-col items-end text-right w-38 shrink-0 grow-0 pt-2">
@@ -33,7 +39,8 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
           </div>
           <div className="flex flex-col xl:flex-row gap-5">
             <div className="text-base/relaxed text-on-main-2 mb-0 md:mb-10">
-              {job.description}
+              <div className="mb-5">{job.description[job.primaryDescription]}</div>
+              {descriptions.map((p, i) => <div key={i} className="mb-5">{p}</div>)}
             </div>
 
             <div className="min-w-80 w-full xl:w-80  shrink-0 mb-10">
@@ -55,7 +62,7 @@ export const JobBlock: FC<{job: Job}> = ({job}) => {
 
                 </>
               )}
-              {job.tags && job.tags.length > 0 && <TagList tags={job.tags} />}
+              {tags.length > 0 && <TagList tags={tags} />}
             </div>
           </div>
         </div>

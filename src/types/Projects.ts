@@ -1,6 +1,6 @@
 import {ReactElement} from 'react';
 import {Tag} from './Tag';
-
+import {Domain} from './Domain';
 export interface Project {
   title: string,
   color: string,
@@ -8,13 +8,8 @@ export interface Project {
   code?: string,
   demo?: string,
   url?: string,
+  brief: ReactElement;
   description: ReactElement,
-  skills: {
-    mobile?: boolean,
-    backend?: boolean,
-    frontend?:boolean,
-    management?: boolean
-  },
   logo?: ReactElement,
-  tags: [Tag, ...Tag[]]
+  tags: Partial<Record<Domain, Tag[]>>,
 }

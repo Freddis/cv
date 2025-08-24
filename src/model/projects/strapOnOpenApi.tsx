@@ -5,6 +5,9 @@ export const strapOnOpenApi: Project = {
   title: 'Snap-On OpenApi',
   color: 'bg-green-950',
   code: 'https://github.com/Freddis/strap-on-openapi',
+  brief: (
+    <p>Framework combining Zod validator and OpenAPI to deliver fully type-safe, end-to-end APIs across frontend and backend.</p>
+  ),
   description: (
     <div>
       <p className="mb-2">
@@ -17,15 +20,14 @@ export const strapOnOpenApi: Project = {
       </p>
     </div>
   ),
-  tags: [
-    Tag.typescript,
-    Tag.javascript,
-    Tag.openApi,
-    Tag.Zod,
-    Tag.Vitest,
-    Tag.CodeGen,
-  ],
-  skills: {
-    backend: true,
+  tags: {
+    Backend: [
+      Tag.typescript,
+      Tag.javascript,
+      Tag.openApi,
+      Tag.Zod,
+      Tag.Vitest,
+      Tag.CodeGen,
+    ],
   },
 };

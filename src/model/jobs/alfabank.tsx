@@ -1,7 +1,8 @@
+import {Domain} from '../../types/Domain';
 import {Job} from '../../types/Job';
 import {Tag} from '../../types/Tag';
 
-export const alfabank: Job = {
+export const alfabank: Job<Domain.Management> = {
   from: new Date('2013-08-01'),
   to: new Date('2014-02-01'),
   title: 'Project Manager',
@@ -13,23 +14,41 @@ export const alfabank: Job = {
     management: 85,
     backend: 50,
   },
-  tags: [
-    Tag.php, Tag.pHPUnit, Tag.selenium, Tag.javascript,
-    Tag.Waterfall,
-  ],
-  description: (
-    <div>
-      <p className="mb-2">
-        My primary duty was to manage projects in the foreign exchange department of Alfa Bank.
-        Small projects had been coded by me alone while more complex projects had been outsourced
-        to various contractors or developed in-house.
+  primaryDescription: Domain.Management,
+  description: {
+    Backend: (
+      <p>
+        Developed secure systems including a <b>fat client password management</b> application
+        with <b>PHP</b> backend. Ensured encryption of sensitive data with
+        private keys never stored on the server. Implemented automated
+        testing with <b>PHPUnit</b> and frontend verification using <b>Selenium</b>,
+        leveraging <b>JavaScript</b> for client-side interactions.
       </p>
-      <p className="mb-2">
-        One of the projects that is worth mentioning is the fat client password management system
-        which we used to share passwords in the department. The data was encrypted and available
-        only for the end users of the system, while the private key is never held on the server therefore
-        it’s not possible to decrypt the data even if the intruder has the database access.
+    ),
+    Management: (
+      <p>
+        Managed projects in the <b>foreign exchange department</b> of <b>Alfa Bank</b>,
+        overseeing both small projects coded personally and larger initiatives
+        executed by contractors or in-house teams. Applied structured <b>Waterfall</b> methodologies
+        in a high-load <b>fintech</b> environment.
       </p>
-    </div>
-  ),
+    ),
+  },
+  tags: {
+    Backend: [
+      Tag.Backend,
+      Tag.php,
+      Tag.pHPUnit,
+      Tag.selenium,
+    ],
+    Frontend: [
+      Tag.javascript,
+    ],
+    Management: [
+      Tag.Management,
+      Tag.Waterfall,
+      Tag.Management,
+      Tag.fintech,
+    ],
+  },
 };

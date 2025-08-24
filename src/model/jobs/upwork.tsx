@@ -1,7 +1,8 @@
+import {Domain} from '../../types/Domain';
 import {Job} from '../../types/Job';
 import {Tag} from '../../types/Tag';
 
-export const upwork: Job = {
+export const upwork: Job<Domain.Backend> = {
   from: new Date('2019-02-01'),
   to: new Date('2021-09-01'),
   title: 'Top Rated+ Freelancer',
@@ -14,52 +15,62 @@ export const upwork: Job = {
     management: 10,
     mobile: 20,
   },
-  tags: [
-    Tag.java,
-    Tag.typescript,
-    Tag.javascript,
-    Tag.php,
-    Tag.cSharp,
-    Tag.angular,
-    Tag.Vue,
-    Tag.HTML,
-    Tag.CSS,
-    Tag.Webpack,
-    Tag.swift,
-    Tag.react,
-    Tag.mysql,
-    Tag.postgreSQL,
-    Tag.redis,
-    Tag.Jira,
-    Tag.nodeJs,
-  ],
-  description: (
-    <div>
-      <p className="mb-2">
-        Participated in various projects, such as payment system, booking website and visual configurator for house interior/exterior.
+  primaryDescription: Domain.Backend,
+  tags: {
+    Backend: [
+      Tag.Backend,
+      Tag.java,
+      Tag.typescript,
+      Tag.javascript,
+      Tag.php,
+      Tag.cSharp,
+      Tag.Webpack,
+      Tag.mysql,
+      Tag.postgreSQL,
+      Tag.redis,
+      Tag.nodeJs,
+    ],
+    Frontend: [
+      Tag.Webpack,
+      Tag.Frontend,
+      Tag.nextJS,
+      Tag.typescript,
+      Tag.javascript,
+      Tag.react,
+      Tag.angular,
+      Tag.Vue,
+      Tag.HTML,
+      Tag.CSS,
+    ],
+    Mobile: [
+      Tag.Mobile,
+      Tag.java,
+      Tag.swift,
+    ],
+  },
+  description: {
+    Backend: (
+     <p>
+        Designed microservices with <b>Node.js</b>, <b>TypeScript</b>, <b>Java</b>, <b>PHP</b>, and <b>C#</b>, using
+        event-driven communication via <b>RabbitMQ</b>. Built
+        systems on <b>MySQL</b>, <b>PostgreSQL</b>, and <b>Redis</b>, including
+        a service for <a href="https://www.linkedin.com/company/finaxar" target="_blank">Finaxar</a> to process
+        user acquisition requests with sensitive data validation and event-based workflows.
+     </p>
+    ),
+    Frontend: (
+      <p>
+       Developed rich interfaces with <b>React</b>, <b>Angular</b>, <b>Vue</b>, <b>JavaScript</b>, <b>HTML</b>, and <b>CSS</b>.
+       Optimized builds using <b>Webpack</b> and built a visual analytics
+       dashboard for <a href="https://www.ecomengine.com/feedbackfive" target="_blank">Feedback Five</a>, integrating Amazon
+       seller data from APIs and scraping pipelines.
       </p>
-      <p className="mb-2">My account has 2 Top Rated badges (normal and high budget projects), Job Success Score: 100%.</p>
-      <p className="mb-2 font-semibold">Notable SOA / Microservice Projects:</p>
-      <ul>
-        <li>
-      <p className="mb-2 pl-2">
-        Led the development of Amazon Analytics Tool.
-        We used distributed architecture in order to process the data of amazon sellers via Amazon API and scraping using chrome headless.
-        Services were communicating via RabbitMQ.
-        <br />
-        <a href={'https://www.ecomengine.com/feedbackfive'} target="_blank" className="text-accent/70">Feedback Five</a>
+    ),
+    Mobile: (
+      <p>
+        Created native apps with <b>Swift</b> and supported cross-platform integration,
+         delivering mobile-first solutions aligned with backend APIs for fintech and e-commerce projects.
       </p>
-      </li>
-      <li>
-      <p className="mb-2 pl-2">
-        Development of a microservice that processes user requests for acquiring.
-        Gathering information from the user, checking sensitive information,
-        and putting the request for acquiring on the bus. Event based communication.
-        <br />
-        <a href={'https://www.linkedin.com/company/finaxar'} target="_blank" className="text-accent/70">Finaxar</a>
-      </p>
-      </li>
-      </ul>
-    </div>
-  ),
+    ),
+  },
 };

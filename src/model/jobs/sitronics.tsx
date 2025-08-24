@@ -1,7 +1,8 @@
+import {Domain} from '../../types/Domain';
 import {Job} from '../../types/Job';
 import {Tag} from '../../types/Tag';
 
-export const sitronics: Job = {
+export const sitronics: Job<Domain.Frontend> = {
   from: new Date('2014-02-01'),
   to: new Date('2014-07-01'),
   title: 'Web-Platform Architect',
@@ -13,21 +14,44 @@ export const sitronics: Job = {
     management: 0,
     backend: 30,
   },
-  tags: [
-    Tag.php, Tag.pHPUnit, Tag.selenium, Tag.javascript, Tag.websocket, Tag.Gulp, Tag.SVG, Tag.HTML, Tag.CSS,
-  ],
-  description: (
-    <div>
-      <p className="mb-2">
-Designed and developed the frontend part of the Allyst platform. The purpose of the platform is
-creation of Enterprise Service Bus (ESB) schemes.The frontend was a visual editor which gave an
-ability to create system integration for the company within minutes.
-      </p>
-      <p className="mb-2">
-The visual editor was a Javascript application utilizing SVG in order to display graphic elements.
-Serverside part for the frontend consisted of PostgreSQL, MongoDB, Redis and thin PHP shiv for
-read / write operations and statistics.
-      </p>
-    </div>
-  ),
+  primaryDescription: Domain.Frontend,
+  tags: {
+    Backend: [
+      Tag.Backend,
+      Tag.php,
+      Tag.pHPUnit,
+      Tag.mongoDB,
+    ],
+    Frontend: [
+      Tag.Frontend,
+      Tag.selenium,
+      Tag.javascript,
+      Tag.websocket,
+      Tag.Gulp,
+      Tag.SVG,
+      Tag.HTML,
+      Tag.CSS,
+      Tag.Frontend,
+    ],
+  },
+  description: {
+    [Domain.Frontend]: (
+        <p>
+          Designed and developed the frontend of the <b>Allyst platform</b>, a visual
+          editor for creating <b>Enterprise Service Bus (ESB)</b>
+          schemes quickly. Built as a <b>JavaScript</b> application using <b>SVG</b>,
+          <b>HTML</b>, <b>CSS</b>, and <b>Websockets</b>, with automated tasks
+          handled via <b>Gulp</b>. Ensured functionality with <b>Selenium</b> tests.
+        </p>
+     ),
+    [Domain.Backend]: (
+        <p>
+          Supported frontend with <b>PostgreSQL</b>, <b>MongoDB</b>, and <b>Redis</b>,
+          using a thin <b>PHP</b> layer for read/write operations and statistics.
+          Applied <b>PHPUnit</b> for backend testing and maintained
+          seamless data flow between server and visual editor components.
+        </p>
+
+     ),
+  },
 };

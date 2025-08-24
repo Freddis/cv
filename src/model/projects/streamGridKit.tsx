@@ -5,6 +5,13 @@ export const streamGridKit: Project = {
   title: 'Steam Grid Kit',
   color: 'bg-blue-950',
   code: 'https://github.com/Freddis/Steam-Grid-Kit',
+  brief: (
+    <p>
+        Automatically adds the games from your game folders to Steam, finds
+        steam IDs and loads images for them. Manages problematic games and
+        programs not listed in Steam Store at all.
+    </p>
+  ),
   description: (
     <div>
       <p className="mb-2">
@@ -21,8 +28,12 @@ export const streamGridKit: Project = {
       </p>
     </div>
   ),
-  tags: [Tag.java, Tag.JavaFx, Tag.jUnit, Tag.Binary],
-  skills: {
-    frontend: true,
+  tags: {
+    Frontend: [
+      Tag.java,
+      Tag.JavaFx,
+      Tag.jUnit,
+      Tag.Binary,
+    ],
   },
 };

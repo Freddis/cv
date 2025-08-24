@@ -1,6 +1,9 @@
 import {TagGroup} from '../types/TagGroup';
 
 export const groupMap: Record<TagGroup, { color: string }> = {
+  [TagGroup.Category]: {
+    color: 'bg-gray-700',
+  },
   [TagGroup.Languages]: {
     color: 'bg-blue-700',
   },

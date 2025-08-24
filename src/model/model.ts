@@ -17,7 +17,13 @@ import {tauroMarkets} from './projects/tauroMarkets';
 
 export const model: Model = {
   profile: {
-    brief: [
+    brief: cleanUpBreaks(`Lead / Senior Full-Stack Developer with 14+ years of experience 
+            designing and scaling high-impact applications. 
+            Proven record of leading engineering teams, building fintech and trading 
+            platforms, and delivering resilient microservices 
+            and event-driven systems. Passionate about type-safe development, 
+            scalable architectures, and DevOps automation.`),
+    core: [
       `With over 14 years of experience in web and mobile development, I have consistently
         worked on complex, high-impact projects throughout my career. Passionate about technology,
         I stay up-to-date with industry-leading solutions and best practices in modern software development.`,
@@ -34,7 +40,8 @@ export const model: Model = {
       telegram: 'aleksei_sarychev',
       phone: '+995 511 260 049',
       email: 'alex@alex-sarychev.com',
-      linkedIn: 'https://www.linkedin.com/in/alex-sarychev-a75a0374/',
+      linkedIn: 'alex-sarychev-a75a0374',
+      website: 'https://alex-sarychev.com',
     },
     skills: {
       backend: [
@@ -85,7 +92,7 @@ export const model: Model = {
   ],
   education: {
     start: new Date('2008-09-01'),
-    end: new Date('2012-06-01'),
+    end: new Date('2013-06-01'),
     degree: 'Bachelor Degree in Development of CAD Systems',
     insitution: 'Moscow State University of Design and Technology',
   },

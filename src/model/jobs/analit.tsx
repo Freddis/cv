@@ -1,7 +1,8 @@
+import {Domain} from '../../types/Domain';
 import {Job} from '../../types/Job';
 import {Tag} from '../../types/Tag';
 
-export const analit: Job = {
+export const analit: Job<Domain.Management> = {
   from: new Date('2014-08-01'),
   to: new Date('2015-10-01'),
   title: 'Head of Department',
@@ -13,35 +14,38 @@ export const analit: Job = {
     management: 60,
     backend: 70,
   },
-  tags: [
-    Tag.cSharp,
-    Tag.Hibernate,
-    Tag.redmine,
-    Tag.ASPNETMVC,
-  ],
-  description: (
-    <div>
-      <p className="mb-2">
-        Analytic Center is a collaboration of the internet
-        provider <a
-          href={'https://ivrn.net'}
-          target="_blank"
-          className="text-accent/70">Inforum</a> and  <a
-          href={'https://analit.net'}
-          target="_blank"
-          className="text-accent/70"
-        >Analit</a> which
-        is a digital marketplace for drugstores and
-        pharmaceutical companies around Russia. The IT department had been relocated to Moscow
-        due to difficulties in recruitment and it served the needs of both Inforum and AnalitFarmacia.
+  primaryDescription: Domain.Management,
+  tags: {
+    Backend: [
+      Tag.Backend,
+      Tag.cSharp,
+      Tag.Hibernate,
+      Tag.ASPNETMVC,
+      Tag.jenkins,
+    ],
+    Frontend: [
+      Tag.javascript,
+    ],
+    Management: [
+      Tag.Management,
+      Tag.redmine,
+    ],
+  },
+  description: {
+    Backend: (
+      <p>
+        Developed and maintained systems using <b>C#</b>, <b>ASP.NET MVC</b>, and <b>Hibernate</b>, contributing
+        to coding, design, and usability testing. Implemented build automation and
+        deployment pipelines with <b>Jenkins</b>, ensuring reliable backend operations.
       </p>
-      <p className="mb-2">
-        I was in charge of variety of things: made trips to Voronezh in order to set the course of
-        development, searched for and hired the employees for the department, managed inventory and
-        salaries, assessed productivity of the employees, tracked the progress for tasks, managed
-        bonuses and fines for the developers and administered the office. As a developer I participated
-        in usability testing, design, outsourcing, planning and coding.
+    ),
+    Management: (
+      <p>
+        Led the IT department relocation to Moscow, hiring and managing
+        employees, tracking productivity, handling bonuses and fines,
+        and administering the office. Coordinated development direction,
+        outsourcing, planning, and task tracking using <b>Redmine</b>.
       </p>
-    </div>
-  ),
+    ),
+  },
 };

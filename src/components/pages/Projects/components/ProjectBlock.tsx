@@ -3,6 +3,7 @@ import {Project} from '../../../../types/Projects';
 import {PrimaryButton} from '../../../elements/PrimaryButton';
 import {SecondaryButton} from '../../../elements/SecondaryButton';
 import {TagList} from '../../../elements/TagList';
+import {getTags} from '../../../../utils/getTags';
 
 export const ProjectBlock: FC<{project: Project}> = ({project}) => {
 
@@ -18,7 +19,7 @@ export const ProjectBlock: FC<{project: Project}> = ({project}) => {
       <div className={'md:col-span-5 flex flex-col h-full grow bg-black/60 p-5'}>
         <div className="mb-2 text-left text-on-main-2 text-base/relaxed">{project.description}</div>
         <div className="mb-2">
-          <TagList tags={project.tags}/>
+          <TagList tags={getTags(project.tags)}/>
         </div>
         <div className="grow items-end flex gap-5 justify-center">
             {!!project.code && (

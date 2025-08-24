@@ -30,7 +30,16 @@ export const RootLayout: FC = () => {
       setFirstRender(false);
       return;
     }
-    const index = Math.floor(Math.random() * animations.length);
+    const animations: [string, string][] = [
+      ['animated-section-rotateRoomLeftIn', 'animated-section-rotateRoomLeftOut animated-section-ontop'],
+      ['animated-section-rotateRoomRightIn', 'animated-section-rotateRoomRightOut animated-section-ontop'],
+      // ['animated-section-rotateRoomTopIn', 'animated-section-rotateRoomTopOut animated-section-ontop'],
+      // ['animated-section-rotateRoomBottomIn', 'animated-section-rotateRoomBottomOut animated-section-ontop'],
+    ];
+    const prevLocationIndex = possibleLocations.findIndex((x) => x === prevLocation);
+    const locationIndex = possibleLocations.findIndex((x) => x === location.pathname);
+    const index = prevLocationIndex < locationIndex ? 0 : 1;
+    // const index = Math.floor(Math.random() * animations.length); // random pick
     const classes = animations[index];
     if (!classes) {
       throw new Error('Animation not found');
@@ -39,12 +48,7 @@ export const RootLayout: FC = () => {
     setOutClasses(`${classes[1]} visible`);
   }, [location.pathname]);
 
-  const animations: [string, string][] = [
-  ['animated-section-rotateRoomLeftIn', 'animated-section-rotateRoomLeftOut animated-section-ontop'],
-  ['animated-section-rotateRoomRightIn', 'animated-section-rotateRoomRightOut animated-section-ontop'],
-  // ['animated-section-rotateRoomTopIn', 'animated-section-rotateRoomTopOut animated-section-ontop'],
-  // ['animated-section-rotateRoomBottomIn', 'animated-section-rotateRoomBottomOut animated-section-ontop'],
-  ];
+
   const savePrevLocation: MouseEventHandler<HTMLAnchorElement> = () => {
     setPrevLocation(window.location.pathname);
     window.scrollTo({top: 0, behavior: 'smooth'});

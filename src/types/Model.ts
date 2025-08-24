@@ -8,12 +8,14 @@ export interface Model {
     position: string,
     dateOfBirth: Date,
     country: string,
-    brief: string[],
+    brief: string
+    core: string[],
     contacts:{
       telegram: string,
       phone: string,
       email: string,
       linkedIn: string,
+      website: string,
     },
     skills: {
       backend: string[],
@@ -23,6 +25,7 @@ export interface Model {
     }
   },
   education: Education
-  jobs: Job[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  jobs: Job<any>[]
   projects: Project[]
 }
