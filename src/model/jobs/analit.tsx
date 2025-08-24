@@ -34,17 +34,19 @@ export const analit: Job<Domain.Management> = {
   description: {
     Backend: (
       <p>
-        Developed and maintained systems using <b>C#</b>, <b>ASP.NET MVC</b>, and <b>Hibernate</b>, contributing
-        to coding, design, and usability testing. Implemented build automation and
-        deployment pipelines with <b>Jenkins</b>, ensuring reliable backend operations.
+        Developed and maintained systems using <span x-data-tag={Tag.cSharp}>C#</span>
+        , <span x-data-tag={Tag.ASPNETMVC}>ASP.NET MVC</span>,
+        and <span x-data-tag={Tag.Hibernate}>Hibernate</span>, contributing to coding, design, and usability testing.
+        Implemented build automation and
+        deployment pipelines with <span x-data-tag={Tag.jenkins}>Jenkins</span>, ensuring reliable backend operations.
       </p>
     ),
     Management: (
       <p>
-        Led the IT department relocation to Moscow, hiring and managing
+        <span x-data-tag={Tag.Management}>Led the IT department</span> relocation to Moscow, hiring and managing
         employees, tracking productivity, handling bonuses and fines,
         and administering the office. Coordinated development direction,
-        outsourcing, planning, and task tracking using <b>Redmine</b>.
+        outsourcing, planning, and task tracking using <span x-data-tag={Tag.redmine}>Redmine</span>.
       </p>
     ),
   },

@@ -18,19 +18,20 @@ export const alfabank: Job<Domain.Management> = {
   description: {
     Backend: (
       <p>
-        Developed secure systems including a <b>fat client password management</b> application
-        with <b>PHP</b> backend. Ensured encryption of sensitive data with
+        Developed secure systems including a fat client password management application
+        with <span x-data-tag={Tag.php}>PHP</span> backend. Ensured encryption of sensitive data with
         private keys never stored on the server. Implemented automated
-        testing with <b>PHPUnit</b> and frontend verification using <b>Selenium</b>,
-        leveraging <b>JavaScript</b> for client-side interactions.
+        testing with <span x-data-tag={Tag.pHPUnit}>PHPUnit</span> and frontend
+        verification using <span x-data-tag={Tag.selenium}>Selenium</span>,
+        leveraging <span x-data-tag={Tag.javascript}>JavaScript</span> for client-side interactions.
       </p>
     ),
     Management: (
       <p>
-        Managed projects in the <b>foreign exchange department</b> of <b>Alfa Bank</b>,
+        Managed projects in the <span x-data-tag={Tag.fintech}>Forex</span> department of Alfa Bank,
         overseeing both small projects coded personally and larger initiatives
-        executed by contractors or in-house teams. Applied structured <b>Waterfall</b> methodologies
-        in a high-load <b>fintech</b> environment.
+        executed by contractors or in-house teams. Applied structured <span x-data-tag={Tag.Waterfall}>Waterfall</span> methodologies
+        in a high-load <span x-data-tag={Tag.fintech}>fintech</span> environment.
       </p>
     ),
   },

@@ -7,17 +7,15 @@ import {nativeEnum} from 'zod';
 import {Tag} from '../../../../types/Tag';
 import {pdfStyles} from '../utils/pdfStyles';
 
-
 interface JsxPdfProps {
-  el: ReactElement
+  el: ReactElement,
+  allowedTags?: Tag[]
 }
 
-export const JsxPdf: FC<JsxPdfProps> = ({el}) => {
+export const JsxPdf: FC<JsxPdfProps> = ({el, allowedTags}) => {
   const htmlToPdfView = (node: typeof window.document.body['childNodes'][0]): ReactElement => {
     const style: Styles[0] = {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'flex-start',
+
     };
     if (node.nodeName === 'P' || node.nodeName === 'UL') {
       for (const key of Object.keys(pdfStyles.paragraph)) {
@@ -33,8 +31,7 @@ export const JsxPdf: FC<JsxPdfProps> = ({el}) => {
     }
 
     if (node.textContent && node.childNodes.length === 0) {
-      // return <Text style={style}>{parent.textContent}</Text>;
-      return <>{node.textContent.split(' ').map((text, i) => <Text key={i} style={style}>{text.trim()} </Text>)}</>;
+      return <Text>{node.textContent}</Text>;
     }
     const child = node.childNodes[0];
     if (child && node.childNodes.length === 1) {
@@ -42,18 +39,21 @@ export const JsxPdf: FC<JsxPdfProps> = ({el}) => {
         const tag = node.getAttribute('x-data-tag');
         const valid = nativeEnum(Tag).safeParse(tag);
         if (valid.success) {
-          const b = document.createElement('b');
-          b.textContent = node.textContent;
-          return htmlToPdfView(b);
+          const shouldDisplay = !allowedTags || allowedTags.includes(valid.data);
+          if (shouldDisplay) {
+            const b = document.createElement('b');
+            b.textContent = node.textContent;
+            return <Text style={{fontWeight: 'bold'}}>{node.textContent}</Text>;
+          }
         }
       }
       return <View style={style}>{htmlToPdfView(child)}</View>;
     }
-    const view = <View style={style}>
+    const view = <Text style={style}>
       {Array.from(node.childNodes).map((x) => (
         <Fragment key={Math.random()}>{htmlToPdfView(x)}</Fragment>
       ))}
-    </View>;
+    </Text>;
     return view;
   };
 

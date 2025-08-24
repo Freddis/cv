@@ -20,6 +20,7 @@ export const upwork: Job<Domain.Backend> = {
     Backend: [
       Tag.Backend,
       Tag.java,
+      Tag.nodeJs,
       Tag.typescript,
       Tag.javascript,
       Tag.php,
@@ -51,24 +52,28 @@ export const upwork: Job<Domain.Backend> = {
   description: {
     Backend: (
      <p>
-        Designed microservices with <b>Node.js</b>, <b>TypeScript</b>, <b>Java</b>, <b>PHP</b>, and <b>C#</b>, using
-        event-driven communication via <b>RabbitMQ</b>. Built
-        systems on <b>MySQL</b>, <b>PostgreSQL</b>, and <b>Redis</b>, including
+        Designed microservices with <span x-data-tag={Tag.nodeJs}>Node.js</span>
+        , <span x-data-tag={Tag.typescript}>TypeScript</span>, <span x-data-tag={Tag.java}>Java</span>
+        , <span x-data-tag={Tag.php}>PHP</span>, and <span x-data-tag={Tag.cSharp}>C#</span>, using
+        event-driven communication via <span x-data-tag={Tag.rabbitMQ}>RabbitMQ</span>. Built
+        systems on <span x-data-tag={Tag.mysql}>MySQL</span>, <span x-data-tag={Tag.postgreSQL}>PostgreSQL</span>,
+        and <span x-data-tag={Tag.redis}>Redis</span>, including
         a service for <a href="https://www.linkedin.com/company/finaxar" target="_blank">Finaxar</a> to process
         user acquisition requests with sensitive data validation and event-based workflows.
      </p>
     ),
     Frontend: (
       <p>
-       Developed rich interfaces with <b>React</b>, <b>Angular</b>, <b>Vue</b>, <b>JavaScript</b>, <b>HTML</b>, and <b>CSS</b>.
-       Optimized builds using <b>Webpack</b> and built a visual analytics
+       Developed rich interfaces with <span x-data-tag={Tag.react}>React</span>
+       , <span x-data-tag={Tag.angular}>Angular</span>, <span x-data-tag={Tag.Vue}>Vue</span>.
+       Optimized builds using <span x-data-tag={Tag.Webpack}>Webpack</span> and built a visual analytics
        dashboard for <a href="https://www.ecomengine.com/feedbackfive" target="_blank">Feedback Five</a>, integrating Amazon
        seller data from APIs and scraping pipelines.
       </p>
     ),
     Mobile: (
       <p>
-        Created native apps with <b>Swift</b> and supported cross-platform integration,
+        Created native apps with <span x-data-tag={Tag.swift}>Swift</span> and <span x-data-tag={Tag.java}>Java</span>,
          delivering mobile-first solutions aligned with backend APIs for fintech and e-commerce projects.
       </p>
     ),

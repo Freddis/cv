@@ -5,6 +5,7 @@ import {pdfStyles} from '../utils/pdfStyles';
 import {joinWith} from '../../../../utils/joinWith';
 import {JsxPdf} from './JsxPdf';
 import {Tag} from '../../../../types/Tag';
+import {Domain} from '../../../../types/Domain';
 
 interface JobSectionPdfProps {
   jobs: Job[]
@@ -65,13 +66,21 @@ export const JobSectionPdf: FC<JobSectionPdfProps> = ({jobs, allowedTags, varian
             </View>
           </View>
           <View>
-            {variant === 'short' && <JsxPdf el={j.description[j.primaryDescription]}/>}
+            <JsxPdf el={j.description[j.primaryDescription]}/>
             {variant === 'long' && (
               <>
-                {hasManagement && j.description?.Management && <JsxPdf el={j.description.Management}/>}
-                {hasBackend && j.description?.Backend && <JsxPdf el={j.description.Backend}/>}
-                {hasFrontend && j.description?.Frontend && <JsxPdf el={j.description.Frontend}/>}
-                {hasMobile && j.description?.Mobile && <JsxPdf el={j.description.Mobile}/>}
+                {hasManagement && j.primaryDescription !== Domain.Management && j.description?.Management && (
+                   <JsxPdf el={j.description.Management} allowedTags={allowedTags}/>
+                )}
+                {hasBackend && j.primaryDescription !== Domain.Backend && j.description?.Backend && (
+                  <JsxPdf el={j.description.Backend} allowedTags={allowedTags}/>
+                )}
+                {hasFrontend && j.primaryDescription !== Domain.Frontend && j.description?.Frontend && (
+                  <JsxPdf el={j.description.Frontend} allowedTags={allowedTags}/>
+                )}
+                {hasMobile && j.primaryDescription !== Domain.Mobile && j.description?.Mobile && (
+                  <JsxPdf el={j.description.Mobile} allowedTags={allowedTags}/>
+                )}
               </>
             )}
           </View>

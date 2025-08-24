@@ -22,6 +22,7 @@ export const skyground: Job<Domain.Management> = {
     ],
     Backend: [
       Tag.Backend,
+      Tag.nodeJs,
       Tag.nestJS,
       Tag.cpp,
       Tag.TCP,
@@ -72,33 +73,46 @@ export const skyground: Job<Domain.Management> = {
   description: {
     Backend: (
       <p>
-        Built type-safe services using <b>TypeScript</b>, <b>Express</b>,
-        <b>Zod</b>, and <b>OpenAPI</b>. Delivered an <b>ETL pipeline</b>
-        with <b>RabbitMQ</b> (10M+ updates/day) and a <b>Redis</b> cache for live PnL (25k users in &lt;5s).
-        Improved infrastructure with <b>Docker</b>, <b>AWS Lambda</b>, <b>protobuf</b>,
-        <b>TCP</b>, <b>MySQL</b>, <b>PostgreSQL</b>,
-        plus <b>C++</b>/<b>C#</b> modules.
+        Built type-safe services using <span x-data-tag={Tag.typescript}>TypeScript</span>
+        ,<span x-data-tag={Tag.Zod}>Zod</span>, and <span x-data-tag={Tag.openApi}>OpenAPI</span>.
+        Delivered an <span x-data-tag={Tag.ETL}>ETL</span> pipeline
+        with <span x-data-tag={Tag.rabbitMQ}>RabbitMQ</span> (10M+ updates/day) and
+        a <span x-data-tag={Tag.redis}>Redis</span> cache for live PnL (25k users in &lt;5s).
+        Improved infrastructure with <span x-data-tag={Tag.docker}>Docker</span>, <span x-data-tag={Tag.awsLambda}>AWS
+        Lambda</span>, <span x-data-tag={Tag.protobuf}>protobuf</span>
+        , <span x-data-tag={Tag.TCP}>TCP</span>, <span x-data-tag={Tag.mysql}>MySQL</span>,
+        <span x-data-tag={Tag.postgreSQL}>PostgreSQL</span>,
+        plus <span x-data-tag={Tag.cpp}>C++</span>/<span x-data-tag={Tag.cSharp}>C#</span> modules.
       </p>
     ),
     Frontend: (
-      <p>Developed apps with <b>React</b>, <b>Next.js</b>, <b>Tailwind</b>,
-        <b>tanstackQuery</b>, and <b>Redux</b>. Created a shared <b>design system</b>,
-        optimized builds with <b>Webpack</b>/<b>Gulp</b>, added <b>Websockets</b>,
-        and ensured quality with <b>Playwright</b> tests.</p>
+      <p>
+        Developed apps with <span x-data-tag={Tag.react}>React</span>, <span x-data-tag={Tag.nextJS}>Next.js</span>
+        , <span x-data-tag={Tag.Tailwind}>Tailwind</span>
+        , <span x-data-tag={Tag.tanstackQuery}>tanstackQuery</span>
+        , and <span x-data-tag={Tag.redux}>Redux</span>
+        . Created a shared <span x-data-tag={Tag.designSystem}>design system</span>, optimized builds
+        with <span x-data-tag={Tag.Webpack}>Webpack</span>/<span x-data-tag={Tag.Gulp}>Gulp</span>,
+        added <span x-data-tag={Tag.websocket}>Websockets</span>
+        , and ensured quality with <span x-data-tag={Tag.playwright}>Playwright</span> tests
+        .</p>
     ),
     Management: (
       <p>
-        Led a <b>10-person team</b> delivering a Forex whitelabeling platform with 30+ <b>microservices</b> on
-        <b>AWS ECS / Fargate</b>. Managed <b>hiring</b>, <b>mentorship</b>, and
-        <b>planning</b>, standardized workflows with <b>Jira</b>, and set up <b>CI/CD</b>
-        via <b>Jenkins</b> and <b>GitHub Actions</b>.
+        Led a <span x-data-tag={Tag.Management}>10-person</span> team delivering
+        a <span x-data-tag={Tag.fintech}>Forex</span> whitelabeling platform
+        with <span x-data-tag={Tag.microservices}>30+  microservices</span>
+        on <span x-data-tag={Tag.awsFargate}>AWS ECS / Fargate</span>. Managed hiring, mentorship, and
+        planning, standardized workflows with <span x-data-tag={Tag.Jira}>Jira</span>, and
+        set up <span x-data-tag={Tag.Backend}>CI/CD</span>&nbsp;
+        via <span x-data-tag={Tag.jenkins}>Jenkins</span> and <span x-data-tag={Tag.gha}>GitHub Actions</span>.
       </p>
     ),
     Mobile: (
       <p>
-        Contributed to <b>Swift</b> apps integrated with <b>MT4/MT5</b>,
+        Contributed to <span x-data-tag={Tag.swift}>Swift</span> apps integrated with <span x-data-tag={Tag.fintech}>MT4/MT5</span>,
         extending platform functionality across devices
-        in the <b>fintech</b> ecosystem.
+        in the <span x-data-tag={Tag.fintech}>fintech</span> ecosystem.
       </p>
     ),
   },

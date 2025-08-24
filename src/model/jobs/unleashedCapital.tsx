@@ -17,6 +17,7 @@ export const unleashedCapital: Job<Domain.Backend> = {
   tags: {
     Backend: [
       Tag.Backend,
+      Tag.nodeJs,
       Tag.javascript,
       Tag.typescript,
       Tag.jenkins,
@@ -26,7 +27,6 @@ export const unleashedCapital: Job<Domain.Backend> = {
       Tag.protobuf,
       Tag.nestJS,
       Tag.docker,
-      Tag.Knex,
       Tag.Jira,
       Tag.Webpack,
       Tag.Zod,
@@ -41,10 +41,16 @@ export const unleashedCapital: Job<Domain.Backend> = {
   description: {
     Backend: (
        <p>
-        Developed and maintained <b>microservices</b> (≈15)
-        for <b>HAVE Bank</b> using <b>NestJS</b>, <b>TypeORM</b>, <b>Knex</b>, <b>PostgreSQL</b>, <b>Redis</b>,
-        <b>Protobuf</b>, <b>Docker</b>, <b>Kubernetes</b>, and <b>Jenkins</b>. Built <b>GraphQL APIs</b> and event-driven
-        architecture with <b>Kafka</b> and <b>RabbitMQ</b>, following <b>CQRS</b> patterns in a high-load <b>fintech</b> environment.
+        Developed and maintained <span x-data-tag={Tag.microservices}>15  microservices</span> for
+        HAVE Bank using <span x-data-tag={Tag.nestJS}>NestJS</span>, <span x-data-tag={Tag.typeORM}>TypeORM</span>
+        , <span x-data-tag={Tag.postgreSQL}>PostgreSQL</span>, <span x-data-tag={Tag.redis}>Redis</span>
+        , <span x-data-tag={Tag.protobuf}>Protobuf</span>, <span x-data-tag={Tag.docker}>Docker</span>
+        , <span x-data-tag={Tag.kubernetes}>Kubernetes</span>, and <span x-data-tag={Tag.jenkins}>Jenkins</span>
+        . Built <span x-data-tag={Tag.graphql}>GraphQL</span> APIs and event-driven
+        architecture with <span x-data-tag={Tag.kafka}>Kafka</span>
+        , following <span x-data-tag={Tag.microservices}>CQRS</span> and&nbsp;
+        <span x-data-tag={Tag.EventSourcing}>Event Sourcing</span> patterns
+        in a <span x-data-tag={Tag.fintech}>fintech</span> environment.
       </p>
 
     ),

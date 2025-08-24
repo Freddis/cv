@@ -37,18 +37,18 @@ export const sitronics: Job<Domain.Frontend> = {
   description: {
     [Domain.Frontend]: (
         <p>
-          Designed and developed the frontend of the <b>Allyst platform</b>, a visual
-          editor for creating <b>Enterprise Service Bus (ESB)</b>
-          schemes quickly. Built as a <b>JavaScript</b> application using <b>SVG</b>,
-          <b>HTML</b>, <b>CSS</b>, and <b>Websockets</b>, with automated tasks
-          handled via <b>Gulp</b>. Ensured functionality with <b>Selenium</b> tests.
+          Designed and developed the frontend of the Allyst platform, a visual
+          editor for creating Enterprise Service Bus (ESB) schemes quickly. Built as
+          a <span x-data-tag={Tag.javascript}>JavaScript</span> application
+          using <span x-data-tag={Tag.SVG}>SVG</span> and <span x-data-tag={Tag.websocket}>Websockets</span>.
+          Ensured functionality with <span x-data-tag={Tag.selenium}>Selenium</span> tests.
         </p>
      ),
     [Domain.Backend]: (
         <p>
-          Supported frontend with <b>PostgreSQL</b>, <b>MongoDB</b>, and <b>Redis</b>,
-          using a thin <b>PHP</b> layer for read/write operations and statistics.
-          Applied <b>PHPUnit</b> for backend testing and maintained
+          Supported frontend with <span x-data-tag={Tag.mongoDB}>MongoDB</span>, and <span x-data-tag={Tag.redis}>Redis</span>,
+          using a thin <span x-data-tag={Tag.php}>PHP</span> layer for read/write operations and statistics.
+          Applied <span x-data-tag={Tag.pHPUnit}>PHPUnit</span> for backend testing and maintained
           seamless data flow between server and visual editor components.
         </p>
 

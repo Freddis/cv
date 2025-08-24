@@ -120,4 +120,5 @@ export enum Tag {
   Frontend = 'Frontend',
   Mobile = 'Mobile',
   Management = 'Management',
+  ecommerce = 'E-commerce',
 }

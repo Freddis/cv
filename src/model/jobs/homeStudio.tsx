@@ -18,6 +18,7 @@ export const homeStudio: Job<Domain.Management> = {
   tags: {
     Backend: [
       Tag.Backend,
+      Tag.nodeJs,
       Tag.javascript,
       Tag.typescript,
       Tag.jenkins,
@@ -61,31 +62,37 @@ export const homeStudio: Job<Domain.Management> = {
     Backend: (
       <p>
         Developed internal tools and client projects
-        using <b>PHP</b>,<b>NodeJs</b>, <b>PostgreSQL</b>, <b>MySQL</b>, <b>Redis</b>, <b>Node.js</b>, <b>NestJS</b>, <b>TypeORM</b>,
-        and <b>Protobuf</b>, ensuring scalable and maintainable back-end systems.
-        Managed deployments with <b>Jenkins</b> and <b>Kubernetes</b>.
+        using <span x-data-tag={Tag.php}>PHP</span>, <span x-data-tag={Tag.nodeJs}>NodeJs</span>
+        , <span x-data-tag={Tag.postgreSQL}>PostgreSQL</span>
+        , <span x-data-tag={Tag.mysql}>MySQL</span>, <span x-data-tag={Tag.redis}>Redis</span>
+        , <span x-data-tag={Tag.typeORM}>TypeORM</span>, and <span x-data-tag={Tag.protobuf}>Protobuf</span>
+        , ensuring scalable and maintainable back-end systems.
+        Managed deployments with <span x-data-tag={Tag.vbox}>VBox</span> and <span x-data-tag={Tag.kubernetes}>Kubernetes</span>.
       </p>
     ),
     Frontend: (
       <p>
-        Built front-end applications using <b>JavaScript</b>, <b>TypeScript</b>, <b>Angular</b>, <b>Vue</b>, <b>Webpack</b>,
-        and <b>Websockets</b>. Maintained high quality with <b>Selenium</b> tests and integrated
+        Built front-end applications using <span x-data-tag={Tag.javascript}>JavaScript</span>
+        , <span x-data-tag={Tag.typescript}>TypeScript</span>, <span x-data-tag={Tag.angular}>Angular</span>
+        , <span x-data-tag={Tag.Vue}>Vue</span>, <span x-data-tag={Tag.Webpack}>Webpack</span>,
+        and <span x-data-tag={Tag.websocket}>Websockets</span>. Maintained high
+        quality with <span x-data-tag={Tag.selenium}>Selenium</span> tests and integrated
         front-end with backend APIs.
       </p>
     ),
     Management: (
       <p>
-        Founded and led a digital agency with 7 employees,
-        including <b>programmers</b>, <b>HTML developer</b>, <b>designer</b>, and <b>sales staff</b>. Oversaw project
+        Founded and led a digital agency with  <span x-data-tag={Tag.Management}>7 employees</span>,
+        including programmers, HTML developer, designer, and sales staff. Oversaw project
         direction, partner relations, and architecture decisions
         while contributing to complex development tasks.
       </p>
     ),
     Mobile: (
        <p>
-        Developed native <b>Android</b> and <b>iOS</b> applications,
+        Developed native <span x-data-tag={Tag.java}>Android</span> and <span x-data-tag={Tag.swift}>iOS</span> applications,
         ensuring full cross-platform functionality and integration
-        with company systems, leveraging <b>Mobile</b> technologies.
+        with company systems, leveraging <span x-data-tag={Tag.Mobile}>Mobile</span> technologies.
       </p>
 
     ),

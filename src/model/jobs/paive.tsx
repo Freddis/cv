@@ -33,16 +33,18 @@ export const paive: Job<Domain.Backend> = {
   description: {
     [Domain.Frontend]: (
       <p>
-        Developed client-facing features using <b>JavaScript</b> and <b>jQuery</b> for the company CMS and
+        Developed client-facing features using <span x-data-tag={Tag.javascript}>JavaScript</span>&nbsp;
+        and <span x-data-tag={Tag.jquery}>jQuery</span> for the company CMS and
         standalone projects. Built interactive applications
-        including platform the Diageo bartender competition, enabling real-time updates via <b>AJAX</b>.
+        including platform the Diageo bartender competition, enabling real-time updates via <span x-data-tag={Tag.ajax}>AJAX</span>.
       </p>
     ),
     [Domain.Backend]: (
       <p>
-        Implemented new modules and fixed bugs in the <b>PHP</b>-based CMS.
+        Implemented new modules and fixed bugs in the <span x-data-tag={Tag.php}>PHP</span>-based CMS.
         Managed routine tasks like data conversion and bulk uploads
-        for <b>e-commerce</b> shops, ensuring smooth backend operations and integration with frontend components.
+        for <span x-data-tag={Tag.ecommerce}>e-commerce</span> shops,
+        ensuring smooth backend operations and integration with frontend components.
       </p>
     ),
   },

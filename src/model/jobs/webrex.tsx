@@ -33,10 +33,11 @@ export const webrex: Job<Domain.Backend> = {
   description: {
     Backend: (
       <p>
-        Developed a coupon website using <b>PHP</b> and the <b>Kohana</b> framework
-        on a 6-month contract. Responsible for selecting tools and libraries,
-        designing the project, and implementing backend functionality
-        using <b>JavaScript</b>, <b>AJAX</b>, <b>HTML</b>, <b>CSS</b>, and <b>jQuery</b> where needed.
+        Developed a coupon website using <span x-data-tag={Tag.php}>PHP</span> and
+        the Kohana framework on a 6-month contract. Responsible for selecting tools and libraries,
+        designing the project, and implementing frontend functionality
+        using <span x-data-tag={Tag.HTML}>HTML</span>
+        , <span x-data-tag={Tag.CSS}>CSS</span>, and <span x-data-tag={Tag.jquery}>jQuery</span> where needed.
       </p>
     ),
   },

@@ -34,18 +34,21 @@ export const xsoft: Job<Domain.Management> = {
   description: {
     Management: (
       <p>
-        Hired and led a team of 3 <b>JavaScript</b> developers,
+        Hired and led
+        a <span x-data-tag={Tag.Management}>team of 3</span> <span x-data-tag={Tag.javascript}>JavaScript developers</span>,
         coordinated with backend, design, and UX teams,
-        and established project workflows using <b>Git</b> and <b>Redmine</b> for
+        and established project workflows using Git and <span x-data-tag={Tag.redmine}>Redmine</span> for
         efficient management.
       </p>
     ),
     Frontend: (
       <p>
-        Designed the entire frontend architecture of a <b>cloud operating system</b> web service
+        Designed the entire frontend architecture of a cloud operating system SAAS
         from scratch, ensuring no extra frameworks were used for security.
         Built interactive features
-        with <b>JavaScript</b>, <b>HTML</b>, <b>CSS</b>, <b>Angular</b>, <b>AJAX</b>, and <b>long polling</b>.
+        with plain <span x-data-tag={Tag.javascript}>JavaScript</span>, <span x-data-tag={Tag.HTML}>HTML</span>,
+         <span x-data-tag={Tag.CSS}>CSS</span>, <span x-data-tag={Tag.ajax}>AJAX</span>,
+          and <span x-data-tag={Tag.longPolling}>long polling</span>.
       </p>
     ),
   },

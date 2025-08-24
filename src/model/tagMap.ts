@@ -437,7 +437,7 @@ export const tagMap: Record<Tag, TagProps> = {
   [Tag.nodeJs]: {
     language: [Tag.typescript, Tag.javascript],
     groups: [TagGroup.Backend],
-    estimatable: false,
+    estimatable: true,
   },
   [Tag.Knex]: {
     language: [Tag.javascript, Tag.typescript],
@@ -594,9 +594,9 @@ export const tagMap: Record<Tag, TagProps> = {
     groups: [TagGroup.Category],
     estimatable: true,
   },
-  // [Tag.Techniques]: {
-  //   language: null,
-  //   groups: [TagGroup.Category],
-  //   estimatable: false,
-  // },
+  [Tag.ecommerce]: {
+    estimatable: false,
+    language: null,
+    groups: [TagGroup.Other, TagGroup.Frontend, TagGroup.Backend],
+  },
 };

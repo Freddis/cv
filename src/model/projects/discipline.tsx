@@ -9,7 +9,7 @@ export const discipline: Project = {
   demo: 'http://discipline.alex-sarychev.com',
   logo: <DisciplineLogo />,
   brief: (
-    <p>A gym tracking app with a modular, service-based backend and a <b>TanStack Start</b> frontend.</p>
+    <p>A gym tracking app with a modular, service-based backend and a TanStack Start frontend.</p>
   ),
   description: (
     <div>
