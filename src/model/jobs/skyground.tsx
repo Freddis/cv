@@ -74,26 +74,23 @@ export const skyground: Job<Domain.Management> = {
     Backend: (
       <p>
         Built type-safe services using <span x-data-tag={Tag.typescript}>TypeScript</span>
-        ,<span x-data-tag={Tag.Zod}>Zod</span>, and <span x-data-tag={Tag.openApi}>OpenAPI</span>.
+        , <span x-data-tag={Tag.Zod}>Zod</span>, and <span x-data-tag={Tag.openApi}>OpenAPI</span>.
         Delivered an <span x-data-tag={Tag.ETL}>ETL</span> pipeline
-        with <span x-data-tag={Tag.rabbitMQ}>RabbitMQ</span> (10M+ updates/day) and
+        with <span x-data-tag={Tag.rabbitMQ}>RabbitMQ</span> (10M+ updates/day), <span x-data-tag={Tag.mysql}>MySQL</span>
+        , <span x-data-tag={Tag.postgreSQL}>PostgreSQL</span>. Built
         a <span x-data-tag={Tag.redis}>Redis</span> cache for live PnL (25k users in &lt;5s).
-        Improved infrastructure with <span x-data-tag={Tag.docker}>Docker</span>, <span x-data-tag={Tag.awsLambda}>AWS
+        Improved infrastructure using  <span x-data-tag={Tag.docker}>Docker</span>. Worked with <span x-data-tag={Tag.awsLambda}>AWS
         Lambda</span>, <span x-data-tag={Tag.protobuf}>protobuf</span>
-        , <span x-data-tag={Tag.TCP}>TCP</span>, <span x-data-tag={Tag.mysql}>MySQL</span>,
-        <span x-data-tag={Tag.postgreSQL}>PostgreSQL</span>,
-        plus <span x-data-tag={Tag.cpp}>C++</span>/<span x-data-tag={Tag.cSharp}>C#</span> modules.
+        , bare <span x-data-tag={Tag.TCP}>TCP</span>
+        , <span x-data-tag={Tag.cpp}>C++</span> and <span x-data-tag={Tag.cSharp}>C#</span> modules.
       </p>
     ),
     Frontend: (
       <p>
-        Developed apps with <span x-data-tag={Tag.react}>React</span>, <span x-data-tag={Tag.nextJS}>Next.js</span>
-        , <span x-data-tag={Tag.Tailwind}>Tailwind</span>
-        , <span x-data-tag={Tag.tanstackQuery}>tanstackQuery</span>
-        , and <span x-data-tag={Tag.redux}>Redux</span>
-        . Created a shared <span x-data-tag={Tag.designSystem}>design system</span>, optimized builds
-        with <span x-data-tag={Tag.Webpack}>Webpack</span>/<span x-data-tag={Tag.Gulp}>Gulp</span>,
-        added <span x-data-tag={Tag.websocket}>Websockets</span>
+        Developed apps with <span x-data-tag={Tag.react}>React</span>
+        , <span x-data-tag={Tag.nextJS}>Next.js</span> and <span x-data-tag={Tag.tanstackQuery}>Tanstack Query</span>
+        . Created a shared <span x-data-tag={Tag.designSystem}>design system</span> based on <span x-data-tag={Tag.Tailwind}>Tailwind</span>
+        , user <span x-data-tag={Tag.redux}>Redux</span> with <span x-data-tag={Tag.websocket}>websockets</span> to stream real-time data
         , and ensured quality with <span x-data-tag={Tag.playwright}>Playwright</span> tests
         .</p>
     ),
@@ -110,9 +107,9 @@ export const skyground: Job<Domain.Management> = {
     ),
     Mobile: (
       <p>
-        Contributed to <span x-data-tag={Tag.swift}>Swift</span> apps integrated with <span x-data-tag={Tag.fintech}>MT4/MT5</span>,
-        extending platform functionality across devices
-        in the <span x-data-tag={Tag.fintech}>fintech</span> ecosystem.
+        Contributed to the <span x-data-tag={Tag.swift}>IOS (Swift)</span> app
+        integrated with <span x-data-tag={Tag.fintech}>MT4/MT5</span>,
+        extending platform functionality across moble devices.
       </p>
     ),
   },

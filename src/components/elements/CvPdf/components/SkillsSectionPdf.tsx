@@ -31,7 +31,7 @@ export const SkillsSectionPdf: FC<{tags: Tag[], jobs: Job[]}> = ({tags, jobs}) =
     <View style={pdfStyles.section}>
       <Text style={pdfStyles.section.heading}>Skills</Text>
       <View style={{flexDirection: 'row', flexWrap: 'wrap', gap: 5}}>
-        {orderedTags.map((tag, i) => <Text key={i}>{tag}: {getExperienceYears(tag).toFixed(1)}y.</Text>)}
+        {orderedTags.map((tag, i) => <Text key={i}>{tag}: {getExperienceYears(tag).toFixed(0)}y.</Text>)}
       </View>
     </View>
   );

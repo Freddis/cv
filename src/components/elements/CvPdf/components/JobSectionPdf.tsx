@@ -35,7 +35,7 @@ export const JobSectionPdf: FC<JobSectionPdfProps> = ({jobs, allowedTags, varian
       'December',
     ];
     const month = date.getMonth();
-    const name = months[month - 1] ?? 'January';
+    const name = months[month] ?? 'January';
     const result = `${name.substring(0, 3)} ${date.getFullYear()}`;
     return result;
   };
