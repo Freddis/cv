@@ -58,7 +58,7 @@ export const Home: FC = () => {
         <p key={text} className="text-on-main-2 text-base/relaxed mb-5">{text}</p>
       ))}
       <div className="flex items-center flex-col md:flex-row gap-5">
-        <SecondaryButton onClick={() => print('compact')}>Compact CV</SecondaryButton>
+        <SecondaryButton onClick={() => print('compact', {allowedTags: Object.values(Tag)})}>Compact CV</SecondaryButton>
         <PrimaryButton onClick={() => print('full', fullCvProps)}>
           Full CV
         </PrimaryButton>

@@ -14,9 +14,7 @@ interface JsxPdfProps {
 
 export const JsxPdf: FC<JsxPdfProps> = ({el, allowedTags}) => {
   const htmlToPdfView = (node: typeof window.document.body['childNodes'][0]): ReactElement => {
-    const style: Styles[0] = {
-
-    };
+    const style: Styles[0] = {};
     if (node.nodeName === 'P' || node.nodeName === 'UL') {
       for (const key of Object.keys(pdfStyles.paragraph)) {
         style[key] = pdfStyles.paragraph[key];
@@ -43,18 +41,20 @@ export const JsxPdf: FC<JsxPdfProps> = ({el, allowedTags}) => {
           if (shouldDisplay) {
             const b = document.createElement('b');
             b.textContent = node.textContent;
-            return <Text style={{fontWeight: 'bold'}}>{node.textContent}</Text>;
+            return htmlToPdfView(b);
           }
         }
       }
       return <View style={style}>{htmlToPdfView(child)}</View>;
     }
-    const view = <Text style={style}>
-      {Array.from(node.childNodes).map((x) => (
-        <Fragment key={Math.random()}>{htmlToPdfView(x)}</Fragment>
-      ))}
-    </Text>;
-    return view;
+
+    return (
+      <Text style={style}>
+        {Array.from(node.childNodes).map((x) => (
+          <Fragment key={Math.random()}>{htmlToPdfView(x)}</Fragment>
+        ))}
+      </Text>
+    );
   };
 
   const render = (el: ReactElement): ReactElement => {

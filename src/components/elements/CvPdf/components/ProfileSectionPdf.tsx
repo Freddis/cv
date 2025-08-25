@@ -11,10 +11,12 @@ export const ProfileSectionPdf: FC<{profile: Model['profile'], variant: 'long' |
   return (
     <View style={pdfStyles.section}>
       <Text style={pdfStyles.section.heading}>Profile</Text>
-      {variant === 'short' && <Text style={{marginBottom: 5}} >{profile.brief}</Text>}
-      {variant !== 'short' && profile.core.map((p) => (
-        <Text key={p} style={{marginBottom: 5}} >{p}</Text>
-      ))}
+      <View style={{flexDirection: 'column', gap: 5}}>
+        {variant === 'short' && <Text>{profile.brief}</Text>}
+        {variant !== 'short' && profile.core.map((p) => (
+          <Text key={p}>{p}</Text>
+        ))}
+      </View>
     </View>
   );
 };

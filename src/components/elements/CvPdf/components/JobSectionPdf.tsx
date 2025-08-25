@@ -65,8 +65,8 @@ export const JobSectionPdf: FC<JobSectionPdfProps> = ({jobs, allowedTags, varian
             )}
             </View>
           </View>
-          <View>
-            <JsxPdf el={j.description[j.primaryDescription]}/>
+          <View style={{marginBottom: -5}}>
+            <JsxPdf el={j.description[j.primaryDescription]} allowedTags={allowedTags}/>
             {variant === 'long' && (
               <>
                 {hasManagement && j.primaryDescription !== Domain.Management && j.description?.Management && (

@@ -1,4 +1,4 @@
-import {Page, Document, Font} from '@react-pdf/renderer';
+import {Page, Document} from '@react-pdf/renderer';
 import {FC} from 'react';
 import {Model} from '../../../types/Model';
 import {Tag} from '../../../types/Tag';
@@ -10,12 +10,6 @@ import {ProfileSectionPdf} from './components/ProfileSectionPdf';
 import {EducationSectionPdf} from './components/EductionSectionPdf';
 import {SkillsSectionPdf} from './components/SkillsSectionPdf';
 import {JobSectionPdf} from './components/JobSectionPdf';
-
-Font.register({family: 'Arial', src: '/fonts/Arial.ttf', fontStyle: 'normal', fontWeight: 'normal'});
-Font.register({family: 'Arial', src: '/fonts/Arial-Bold.ttf', fontStyle: 'normal', fontWeight: 'bold'});
-Font.register({family: 'Arial', src: '/fonts/Arial-Italic.ttf', fontStyle: 'italic', fontWeight: 'normal'});
-Font.register({family: 'Arial', src: '/fonts/Arial-Italic.ttf', fontStyle: 'italic', fontWeight: 'normal'});
-Font.register({family: 'Arial', src: '/fonts/Arial-BoldItalic.ttf', fontStyle: 'italic', fontWeight: 'bold'});
 
 export interface CvPdfProps {
   model: Model,

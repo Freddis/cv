@@ -98,7 +98,7 @@ export const skyground: Job<Domain.Management> = {
       <p>
         Led a <span x-data-tag={Tag.Management}>10-person</span> team delivering
         a <span x-data-tag={Tag.fintech}>Forex</span> whitelabeling platform
-        with <span x-data-tag={Tag.microservices}>30+  microservices</span>
+        with <span x-data-tag={Tag.microservices}>30+  microservices</span>&nbsp;
         on <span x-data-tag={Tag.awsFargate}>AWS ECS / Fargate</span>. Managed hiring, mentorship, and
         planning, standardized workflows with <span x-data-tag={Tag.Jira}>Jira</span>, and
         set up <span x-data-tag={Tag.Backend}>CI/CD</span>&nbsp;
