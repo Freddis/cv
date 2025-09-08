@@ -9,14 +9,16 @@ import {TagOverviewBlock} from './components/TagOverviewBlock';
 import {FaCode, FaUsers} from 'react-icons/fa6';
 import {HiOutlineClock} from 'react-icons/hi';
 import {model} from '../../../model/model';
-import {pdf} from '@react-pdf/renderer';
-import {CvPdf, CvPdfProps} from '../../elements/CvPdf/CvPdf';
+import type {CvPdfProps} from '../../elements/CvPdf/CvPdf';
 import {SecondaryButton} from '../../elements/SecondaryButton';
 import {Tag} from '../../../types/Tag';
 
 export const Home: FC = () => {
 
   const print = async (suffix: string, props?: Omit<CvPdfProps, 'model'>) => {
+    // the react-pdf is unbelievably big, not need to include it in the bundle
+    const pdf = (await import('@react-pdf/renderer')).pdf;
+    const CvPdf = (await import('../../elements/CvPdf/CvPdf')).CvPdf;
     const blob = await pdf(<CvPdf model={model} {...props} />).toBlob();
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');

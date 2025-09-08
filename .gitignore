@@ -9,3 +9,4 @@ build
 .drizzle
 temp
 .env
+stats.html

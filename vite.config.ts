@@ -3,6 +3,7 @@ import {defineConfig} from 'vite';
 import tsConfigPaths from 'vite-tsconfig-paths';
 import viteReact from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+import {visualizer} from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   server: {
@@ -22,5 +23,11 @@ export default defineConfig({
       },
     }),
     viteReact(),
+    visualizer({
+      filename: 'stats.html',
+      gzipSize: true,
+      brotliSize: true,
+      // open: true,
+    }),
   ],
 });
