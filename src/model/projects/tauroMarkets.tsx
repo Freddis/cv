@@ -34,6 +34,9 @@ export const tauroMarkets: Project = {
       Tag.fintech,
       Tag.websocket,
       Tag.jenkins,
+      Tag.awsCDK,
+      Tag.bull,
+      Tag.kue,
     ],
     Frontend: [
       Tag.Frontend,

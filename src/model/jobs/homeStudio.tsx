@@ -62,7 +62,8 @@ export const homeStudio: Job<Domain.Management> = {
     Backend: (
       <p>
         Developed internal tools and client projects
-        using <span x-data-tag={Tag.php}>PHP</span>, <span x-data-tag={Tag.nodeJs}>NodeJs</span>
+        using <span x-data-tag={Tag.java}>Java</span>
+        , <span x-data-tag={Tag.php}>PHP</span>, <span x-data-tag={Tag.nodeJs}>NodeJs</span>
         , <span x-data-tag={Tag.postgreSQL}>PostgreSQL</span>
         , <span x-data-tag={Tag.mysql}>MySQL</span>, <span x-data-tag={Tag.redis}>Redis</span>
         , <span x-data-tag={Tag.typeORM}>TypeORM</span>, and <span x-data-tag={Tag.protobuf}>Protobuf</span>

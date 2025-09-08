@@ -47,7 +47,8 @@ export const sitronics: Job<Domain.Frontend> = {
     [Domain.Backend]: (
         <p>
           Supported frontend with <span x-data-tag={Tag.mongoDB}>MongoDB</span>, and <span x-data-tag={Tag.redis}>Redis</span>,
-          using a thin <span x-data-tag={Tag.php}>PHP</span> layer for read/write operations and statistics.
+          using a thin <span x-data-tag={Tag.php}>PHP</span>(
+          <span x-data-tag={Tag.symfony}>Symfony</span>) layer for read/write operations and statistics.
           Applied <span x-data-tag={Tag.pHPUnit}>PHPUnit</span> for backend testing and maintained
           seamless data flow between server and visual editor components.
         </p>

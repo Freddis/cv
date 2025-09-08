@@ -17,6 +17,7 @@ export const JobSectionPdf: FC<JobSectionPdfProps> = ({jobs, allowedTags, varian
   const hasFrontend = allowedTags?.includes(Tag.Frontend);
   const hasMobile = allowedTags?.includes(Tag.Mobile);
   const hasManagement = allowedTags?.includes(Tag.Management);
+
   const getDate = (date?: Date): string => {
     if (!date) {
       return 'To Date';
@@ -38,6 +39,22 @@ export const JobSectionPdf: FC<JobSectionPdfProps> = ({jobs, allowedTags, varian
     const name = months[month] ?? 'January';
     const result = `${name.substring(0, 3)} ${date.getFullYear()}`;
     return result;
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const shouldDisplayPrimaryDescription = (job: Job): boolean => {
+    return true;
+
+    // const somethingToDisplayExists = [
+    //   hasBackend ? Domain.Backend : undefined,
+    //   hasFrontend ? Domain.Frontend : undefined,
+    //   hasMobile ? Domain.Mobile : undefined,
+    //   hasManagement ? Domain.Management : undefined,
+    // ]
+    // .filter((x) => x !== undefined)
+    // .filter((x) => x !== job.primaryDescription)
+    // .find((x) => !!job.description[x]);
+    // return !somethingToDisplayExists;
   };
 
   return (
@@ -66,11 +83,18 @@ export const JobSectionPdf: FC<JobSectionPdfProps> = ({jobs, allowedTags, varian
             </View>
           </View>
           <View style={{marginBottom: -5}}>
-            <JsxPdf el={j.description[j.primaryDescription]} allowedTags={allowedTags}/>
+            {variant === 'short' && (
+              <JsxPdf el={j.description[j.primaryDescription]} allowedTags={allowedTags}/>
+            )}
             {variant === 'long' && (
               <>
+
+                { //primary description goes first
+                shouldDisplayPrimaryDescription(j) && (
+                  <JsxPdf el={j.description[j.primaryDescription]} allowedTags={allowedTags}/>
+                )}
                 {hasManagement && j.primaryDescription !== Domain.Management && j.description?.Management && (
-                   <JsxPdf el={j.description.Management} allowedTags={allowedTags}/>
+                  <JsxPdf el={j.description.Management} allowedTags={allowedTags}/>
                 )}
                 {hasBackend && j.primaryDescription !== Domain.Backend && j.description?.Backend && (
                   <JsxPdf el={j.description.Backend} allowedTags={allowedTags}/>

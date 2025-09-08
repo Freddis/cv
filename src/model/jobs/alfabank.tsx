@@ -19,7 +19,8 @@ export const alfabank: Job<Domain.Management> = {
     Backend: (
       <p>
         Developed secure systems including a fat client password management application
-        with <span x-data-tag={Tag.php}>PHP</span> backend. Ensured encryption of sensitive data with
+        with <span x-data-tag={Tag.php}>PHP</span>(<span x-data-tag={Tag.symfony}>Symfony</span>) backend.
+        Ensured encryption of sensitive data with
         private keys never stored on the server. Implemented automated
         testing with <span x-data-tag={Tag.pHPUnit}>PHPUnit</span> and frontend
         verification using <span x-data-tag={Tag.selenium}>Selenium</span>,

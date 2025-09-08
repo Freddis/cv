@@ -24,7 +24,7 @@ export interface CvPdfProps {
 export const CvPdf: FC<CvPdfProps> = ({
   model,
   allowedTags,
-  profileVariant: profile = 'short',
+  profileVariant,
   jobsVariant = 'short',
   projects = false,
   contacts,
@@ -35,7 +35,7 @@ export const CvPdf: FC<CvPdfProps> = ({
     <Document>
       <Page size="A4" style={pdfStyles.page}>
         <HeaderSectionPdf profile={model.profile} contacts={contacts}/>
-        <ProfileSectionPdf profile={model.profile} variant={profile} />
+        {profileVariant && <ProfileSectionPdf profile={model.profile} variant={profileVariant} /> }
         {estimatableTags.length > 0 && <SkillsSectionPdf tags={estimatableTags} jobs={model.jobs}/>}
         <JobSectionPdf jobs={model.jobs} allowedTags={allowedTags ?? []} variant={jobsVariant}/>
         <EducationSectionPdf education={model.education} />

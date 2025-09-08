@@ -47,6 +47,9 @@ export const skyground: Job<Domain.Management> = {
       Tag.fintech,
       Tag.websocket,
       Tag.jenkins,
+      Tag.awsCDK,
+      Tag.bull,
+      Tag.kue,
     ],
     Frontend: [
       Tag.Frontend,
@@ -81,6 +84,7 @@ export const skyground: Job<Domain.Management> = {
         a <span x-data-tag={Tag.redis}>Redis</span> cache for live PnL (25k users in &lt;5s).
         Improved infrastructure using  <span x-data-tag={Tag.docker}>Docker</span>. Worked with <span x-data-tag={Tag.awsLambda}>AWS
         Lambda</span>, <span x-data-tag={Tag.protobuf}>protobuf</span>
+        , <span x-data-tag={Tag.bull}>Bull</span>, <span x-data-tag={Tag.kue}>Kue</span>
         , bare <span x-data-tag={Tag.TCP}>TCP</span>
         , <span x-data-tag={Tag.cpp}>C++</span> and <span x-data-tag={Tag.cSharp}>C#</span> modules.
       </p>
@@ -99,7 +103,8 @@ export const skyground: Job<Domain.Management> = {
         Led a <span x-data-tag={Tag.Management}>10-person</span> team delivering
         a <span x-data-tag={Tag.fintech}>Forex</span> whitelabeling platform
         with <span x-data-tag={Tag.microservices}>30+  microservices</span>&nbsp;
-        on <span x-data-tag={Tag.awsFargate}>AWS ECS / Fargate</span>. Managed hiring, mentorship, and
+        on <span x-data-tag={Tag.awsFargate}>AWS ECS / Fargate</span> deployed
+        via <span x-data-tag={Tag.awsCDK}>AWS CDK</span>. Managed hiring, mentorship, and
         planning, standardized workflows with <span x-data-tag={Tag.Jira}>Jira</span>, and
         set up <span x-data-tag={Tag.Backend}>CI/CD</span>&nbsp;
         via <span x-data-tag={Tag.jenkins}>Jenkins</span> and <span x-data-tag={Tag.gha}>GitHub Actions</span>.
