@@ -1,5 +1,5 @@
-import {HeadContent, Scripts, useLocation} from '@tanstack/react-router';
-import {FC, MouseEventHandler, StrictMode, useEffect, useState} from 'react';
+import {AnyRoute, HeadContent, Scripts, useLocation} from '@tanstack/react-router';
+import {FC, MouseEventHandler, ReactElement, StrictMode, useEffect, useMemo, useState} from 'react';
 import {cvRoute, homeRoute, projectsRoute} from '../../routes/routes';
 import {cn} from '../../utils/cn';
 import {CvPage} from '../pages/Cv/CvPage';
@@ -11,6 +11,13 @@ import {MobileMenuDrawer} from '../elements/MobileMenuDrawer';
 import {MainMenu} from '../elements/MainMenu';
 
 export const RootLayout: FC = () => {
+  const routes = useMemo(() => [
+    [homeRoute, <Home />],
+    [cvRoute, <CvPage />],
+    [projectsRoute, <Projects/>],
+  ]as const satisfies [AnyRoute, ReactElement][], []);
+
+  const possibleLocations = routes.map((x) => x[0].id);
   const location = useLocation();
   const [prevLocation, setPrevLocation] = useState('');
   const [firstRender, setFirstRender] = useState(true);
@@ -18,12 +25,6 @@ export const RootLayout: FC = () => {
   const [outClasses, setOutClasses] = useState('visible');
   const [showMenu, setShowMenu] = useState(false);
 
-  const routes = [
-    homeRoute,
-    cvRoute,
-    projectsRoute,
-  ];
-  const possibleLocations = routes.map((x) => x.id);
   useEffect(() => {
     if (firstRender) {
       // preventing animations on the first render
@@ -47,7 +48,6 @@ export const RootLayout: FC = () => {
     setInClasses(`${classes[0]} visible relative`);
     setOutClasses(`${classes[1]} visible`);
   }, [location.pathname]);
-
 
   const savePrevLocation: MouseEventHandler<HTMLAnchorElement> = () => {
     setPrevLocation(window.location.pathname);
@@ -73,35 +73,19 @@ export const RootLayout: FC = () => {
               <div className="block md:hidden text-3xl text-accent absolute right-5 top-5 z-100 cursor-pointer">
                 <RxHamburgerMenu onClick={() => setShowMenu(!showMenu)} />
               </div>
-              <div className={cn(
-                'max-w-7xl w-full min-h-screen invisible absolute',
-                homeRoute.id === location.pathname ? inClasses : '',
-                homeRoute.id === prevLocation ? outClasses : ''
+              {routes.map((row) => (
+                <div key={row[0].id} className={cn(
+                  'max-w-7xl w-full min-h-screen invisible absolute',
+                  row[0].id === location.pathname ? inClasses : '',
+                  row[0].id === prevLocation ? outClasses : ''
                 )}>
-                <Home />
+                {row[1]}
               </div>
-             <div className={cn(
-                'max-w-7xl w-full min-h-screen invisible absolute',
-                cvRoute.id === location.pathname ? inClasses : '',
-                cvRoute.id === prevLocation ? outClasses : ''
-                )}>
-                <CvPage />
-              </div>
-               <div className={cn(
-                'max-w-7xl w-full min-h-screen invisible absolute',
-                projectsRoute.id === location.pathname ? inClasses : '',
-                projectsRoute.id === prevLocation ? outClasses : ''
-                )}>
-                <Projects />
-              </div>
+              ))}
               {!possibleLocations.find((x) => x === location.pathname) && (
-                <div className={cn(
-                'max-w-7xl w-full min-h-screen',
-                projectsRoute.id === location.pathname ? inClasses : '',
-                projectsRoute.id === prevLocation ? outClasses : ''
-                )}>
-                <NotFound/>
-              </div>
+                <div className={cn('max-w-7xl w-full min-h-screen')}>
+                  <NotFound/>
+                </div>
               )}
 
             </div>

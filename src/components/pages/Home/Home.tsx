@@ -14,7 +14,6 @@ import {SecondaryButton} from '../../elements/SecondaryButton';
 import {Tag} from '../../../types/Tag';
 
 export const Home: FC = () => {
-
   const print = async (suffix: string, props?: Omit<CvPdfProps, 'model'>) => {
     // the react-pdf is unbelievably big, not need to include it in the bundle
     const pdf = (await import('@react-pdf/renderer')).pdf;
