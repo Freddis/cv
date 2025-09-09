@@ -18,6 +18,7 @@ export default defineConfig({
       customViteReactPlugin: true,
       spa: {enabled: false},
       tsr: {
+        // Tanstack still generates file routes even if you don't use it.
         generatedRouteTree: 'src/ignore-this-garbage/routeTree.gen.ts',
         routesDirectory: 'src/ignore-this-garbage/routes',
       },
